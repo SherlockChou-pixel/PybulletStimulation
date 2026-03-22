@@ -93,114 +93,200 @@ class GripperController:
 
         contact_count = 0
         total_normal_force = 0.0
+        total_lateral_friction = 0.0
+        total_spinning_friction = 0.0
         active_fingers = 0
+        friction_coefficients = []
+        
         for joint_id in self.gripper_joints:
             contacts = p.getContactPoints(bodyA=self.panda_id, bodyB=object_id, linkIndexA=joint_id)
             if contacts:
                 active_fingers += 1
-            contact_count += len(contacts)
-            total_normal_force += sum(contact[9] for contact in contacts)
+            for contact in contacts:
+                # 获取接触点的正压力
+                total_normal_force += contact[9]  # normal force is at index 9
+                
+                # 获取摩擦系数 (index 13)
+                if len(contact) > 13:
+                    friction_coeff = contact[13]  # lateral friction coefficient is at index 13
+                    friction_coefficients.append(friction_coeff)
+                
+                # 累计横向摩擦力 (indices 10 and 12)
+                if len(contact) > 10:
+                    total_lateral_friction += contact[10]  # lateral friction force 1 at index 10
+                if len(contact) > 12:
+                    total_lateral_friction += contact[12]  # lateral friction force 2 at index 12
+                
+                # 累计旋转摩擦力 (index 14, if available)
+                if len(contact) > 14:
+                    total_spinning_friction += contact[14]  # spinning friction at index 14
 
+                contact_count += 1
+
+        avg_friction_coeff = np.mean(friction_coefficients) if friction_coefficients else 0.0
+        
         return {
             "contact_count": contact_count,
             "active_fingers": active_fingers,
             "total_normal_force": float(total_normal_force),
+            "total_lateral_friction": float(total_lateral_friction),
+            "total_spinning_friction": float(total_spinning_friction),
+            "avg_friction_coefficient": float(avg_friction_coeff),
+            "friction_coefficients": friction_coefficients
         }
 
-    def adjust_grip_force(self, object_id=None, base_force=None, max_force=None, target_pos=None):
+    def calculate_min_grasp_force(self, object_id=None):
+        """
+        根据物体质量与摩擦系数动态计算最小所需抓取力（考虑20%安全余量）
+        
+        Args:
+            object_id: 物体ID，若为None则使用当前配置的物体ID
+            
+        Returns:
+            float: 计算得到的最小抓取力（N），若失败则返回0.0
+        """
         if object_id is None:
             object_id = self.object_id
-        if base_force is None:
-            base_force = self.current_grip_force if self.current_grip_force > 0 else 40.0
-        if max_force is None:
-            max_force = max(base_force, self.current_grip_force)
-        if target_pos is None:
-            target_pos = self.current_grip_target
+            
+        try:
+            dynamics_info = p.getDynamicsInfo(object_id, -1)
+            mass = dynamics_info[0]
+            lateral_friction = dynamics_info[1]
 
-        contact_state = self.get_contact_state(object_id)
-        total_normal_force = contact_state["total_normal_force"]
-        active_fingers = contact_state["active_fingers"]
-        new_force = self.current_grip_force if self.current_grip_force > 0 else base_force
+            # 类型安全检查
+            if not isinstance(mass, (int, float, np.number)):
+                mass = float(np.asscalar(mass)) if hasattr(np, 'asscalar') else float(mass[0]) if isinstance(mass, (list, tuple, np.ndarray)) else 0.0
+            if not isinstance(lateral_friction, (int, float, np.number)):
+                lateral_friction = float(lateral_friction[0]) if isinstance(lateral_friction, (list, tuple, np.ndarray)) else 0.0
 
-        if active_fingers < 2 or total_normal_force < self.config.gripper.contact_force_threshold:
-            new_force = min(max_force, new_force + self.config.gripper.boost_step)
-        elif total_normal_force > self.config.gripper.release_contact_force:
-            new_force = max(base_force, new_force - self.config.gripper.relax_step)
+            gravity = 9.8
+            weight = mass * gravity
+            min_normal_force = weight / lateral_friction  # N ≥ G / μ
 
-        self.set_gripper(target_pos, new_force)
-        return new_force, contact_state
+            # 预留20%余量，防止滑动
+            min_grasp_force = min_normal_force * 1.2
+            self.logger.info("计算得最小抓取力 %.3f N (基于质量 %.3f kg, 摩擦系数 %.3f)", min_grasp_force, mass, lateral_friction)
+            return min_grasp_force
+            
+        except Exception as e:
+            self.logger.warning("无法获取物体动力学参数以计算最小抓取力: %s", str(e))
+            return 0.0
 
-    def close_with_force_control(self, target_force=None, max_steps=None, object_id=None):
+    def set_object_friction(self, object_id=None, lateral_friction=0.5, spinning_friction=0.0, rolling_friction=0.0):
+        """
+        设置物体的摩擦系数，用于验证算法在不同摩擦条件下的表现
+        
+        Args:
+            object_id: 物体ID，若为None则使用当前配置的物体ID
+            lateral_friction: 侧向摩擦系数
+            spinning_friction: 自旋摩擦系数
+            rolling_friction: 滚动摩擦系数
+        """
         if object_id is None:
             object_id = self.object_id
-        if max_steps is None:
-            max_steps = self.config.motion.close_steps
+            
+        try:
+            p.changeDynamics(object_id, -1, lateralFriction=lateral_friction, 
+                           spinningFriction=spinning_friction, rollingFriction=rolling_friction)
+            self.logger.info("已设置物体摩擦系数: 侧向=%.3f, 自旋=%.3f, 滚动=%.3f", 
+                           lateral_friction, spinning_friction, rolling_friction)
+        except Exception as e:
+            self.logger.error("设置物体摩擦系数失败: %s", str(e))
 
-        grasp_cfg = self.estimate_gripper_force(object_id)
-        if target_force is None:
-            target_force = grasp_cfg["target_torque"]
-        target_force = max(0.0, float(target_force))
+    def close_with_fixed_force(self, object_id=None, fixed_force=None, close_position=None, stabilize_steps=None):
+        if object_id is None:
+            object_id = self.object_id
+        if fixed_force is None:
+            # 使用新封装的方法计算最小抓取力
+            fixed_force = self.calculate_min_grasp_force(object_id)
+            
+            # 若计算失败，则回退到配置值
+            if fixed_force <= 0:
+                fixed_force = self.config.gripper.close_force
+                
+        if close_position is None:
+            close_position = self.config.gripper.default_close_position
+        if stabilize_steps is None:
+            stabilize_steps = self.config.motion.close_stabilize_steps
 
-        max_motor_force = max(
-            self.config.gripper.motor_force_min,
-            grasp_cfg["max_motor_force"] * self.config.gripper.force_scale,
-        )
-        hold_force = max(
-            self.config.gripper.hold_force_min,
-            grasp_cfg["hold_force"] * self.config.gripper.force_scale,
-        )
-        hold_force = float(np.clip(max(hold_force, target_force * self.config.gripper.force_scale), 12.0, max_motor_force))
-        min_finger_pos = grasp_cfg["finger_target_pos"]
+        self.logger.info("开始固定力抓取 force=%.2f", fixed_force)
 
-        self.logger.info(
-            "开始自适应闭合 mass=%.3f size=%s target_torque=%.4f hold_force=%.2f max_force=%.2f",
-            grasp_cfg["mass"],
-            np.round(grasp_cfg["object_size"], 3),
-            target_force,
-            hold_force,
-            max_motor_force,
-        )
-
+        # 打开夹爪
         self.open_gripper()
         self.runtime.step(60)
 
-        open_pos = self.config.gripper.open_position
-        close_steps = max(20, min(max_steps, self.config.motion.close_steps))
-        final_pos = min_finger_pos
-        contact_state = {"contact_count": 0, "active_fingers": 0, "total_normal_force": 0.0}
+        # 闭合夹爪到指定位置和力度
+        self.set_gripper(close_position, fixed_force)
+        self.logger.info("夹爪闭合至 %.4f 位置，施加力 %.2f", close_position, fixed_force)
 
-        for step in range(close_steps):
-            ratio = (step + 1) / close_steps
-            target_pos_now = open_pos + (min_finger_pos - open_pos) * ratio
-            motor_force_now = hold_force + (max_motor_force - hold_force) * ratio
-            self.set_gripper(target_pos_now, motor_force_now)
-            self.runtime.step(4)
-
-            contact_state = self.get_contact_state(object_id)
-            if contact_state["active_fingers"] >= 2 and contact_state["total_normal_force"] > self.config.gripper.contact_force_threshold:
-                joint_states = [p.getJointState(self.panda_id, joint_id)[0] for joint_id in self.gripper_joints]
-                final_pos = max(min_finger_pos, float(np.mean(joint_states)))
-                break
-
-        self.set_gripper(final_pos, hold_force)
-        for _ in range(self.config.motion.close_stabilize_steps):
-            _, contact_state = self.adjust_grip_force(
-                object_id=object_id,
-                base_force=hold_force,
-                max_force=max_motor_force,
-                target_pos=final_pos,
-            )
+        # 等待夹爪闭合
+        for step in range(40):  # 给予一定时间让夹爪闭合
             self.runtime.step(1)
 
+        # 获取抓取前的状态
+        pre_contact_state = self.get_contact_state(object_id)
         self.logger.info(
-            "夹持稳定 final_pos=%.4f current_force=%.2f contact_force=%.4f contacts=%s",
-            final_pos,
-            self.current_grip_force,
-            contact_state["total_normal_force"],
-            contact_state["contact_count"],
+            "抓取前状态 - 接触点数量: %d, 总正压力: %.4f, 平均摩擦系数: %.3f",
+            pre_contact_state["contact_count"],
+            pre_contact_state["total_normal_force"],
+            pre_contact_state["avg_friction_coefficient"]
         )
+
+        # 进行稳定步骤
+        for step in range(stabilize_steps):
+            self.set_gripper(close_position, fixed_force)  # 保持固定位置和力
+            self.runtime.step(1)
+
+        # 获取抓取后的状态
+        contact_state = self.get_contact_state(object_id)
+        
+        # 获取物体的动力学信息（包括摩擦系数）
+        try:
+            dynamics_info = p.getDynamicsInfo(object_id, -1)
+            
+            # 安全地提取动力学信息，确保是数值类型
+            object_mass = dynamics_info[0]
+            if isinstance(object_mass, (int, float, np.number)):
+                object_mass = float(object_mass)
+            else:
+                object_mass = float(np.asscalar(object_mass)) if hasattr(np, 'asscalar') else float(object_mass[0]) if isinstance(object_mass, (list, tuple, np.ndarray)) else 0.0
+            
+            lateral_friction = dynamics_info[1]
+            if isinstance(lateral_friction, (int, float, np.number)):
+                lateral_friction = float(lateral_friction)
+            else:
+                lateral_friction = float(lateral_friction[0]) if isinstance(lateral_friction, (list, tuple, np.ndarray)) else 0.0
+            
+            spinning_friction = dynamics_info[3] if len(dynamics_info) > 3 else 0.0
+            if isinstance(spinning_friction, (int, float, np.number)):
+                spinning_friction = float(spinning_friction)
+            else:
+                spinning_friction = float(spinning_friction[0]) if isinstance(spinning_friction, (list, tuple, np.ndarray)) else 0.0
+            
+            rolling_friction = dynamics_info[4] if len(dynamics_info) > 4 else 0.0
+            if isinstance(rolling_friction, (int, float, np.number)):
+                rolling_friction = float(rolling_friction)
+            else:
+                rolling_friction = float(rolling_friction[0]) if isinstance(rolling_friction, (list, tuple, np.ndarray)) else 0.0
+            
+            self.logger.info(
+                "物体动力学参数 - 质量: %.3f, 侧向摩擦系数: %.3f, 自旋摩擦系数: %.4f, 滚动摩擦系数: %.4f",
+                object_mass, lateral_friction, spinning_friction, rolling_friction
+            )
+        except Exception as e:
+            self.logger.warning("无法获取物体动力学参数: %s", str(e))
+
+        self.logger.info(
+            "抓取完成 - 接触点数量: %d, 总正压力: %.4f, 侧向摩擦力: %.4f, 旋转摩擦力: %.4f, 平均摩擦系数: %.3f",
+            contact_state["contact_count"],
+            contact_state["total_normal_force"],
+            contact_state["total_lateral_friction"],
+            contact_state["total_spinning_friction"],
+            contact_state["avg_friction_coefficient"]
+        )
+
         return {
-            "final_pos": final_pos,
-            "hold_force": hold_force,
-            "max_motor_force": max_motor_force,
+            "final_pos": close_position,
+            "hold_force": fixed_force,
+            "contact_state": contact_state
         }

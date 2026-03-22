@@ -39,19 +39,15 @@ class GraspWorkflow:
             self.logger.info("机械臂下降到抓取位姿 %s", grasp_pos)
             self.arm.move_to_position(grasp_pos, target_orn=grasp_orn)
 
-            grip_state = self.gripper.close_with_force_control()
-            grip_adjust = lambda: self.gripper.adjust_grip_force(
-                object_id=self.runtime.obj_id,
-                base_force=grip_state["hold_force"],
-                max_force=grip_state["max_motor_force"],
-                target_pos=grip_state["final_pos"],
-            )
+            # 使用固定力抓取方法代替原来的自适应抓取方法
+            grip_state = self.gripper.close_with_fixed_force()
 
-            self.runtime.step(self.config.motion.hold_steps, hook=grip_adjust)
+            # 直接使用固定力保持抓取
+            self.runtime.step(self.config.motion.hold_steps)
 
             lift_pos = [grasp_pos[0], grasp_pos[1], grasp_pos[2] + self.config.motion.lift_offset]
             self.logger.info("机械臂抬升目标 %s", lift_pos)
-            self.arm.move_to_position(lift_pos, target_orn=grasp_orn, grip_adjust=grip_adjust)
+            self.arm.move_to_position(lift_pos, target_orn=grasp_orn)
             self.logger.info("抓取任务完成")
         finally:
             self.runtime.disconnect()

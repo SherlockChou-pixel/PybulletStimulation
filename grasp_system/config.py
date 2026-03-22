@@ -40,7 +40,7 @@ class GripperConfig:
     open_position: float = 0.04
     default_close_position: float = 0.01
     open_force: float = 80.0
-    close_force: float = 120.0
+    close_force: float = 30.0  # 提升默认抓取力至30N，防止滑动
     hold_force_min: float = 12.0
     motor_force_min: float = 20.0
     force_scale: float = 1000.0

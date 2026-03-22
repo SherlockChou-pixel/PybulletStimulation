@@ -23,7 +23,7 @@ class SimulationRuntime:
         p.connect(connection_mode)
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0, 0, -9.8)
-        p.configureDebugVisualizer(p.COV_ENABLE_GUI, 1)
+        p.configureDebugVisualizer(p.COV_ENABLE_GUI, 0)
         p.resetDebugVisualizerCamera(
             cameraDistance=1.5,
             cameraYaw=60,
