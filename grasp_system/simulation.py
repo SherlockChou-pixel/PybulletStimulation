@@ -36,17 +36,20 @@ class SimulationRuntime:
         self.panda_id = p.loadURDF(scene.robot_urdf, scene.robot_base_position, useFixedBase=scene.use_fixed_base)
         self.obj_id = p.loadURDF(scene.object_urdf, scene.object_position)
         self.connected = True
-        self.logger.info("仿真环境初始化完成，robot_id=%s, object_id=%s", self.panda_id, self.obj_id)
+        self.logger.info('simulation_ready robot_id=%s object_id=%s', self.panda_id, self.obj_id)
 
     def step(self, steps: int = 1, hook=None):
+        realtime_sleep = self.config.runtime.realtime_sleep
+        sleep_dt = self.config.runtime.sleep_dt
         for _ in range(steps):
             if hook is not None:
                 hook()
             p.stepSimulation()
-            time.sleep(1 / 240.0)
+            if realtime_sleep and sleep_dt > 0:
+                time.sleep(sleep_dt)
 
     def disconnect(self):
         if self.connected:
             p.disconnect()
             self.connected = False
-            self.logger.info("仿真连接已断开")
+            self.logger.info('simulation_disconnected')

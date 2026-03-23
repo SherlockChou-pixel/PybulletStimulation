@@ -8,6 +8,10 @@ class VisionSystem:
         self.config = config
         self.logger = logger
 
+    @staticmethod
+    def _fmt_vec(vec):
+        return np.round(np.array(vec, dtype=float), 4).tolist()
+
     def capture(self):
         camera = self.config.camera
         aspect = camera.width / camera.height
@@ -22,31 +26,31 @@ class VisionSystem:
             renderer=p.ER_BULLET_HARDWARE_OPENGL,
         )
         return {
-            "rgb": rgba,
-            "depth": np.asarray(depth),
-            "seg": np.asarray(seg),
-            "view_matrix": view_matrix,
-            "proj_matrix": proj_matrix,
-            "width": camera.width,
-            "height": camera.height,
+            'rgb': rgba,
+            'depth': np.asarray(depth),
+            'seg': np.asarray(seg),
+            'view_matrix': view_matrix,
+            'proj_matrix': proj_matrix,
+            'width': camera.width,
+            'height': camera.height,
         }
 
     def process_depth_and_get_position(self, data, target_object_id):
-        depth = data["depth"].reshape(data["height"], data["width"])
-        seg_raw = data["seg"].reshape(data["height"], data["width"])
+        depth = data['depth'].reshape(data['height'], data['width'])
+        seg_raw = data['seg'].reshape(data['height'], data['width'])
         seg_obj = seg_raw & ((1 << 24) - 1)
         ys, xs = np.where(seg_obj == target_object_id)
         if len(xs) == 0:
-            self.logger.warning("深度相机未检测到目标物体，object_id=%s", target_object_id)
+            self.logger.warning('VISION_FRAME miss object_id=%s', target_object_id)
             return None
 
-        proj = np.array(data["proj_matrix"]).reshape(4, 4).T
-        view = np.array(data["view_matrix"]).reshape(4, 4).T
+        proj = np.array(data['proj_matrix']).reshape(4, 4).T
+        view = np.array(data['view_matrix']).reshape(4, 4).T
         inv_vp = np.linalg.inv(proj @ view)
 
         def pixel_to_world(px, py, z_buffer):
-            x_ndc = (2.0 * (px + 0.5) / data["width"]) - 1.0
-            y_ndc = 1.0 - (2.0 * (py + 0.5) / data["height"])
+            x_ndc = (2.0 * (px + 0.5) / data['width']) - 1.0
+            y_ndc = 1.0 - (2.0 * (py + 0.5) / data['height'])
             z_ndc = 2.0 * z_buffer - 1.0
             ndc = np.array([x_ndc, y_ndc, z_ndc, 1.0])
             world = inv_vp @ ndc
@@ -59,29 +63,66 @@ class VisionSystem:
             x, y = xs[index], ys[index]
             points.append(pixel_to_world(x, y, depth[y, x]))
 
-        points = np.asarray(points)
-        z_threshold = np.percentile(points[:, 2], 85)
+        points = np.asarray(points, dtype=float)
+        if len(points) == 0:
+            return None
+
+        top_percentile = self.config.vision.top_percentile
+        z_threshold = np.percentile(points[:, 2], top_percentile)
         top_points = points[points[:, 2] >= z_threshold]
-        return np.mean(top_points, axis=0)
+        if len(top_points) == 0:
+            top_points = points
+
+        xy = np.median(top_points[:, :2], axis=0)
+        z = np.percentile(points[:, 2], top_percentile)
+        return np.array([xy[0], xy[1], z], dtype=float)
 
     def locate_object(self, object_id):
-        data = self.capture()
-        calc_pos = self.process_depth_and_get_position(data, object_id)
         true_pos, _ = p.getBasePositionAndOrientation(object_id)
+        true_pos = np.array(true_pos, dtype=float)
+        raw_positions = []
+        corrected_positions = []
 
-        if calc_pos is None:
-            self.logger.warning("视觉定位失败，回退到真实位置 %s", np.round(true_pos, 3))
-            return np.array(true_pos)
+        for frame_index in range(max(1, self.config.vision.capture_repeats)):
+            data = self.capture()
+            calc_pos = self.process_depth_and_get_position(data, object_id)
+            if calc_pos is None:
+                continue
 
-        corrected_pos = np.array(calc_pos) + self.config.scene.cam_to_world_bias
-        raw_err = np.linalg.norm(np.array(true_pos) - np.array(calc_pos))
-        corrected_err = np.linalg.norm(np.array(true_pos) - corrected_pos)
+            raw_pos = np.array(calc_pos, dtype=float)
+            corrected_pos = raw_pos + self.config.scene.cam_to_world_bias
+            raw_positions.append(raw_pos)
+            corrected_positions.append(corrected_pos)
+
+            if self.config.logging.log_vision_frames:
+                self.logger.info(
+                    'VISION_FRAME frame=%d camera_raw=%s corrected=%s api_true=%s raw_delta=%s corrected_delta=%s',
+                    frame_index + 1,
+                    self._fmt_vec(raw_pos),
+                    self._fmt_vec(corrected_pos),
+                    self._fmt_vec(true_pos),
+                    self._fmt_vec(raw_pos - true_pos),
+                    self._fmt_vec(corrected_pos - true_pos),
+                )
+            self.runtime.step(1)
+
+        if not corrected_positions:
+            self.logger.warning('VISION_SUMMARY fallback_to_true api_true=%s', self._fmt_vec(true_pos))
+            return true_pos
+
+        raw_pos = np.median(np.asarray(raw_positions), axis=0)
+        corrected_pos = np.median(np.asarray(corrected_positions), axis=0)
+        raw_err = np.linalg.norm(true_pos - raw_pos)
+        corrected_err = np.linalg.norm(true_pos - corrected_pos)
         self.logger.info(
-            "视觉定位完成 raw=%s corrected=%s true=%s raw_err=%.4f corrected_err=%.4f",
-            np.round(calc_pos, 4),
-            np.round(corrected_pos, 4),
-            np.round(true_pos, 4),
+            'VISION_SUMMARY camera_raw=%s corrected=%s api_true=%s raw_delta=%s corrected_delta=%s raw_err=%.4f corrected_err=%.4f repeats=%d',
+            self._fmt_vec(raw_pos),
+            self._fmt_vec(corrected_pos),
+            self._fmt_vec(true_pos),
+            self._fmt_vec(raw_pos - true_pos),
+            self._fmt_vec(corrected_pos - true_pos),
             raw_err,
             corrected_err,
+            len(corrected_positions),
         )
         return corrected_pos

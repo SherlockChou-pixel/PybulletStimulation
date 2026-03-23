@@ -289,3 +289,1089 @@
 2026-03-22 21:06:32,167 | INFO | grasp_system | 抓取完成 - 接触点数量: 2, 总正压力: 2.3520, 侧向摩擦力: 1.9734, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.333
 2026-03-22 21:06:34,960 | INFO | grasp_system | 机械臂抬升目标 [np.float64(0.8116559722592881), np.float64(0.11145167950639329), np.float64(0.2899156984584778)]
 2026-03-22 21:06:34,961 | INFO | grasp_system | 机械臂移动 target_pos=[np.float64(0.8116559722592881), np.float64(0.11145167950639329), np.float64(0.2899156984584778)] steps=240
+2026-03-23 15:02:42,764 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:02:42,765 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:02:44,406 | INFO | grasp_system | Vision locate raw=[0.8157 0.1155 0.0499] corrected=[0.8157 0.1155 0.0199] true=[0.8    0.1    0.0249] raw_err=0.0334 corrected_err=0.0227 repeats=5
+2026-03-23 15:02:44,654 | INFO | grasp_system | grasp plan target_pos=[0.7957, 0.1155, 0.0399] yaw=0.785 pos_error=0.0084
+2026-03-23 15:02:44,655 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:02:44,657 | INFO | grasp_system | move_pre_grasp target_pos=[0.7957, 0.1155, 0.1999] steps=240
+2026-03-23 15:02:49,014 | INFO | grasp_system | Vision locate raw=[0.7891 0.0951 0.05  ] corrected=[0.7891 0.0951 0.02  ] true=[0.8   0.1   0.025] raw_err=0.0277 corrected_err=0.0129 repeats=5
+2026-03-23 15:02:49,018 | INFO | grasp_system | Refine target before grasp delta=0.0336 fused_pos=[0.8024, 0.1053, 0.02]
+2026-03-23 15:02:49,209 | INFO | grasp_system | refined_grasp plan target_pos=[0.7924, 0.0953, 0.04] yaw=0.785 pos_error=0.0020
+2026-03-23 15:02:49,209 | INFO | grasp_system | Descend to grasp pose [0.7924, 0.0953, 0.04]
+2026-03-23 15:02:49,211 | INFO | grasp_system | move_grasp target_pos=[0.7924, 0.0953, 0.04] steps=240
+2026-03-23 15:02:52,957 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:02:52,957 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:02:52,958 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:02:53,902 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:02:54,535 | INFO | grasp_system | 抓取前状态 - 接触点数量: 2, 总正压力: 1.7845, 平均摩擦系数: 0.334
+2026-03-23 15:02:55,943 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:02:55,943 | INFO | grasp_system | 抓取完成 - 接触点数量: 2, 总正压力: 1.8266, 侧向摩擦力: 0.7327, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.334
+2026-03-23 15:02:58,736 | INFO | grasp_system | Lift target [0.7924, 0.0953, 0.29]
+2026-03-23 15:02:58,738 | INFO | grasp_system | move_lift target_pos=[0.7924, 0.0953, 0.29] steps=240
+2026-03-23 15:03:02,458 | INFO | grasp_system | place plan target_pos=[0.55, -0.2, 0.08] yaw=-1.571 pos_error=0.0000
+2026-03-23 15:03:02,459 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=240
+2026-03-23 15:03:06,167 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=240
+2026-03-23 15:03:09,881 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:03:11,267 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=240
+2026-03-23 15:03:14,969 | INFO | grasp_system | Workflow finished
+2026-03-23 15:03:15,604 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:03:32,745 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:03:32,745 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:03:34,241 | INFO | grasp_system | Vision locate raw=[0.8157 0.0153 0.0499] corrected=[0.8157 0.0153 0.0199] true=[ 0.8    -0.      0.0249] raw_err=0.0333 corrected_err=0.0225 repeats=5
+2026-03-23 15:03:34,452 | INFO | grasp_system | grasp plan target_pos=[0.8057, 0.0153, 0.0399] yaw=0.785 pos_error=0.0094
+2026-03-23 15:03:34,452 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:03:34,454 | INFO | grasp_system | move_pre_grasp target_pos=[0.8057, 0.0153, 0.1999] steps=240
+2026-03-23 15:03:38,264 | WARNING | grasp_system | Vision miss: object_id=2
+2026-03-23 15:03:38,371 | WARNING | grasp_system | Vision miss: object_id=2
+2026-03-23 15:03:38,468 | WARNING | grasp_system | Vision miss: object_id=2
+2026-03-23 15:03:38,567 | WARNING | grasp_system | Vision miss: object_id=2
+2026-03-23 15:03:38,664 | WARNING | grasp_system | Vision miss: object_id=2
+2026-03-23 15:03:38,665 | WARNING | grasp_system | Vision fallback to true position [0.8   0.    0.025]
+2026-03-23 15:03:38,673 | INFO | grasp_system | Refine target before grasp delta=0.0225 fused_pos=[0.8079, 0.0077, 0.0225]
+2026-03-23 15:03:38,878 | INFO | grasp_system | refined_grasp plan target_pos=[0.7979, 0.0077, 0.0425] yaw=0.785 pos_error=0.0015
+2026-03-23 15:03:38,878 | INFO | grasp_system | Descend to grasp pose [0.7979, 0.0077, 0.0425]
+2026-03-23 15:03:38,878 | INFO | grasp_system | move_grasp target_pos=[0.7979, 0.0077, 0.0425] steps=240
+2026-03-23 15:03:42,567 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:03:42,567 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:03:42,568 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:03:43,502 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:03:44,121 | INFO | grasp_system | 抓取前状态 - 接触点数量: 2, 总正压力: 2.3463, 平均摩擦系数: 0.333
+2026-03-23 15:03:45,523 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:03:45,523 | INFO | grasp_system | 抓取完成 - 接触点数量: 2, 总正压力: 2.3445, 侧向摩擦力: 1.6044, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.333
+2026-03-23 15:03:48,325 | INFO | grasp_system | Lift target [0.7979, 0.0077, 0.2925]
+2026-03-23 15:03:48,327 | INFO | grasp_system | move_lift target_pos=[0.7979, 0.0077, 0.2925] steps=240
+2026-03-23 15:03:52,089 | INFO | grasp_system | place plan target_pos=[0.55, -0.2, 0.08] yaw=-1.571 pos_error=0.0000
+2026-03-23 15:03:52,091 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=240
+2026-03-23 15:05:14,614 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:05:14,614 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:05:16,099 | INFO | grasp_system | Vision locate raw=[0.7155 0.0153 0.0499] corrected=[0.7155 0.0153 0.0199] true=[ 0.7    -0.      0.0249] raw_err=0.0332 corrected_err=0.0224 repeats=5
+2026-03-23 15:05:16,279 | INFO | grasp_system | grasp plan target_pos=[0.7355, 0.0153, 0.0399] yaw=-1.571 pos_error=0.0002
+2026-03-23 15:05:16,279 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:05:16,282 | INFO | grasp_system | move_pre_grasp target_pos=[0.7355, 0.0153, 0.1999] steps=240
+2026-03-23 15:05:20,568 | INFO | grasp_system | Vision locate raw=[0.691  0.0174 0.05  ] corrected=[0.691  0.0174 0.02  ] true=[0.7   0.    0.025] raw_err=0.0317 corrected_err=0.0202 repeats=5
+2026-03-23 15:05:20,572 | INFO | grasp_system | Refine target before grasp delta=0.0246 fused_pos=[0.7033, 0.0164, 0.02]
+2026-03-23 15:05:20,772 | INFO | grasp_system | refined_grasp plan target_pos=[0.7233, 0.0164, 0.04] yaw=2.356 pos_error=0.0018
+2026-03-23 15:05:20,772 | INFO | grasp_system | Descend to grasp pose [0.7233, 0.0164, 0.04]
+2026-03-23 15:05:20,772 | INFO | grasp_system | move_grasp target_pos=[0.7233, 0.0164, 0.04] steps=240
+2026-03-23 15:05:24,493 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:05:24,493 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:05:24,494 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:05:25,420 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:05:26,040 | INFO | grasp_system | 抓取前状态 - 接触点数量: 0, 总正压力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:05:27,437 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:05:27,437 | INFO | grasp_system | 抓取完成 - 接触点数量: 0, 总正压力: 0.0000, 侧向摩擦力: 0.0000, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:05:30,229 | INFO | grasp_system | Lift target [0.7233, 0.0164, 0.29]
+2026-03-23 15:05:30,230 | INFO | grasp_system | move_lift target_pos=[0.7233, 0.0164, 0.29] steps=240
+2026-03-23 15:05:33,956 | INFO | grasp_system | place plan target_pos=[0.55, -0.2, 0.08] yaw=-0.785 pos_error=0.0000
+2026-03-23 15:05:33,957 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=240
+2026-03-23 15:05:37,676 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=240
+2026-03-23 15:05:41,370 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:05:42,773 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=240
+2026-03-23 15:05:46,480 | INFO | grasp_system | Workflow finished
+2026-03-23 15:05:46,515 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:05:59,494 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:05:59,494 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:06:01,011 | INFO | grasp_system | Vision locate raw=[0.7155 0.0153 0.0499] corrected=[0.7155 0.0153 0.0199] true=[ 0.7    -0.      0.0249] raw_err=0.0332 corrected_err=0.0224 repeats=5
+2026-03-23 15:06:01,170 | INFO | grasp_system | grasp plan target_pos=[0.7355, 0.0153, 0.0399] yaw=-1.571 pos_error=0.0002
+2026-03-23 15:06:01,170 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:06:01,172 | INFO | grasp_system | move_pre_grasp target_pos=[0.7355, 0.0153, 0.1999] steps=240
+2026-03-23 15:06:05,566 | INFO | grasp_system | Vision locate raw=[0.691  0.0174 0.05  ] corrected=[0.691  0.0174 0.02  ] true=[0.7   0.    0.025] raw_err=0.0317 corrected_err=0.0202 repeats=5
+2026-03-23 15:06:05,570 | INFO | grasp_system | Refine target before grasp delta=0.0246 fused_pos=[0.7033, 0.0164, 0.02]
+2026-03-23 15:06:05,771 | INFO | grasp_system | refined_grasp plan target_pos=[0.7233, 0.0164, 0.04] yaw=2.356 pos_error=0.0018
+2026-03-23 15:06:05,775 | INFO | grasp_system | Descend to grasp pose [0.7233, 0.0164, 0.04]
+2026-03-23 15:06:05,777 | INFO | grasp_system | move_grasp target_pos=[0.7233, 0.0164, 0.04] steps=240
+2026-03-23 15:06:09,499 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:06:09,499 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:06:09,500 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:06:10,422 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:06:11,047 | INFO | grasp_system | 抓取前状态 - 接触点数量: 0, 总正压力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:06:12,441 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:06:12,441 | INFO | grasp_system | 抓取完成 - 接触点数量: 0, 总正压力: 0.0000, 侧向摩擦力: 0.0000, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:06:15,219 | INFO | grasp_system | Lift target [0.7233, 0.0164, 0.29]
+2026-03-23 15:06:15,220 | INFO | grasp_system | move_lift target_pos=[0.7233, 0.0164, 0.29] steps=240
+2026-03-23 15:06:18,947 | INFO | grasp_system | place plan target_pos=[0.55, -0.2, 0.08] yaw=-0.785 pos_error=0.0000
+2026-03-23 15:06:18,948 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=240
+2026-03-23 15:06:22,658 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=240
+2026-03-23 15:06:26,362 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:06:27,746 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=240
+2026-03-23 15:06:31,458 | INFO | grasp_system | Workflow finished
+2026-03-23 15:06:31,492 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:06:40,821 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:06:40,821 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:06:42,313 | INFO | grasp_system | Vision locate raw=[0.7155 0.0153 0.0499] corrected=[0.7155 0.0153 0.0199] true=[ 0.7    -0.      0.0249] raw_err=0.0332 corrected_err=0.0224 repeats=5
+2026-03-23 15:06:42,498 | INFO | grasp_system | grasp plan target_pos=[0.7355, 0.0153, 0.0399] yaw=-1.571 pos_error=0.0002
+2026-03-23 15:06:42,498 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:06:42,500 | INFO | grasp_system | move_pre_grasp target_pos=[0.7355, 0.0153, 0.1999] steps=240
+2026-03-23 15:06:46,836 | INFO | grasp_system | Vision locate raw=[0.691  0.0174 0.05  ] corrected=[0.691  0.0174 0.02  ] true=[0.7   0.    0.025] raw_err=0.0317 corrected_err=0.0202 repeats=5
+2026-03-23 15:06:46,840 | INFO | grasp_system | Refine target before grasp delta=0.0246 fused_pos=[0.7033, 0.0164, 0.02]
+2026-03-23 15:06:47,009 | INFO | grasp_system | refined_grasp plan target_pos=[0.7233, 0.0164, 0.04] yaw=2.356 pos_error=0.0018
+2026-03-23 15:06:47,009 | INFO | grasp_system | Descend to grasp pose [0.7233, 0.0164, 0.04]
+2026-03-23 15:06:47,009 | INFO | grasp_system | move_grasp target_pos=[0.7233, 0.0164, 0.04] steps=240
+2026-03-23 15:06:50,711 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:06:50,711 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:06:50,711 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:06:51,637 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:06:52,257 | INFO | grasp_system | 抓取前状态 - 接触点数量: 0, 总正压力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:06:53,649 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:06:53,649 | INFO | grasp_system | 抓取完成 - 接触点数量: 0, 总正压力: 0.0000, 侧向摩擦力: 0.0000, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:06:56,444 | INFO | grasp_system | Lift target [0.7233, 0.0164, 0.29]
+2026-03-23 15:06:56,446 | INFO | grasp_system | move_lift target_pos=[0.7233, 0.0164, 0.29] steps=240
+2026-03-23 15:07:00,166 | INFO | grasp_system | place plan target_pos=[0.55, -0.2, 0.08] yaw=-0.785 pos_error=0.0000
+2026-03-23 15:07:00,167 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=240
+2026-03-23 15:07:03,880 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=240
+2026-03-23 15:07:07,586 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:07:08,975 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=240
+2026-03-23 15:13:24,704 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:13:24,704 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:13:25,744 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7155, 0.0153, 0.0199] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0155, 0.0153, -0.005]
+2026-03-23 15:13:25,847 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7135, 0.0153, 0.0499] corrected=[0.7135, 0.0153, 0.0199] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0135, 0.0153, 0.025] corrected_delta=[0.0135, 0.0153, -0.005]
+2026-03-23 15:13:25,961 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7155, 0.0153, 0.0199] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0155, 0.0153, -0.005]
+2026-03-23 15:13:26,058 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7155, 0.0153, 0.0199] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0155, 0.0153, -0.005]
+2026-03-23 15:13:26,166 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7155, 0.0153, 0.0199] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0155, 0.0153, -0.005]
+2026-03-23 15:13:26,174 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7155, 0.0153, 0.0199] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0155, 0.0153, -0.005] raw_err=0.0332 corrected_err=0.0224 repeats=5
+2026-03-23 15:13:26,360 | INFO | grasp_system | grasp plan target_pos=[0.7355, 0.0153, 0.0399] yaw=-1.571 pos_error=0.0002
+2026-03-23 15:13:26,361 | INFO | grasp_system | TARGET_COMPARE initial_plan vision=[0.7155, 0.0153, 0.0199] | api_true=[0.7, -0.0, 0.0249] | vision_delta=[0.0155, 0.0153, -0.005] | planned=[0.7355, 0.0153, 0.0399] | plan_delta=[0.0355, 0.0153, 0.015]
+2026-03-23 15:13:26,361 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:13:26,362 | INFO | grasp_system | move_pre_grasp target_pos=[0.7355, 0.0153, 0.1999] steps=240
+2026-03-23 15:13:30,223 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.6879, 0.0194, 0.05] corrected=[0.6879, 0.0194, 0.02] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0121, 0.0194, 0.025] corrected_delta=[-0.0121, 0.0194, -0.005]
+2026-03-23 15:13:30,333 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.6889, 0.0174, 0.05] corrected=[0.6889, 0.0174, 0.02] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0111, 0.0174, 0.025] corrected_delta=[-0.0111, 0.0174, -0.005]
+2026-03-23 15:13:30,461 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.691, 0.0174, 0.05] corrected=[0.691, 0.0174, 0.02] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.009, 0.0174, 0.025] corrected_delta=[-0.009, 0.0174, -0.005]
+2026-03-23 15:13:30,571 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.693, 0.0174, 0.05] corrected=[0.693, 0.0174, 0.02] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.007, 0.0174, 0.025] corrected_delta=[-0.007, 0.0174, -0.005]
+2026-03-23 15:13:30,706 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.6951, 0.0174, 0.05] corrected=[0.6951, 0.0174, 0.02] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0049, 0.0174, 0.025] corrected_delta=[-0.0049, 0.0174, -0.005]
+2026-03-23 15:13:30,720 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.691, 0.0174, 0.05] corrected=[0.691, 0.0174, 0.02] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.009, 0.0174, 0.025] corrected_delta=[-0.009, 0.0174, -0.005] raw_err=0.0317 corrected_err=0.0202 repeats=5
+2026-03-23 15:13:30,723 | INFO | grasp_system | REFINE_TARGET delta=0.0246 previous=[0.7155, 0.0153, 0.0199] refined=[0.691, 0.0174, 0.02] fused=[0.7033, 0.0164, 0.02]
+2026-03-23 15:13:30,899 | INFO | grasp_system | refined_grasp plan target_pos=[0.7233, 0.0164, 0.04] yaw=2.356 pos_error=0.0018
+2026-03-23 15:13:30,899 | INFO | grasp_system | TARGET_COMPARE refined_plan vision=[0.7033, 0.0164, 0.02] | api_true=[0.7, 0.0, 0.025] | vision_delta=[0.0033, 0.0163, -0.005] | planned=[0.7233, 0.0164, 0.04] | plan_delta=[0.0233, 0.0163, 0.015]
+2026-03-23 15:13:30,899 | INFO | grasp_system | Descend to grasp pose [0.7233, 0.0164, 0.04]
+2026-03-23 15:13:30,900 | INFO | grasp_system | move_grasp target_pos=[0.7233, 0.0164, 0.04] steps=240
+2026-03-23 15:13:34,644 | INFO | grasp_system | TARGET_COMPARE after_descend vision=[0.7033, 0.0164, 0.02] | api_true=[0.7, 0.0, 0.025] | vision_delta=[0.0033, 0.0163, -0.005] | planned=[0.7233, 0.0164, 0.04] | plan_delta=[0.0233, 0.0163, 0.015]
+2026-03-23 15:13:34,644 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:13:34,644 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:13:34,644 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:13:35,573 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:13:36,196 | INFO | grasp_system | 抓取前状态 - 接触点数量: 0, 总正压力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:13:37,596 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:13:37,596 | INFO | grasp_system | 抓取完成 - 接触点数量: 0, 总正压力: 0.0000, 侧向摩擦力: 0.0000, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.000
+2026-03-23 15:13:40,407 | INFO | grasp_system | Lift target [0.7233, 0.0164, 0.29]
+2026-03-23 15:13:40,408 | INFO | grasp_system | move_lift target_pos=[0.7233, 0.0164, 0.29] steps=240
+2026-03-23 15:13:44,174 | INFO | grasp_system | place plan target_pos=[0.55, -0.2, 0.08] yaw=-0.785 pos_error=0.0000
+2026-03-23 15:13:44,175 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=240
+2026-03-23 15:22:40,146 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:22:40,147 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:22:41,194 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.8137, 0.1135, 0.0499] corrected=[0.7987, 0.0985, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0137, 0.0135, 0.025] corrected_delta=[-0.0013, -0.0015, 0.0]
+2026-03-23 15:22:41,303 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.8137, 0.1155, 0.0499] corrected=[0.7987, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0137, 0.0155, 0.025] corrected_delta=[-0.0013, 0.0005, 0.0]
+2026-03-23 15:22:41,412 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:22:41,535 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:22:41,650 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:22:41,662 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0] raw_err=0.0334 corrected_err=0.0009 repeats=5
+2026-03-23 15:22:41,680 | INFO | grasp_system | grasp plan target_pos=[0.8007, 0.1005, 0.0449] yaw=0.785 pos_error=0.0097
+2026-03-23 15:22:41,681 | INFO | grasp_system | TARGET_COMPARE initial_plan vision=[0.8007, 0.1005, 0.0249] | api_true=[0.8, 0.1, 0.0249] | vision_delta=[0.0007, 0.0005, -0.0] | planned=[0.8007, 0.1005, 0.0449] | plan_delta=[0.0007, 0.0005, 0.02]
+2026-03-23 15:22:41,681 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:22:41,682 | INFO | grasp_system | move_pre_grasp target_pos=[0.8007, 0.1005, 0.2049] steps=240
+2026-03-23 15:22:45,523 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7789, 0.0767, 0.0498] corrected=[0.7639, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.0211, -0.0233, 0.0248] corrected_delta=[-0.0361, -0.0383, -0.0002]
+2026-03-23 15:22:45,657 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:22:45,774 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7789, 0.0767, 0.048] corrected=[0.7639, 0.0617, 0.023] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.0211, -0.0233, 0.023] corrected_delta=[-0.0361, -0.0383, -0.002]
+2026-03-23 15:22:45,903 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:22:46,021 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:22:46,038 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002] raw_err=0.0390 corrected_err=0.0513 repeats=5
+2026-03-23 15:22:46,041 | INFO | grasp_system | REFINE_TARGET delta=0.0521 previous=[0.8007, 0.1005, 0.0249] refined=[0.766, 0.0617, 0.0248] fused=[0.7834, 0.0811, 0.0249]
+2026-03-23 15:22:46,057 | INFO | grasp_system | refined_grasp plan target_pos=[0.7834, 0.0811, 0.0449] yaw=0.785 pos_error=0.0031
+2026-03-23 15:22:46,057 | INFO | grasp_system | TARGET_COMPARE refined_plan vision=[0.7834, 0.0811, 0.0249] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0166, -0.0189, -0.0001] | planned=[0.7834, 0.0811, 0.0449] | plan_delta=[-0.0166, -0.0189, 0.0199]
+2026-03-23 15:22:46,057 | INFO | grasp_system | Descend to grasp pose [0.7834, 0.0811, 0.0449]
+2026-03-23 15:22:46,057 | INFO | grasp_system | move_grasp target_pos=[0.7834, 0.0811, 0.0449] steps=240
+2026-03-23 15:22:49,787 | INFO | grasp_system | TARGET_COMPARE after_descend vision=[0.7834, 0.0811, 0.0249] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0166, -0.0189, -0.0001] | planned=[0.7834, 0.0811, 0.0449] | plan_delta=[-0.0166, -0.0189, 0.0199]
+2026-03-23 15:22:49,787 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:22:49,787 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:22:49,788 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:22:50,725 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:22:51,355 | INFO | grasp_system | 抓取前状态 - 接触点数量: 4, 总正压力: 2.0273, 平均摩擦系数: 0.334
+2026-03-23 15:22:52,768 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:22:52,768 | INFO | grasp_system | 抓取完成 - 接触点数量: 4, 总正压力: 1.9566, 侧向摩擦力: 1.2606, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.335
+2026-03-23 15:22:55,588 | INFO | grasp_system | Lift target [0.7834, 0.0811, 0.2949]
+2026-03-23 15:22:55,589 | INFO | grasp_system | move_lift target_pos=[0.7834, 0.0811, 0.2949] steps=240
+2026-03-23 15:22:59,330 | INFO | grasp_system | Workflow finished
+2026-03-23 15:22:59,360 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:24:01,967 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:24:01,967 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:24:03,017 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:24:03,128 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.8137, 0.0153, 0.0499] corrected=[0.7987, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0137, 0.0153, 0.025] corrected_delta=[-0.0013, 0.0003, 0.0]
+2026-03-23 15:24:03,231 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:24:03,350 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:24:03,452 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:24:03,466 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0] raw_err=0.0333 corrected_err=0.0008 repeats=5
+2026-03-23 15:24:03,485 | INFO | grasp_system | grasp plan target_pos=[0.8007, 0.0003, 0.0449] yaw=0.785 pos_error=0.0064
+2026-03-23 15:24:03,486 | INFO | grasp_system | TARGET_COMPARE initial_plan vision=[0.8007, 0.0003, 0.0249] | api_true=[0.8, -0.0, 0.0249] | vision_delta=[0.0007, 0.0003, -0.0] | planned=[0.8007, 0.0003, 0.0449] | plan_delta=[0.0007, 0.0003, 0.02]
+2026-03-23 15:24:03,486 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:24:03,487 | INFO | grasp_system | move_pre_grasp target_pos=[0.8007, 0.0003, 0.2049] steps=240
+2026-03-23 15:24:07,342 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:24:07,457 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:24:07,561 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:24:07,675 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:24:07,784 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:24:07,784 | WARNING | grasp_system | VISION_SUMMARY fallback_to_true api_true=[0.8, 0.0, 0.025]
+2026-03-23 15:24:07,812 | INFO | grasp_system | refined_grasp plan target_pos=[0.8, 0.0, 0.045] yaw=0.785 pos_error=0.0030
+2026-03-23 15:24:07,812 | INFO | grasp_system | TARGET_COMPARE refined_plan vision=[0.8, 0.0, 0.025] | api_true=[0.8, 0.0, 0.025] | vision_delta=[0.0, 0.0, 0.0] | planned=[0.8, 0.0, 0.045] | plan_delta=[0.0, 0.0, 0.02]
+2026-03-23 15:24:07,812 | INFO | grasp_system | Descend to grasp pose [0.8, 0.0, 0.045]
+2026-03-23 15:24:07,813 | INFO | grasp_system | move_grasp target_pos=[0.8, 0.0, 0.045] steps=240
+2026-03-23 15:24:11,559 | INFO | grasp_system | TARGET_COMPARE after_descend vision=[0.8, 0.0, 0.025] | api_true=[0.8028, 0.0038, 0.025] | vision_delta=[-0.0028, -0.0037, -0.0] | planned=[0.8, 0.0, 0.045] | plan_delta=[-0.0028, -0.0037, 0.02]
+2026-03-23 15:24:11,559 | INFO | grasp_system | 计算得最小抓取力 1.176 N (基于质量 0.100 kg, 摩擦系数 1.000)
+2026-03-23 15:24:11,559 | INFO | grasp_system | 开始固定力抓取 force=1.18
+2026-03-23 15:24:11,560 | INFO | grasp_system | 夹爪打开 target_pos=0.0400 force=80.00
+2026-03-23 15:24:12,493 | INFO | grasp_system | 夹爪闭合至 0.0100 位置，施加力 1.18
+2026-03-23 15:24:13,117 | INFO | grasp_system | 抓取前状态 - 接触点数量: 2, 总正压力: 2.1733, 平均摩擦系数: 0.334
+2026-03-23 15:24:14,525 | INFO | grasp_system | 物体动力学参数 - 质量: 0.100, 侧向摩擦系数: 1.000, 自旋摩擦系数: 0.0000, 滚动摩擦系数: 0.0000
+2026-03-23 15:24:14,525 | INFO | grasp_system | 抓取完成 - 接触点数量: 2, 总正压力: 2.1552, 侧向摩擦力: 1.7320, 旋转摩擦力: 0.0000, 平均摩擦系数: 0.334
+2026-03-23 15:24:17,333 | INFO | grasp_system | Lift target [0.8, 0.0, 0.295]
+2026-03-23 15:24:17,335 | INFO | grasp_system | move_lift target_pos=[0.8, 0.0, 0.295] steps=240
+2026-03-23 15:24:21,157 | INFO | grasp_system | Workflow finished
+2026-03-23 15:24:21,196 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:30:53,613 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:30:53,613 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:30:54,649 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.8137, 0.1135, 0.0499] corrected=[0.7987, 0.0985, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0137, 0.0135, 0.025] corrected_delta=[-0.0013, -0.0015, 0.0]
+2026-03-23 15:30:54,765 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.8137, 0.1155, 0.0499] corrected=[0.7987, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0137, 0.0155, 0.025] corrected_delta=[-0.0013, 0.0005, 0.0]
+2026-03-23 15:30:54,886 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:30:55,001 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:30:55,119 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:30:55,130 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0] raw_err=0.0334 corrected_err=0.0009 repeats=5
+2026-03-23 15:30:55,146 | INFO | grasp_system | grasp plan target_pos=[0.8007, 0.1005, 0.0449] yaw=0.785 pos_error=0.0097
+2026-03-23 15:30:55,146 | INFO | grasp_system | TARGET_COMPARE initial_plan vision=[0.8007, 0.1005, 0.0249] | api_true=[0.8, 0.1, 0.0249] | vision_delta=[0.0007, 0.0005, -0.0] | planned=[0.8007, 0.1005, 0.0449] | plan_delta=[0.0007, 0.0005, 0.02]
+2026-03-23 15:30:55,146 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:30:55,147 | INFO | grasp_system | move_pre_grasp target_pos=[0.8007, 0.1005, 0.2049] steps=240
+2026-03-23 15:30:58,894 | INFO | grasp_system | EE_STATE stage=after_pre_grasp | ee_pos=[0.6769, 0.085, 0.4218] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.1231, -0.015, 0.3969] | target=[0.8007, 0.1005, 0.2049] | ee_to_target=[-0.1238, -0.0155, 0.2169]
+2026-03-23 15:30:58,990 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7789, 0.0767, 0.0498] corrected=[0.7639, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.0211, -0.0233, 0.0248] corrected_delta=[-0.0361, -0.0383, -0.0002]
+2026-03-23 15:30:59,095 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:30:59,197 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7789, 0.0767, 0.048] corrected=[0.7639, 0.0617, 0.023] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.0211, -0.0233, 0.023] corrected_delta=[-0.0361, -0.0383, -0.002]
+2026-03-23 15:30:59,313 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:30:59,418 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:30:59,423 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002] raw_err=0.0390 corrected_err=0.0513 repeats=5
+2026-03-23 15:30:59,426 | INFO | grasp_system | REFINE_TARGET delta=0.0521 previous=[0.8007, 0.1005, 0.0249] refined=[0.766, 0.0617, 0.0248] fused=[0.7834, 0.0811, 0.0249]
+2026-03-23 15:30:59,442 | INFO | grasp_system | refined_grasp plan target_pos=[0.7834, 0.0811, 0.0449] yaw=0.785 pos_error=0.0031
+2026-03-23 15:30:59,442 | INFO | grasp_system | TARGET_COMPARE refined_plan vision=[0.7834, 0.0811, 0.0249] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0166, -0.0189, -0.0001] | planned=[0.7834, 0.0811, 0.0449] | plan_delta=[-0.0166, -0.0189, 0.0199]
+2026-03-23 15:30:59,442 | INFO | grasp_system | Descend to grasp pose [0.7834, 0.0811, 0.0449]
+2026-03-23 15:30:59,443 | INFO | grasp_system | move_grasp target_pos=[0.7834, 0.0811, 0.0449] steps=240
+2026-03-23 15:31:03,202 | INFO | grasp_system | TARGET_COMPARE after_descend vision=[0.7834, 0.0811, 0.0249] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0166, -0.0189, -0.0001] | planned=[0.7834, 0.0811, 0.0449] | plan_delta=[-0.0166, -0.0189, 0.0199]
+2026-03-23 15:31:03,202 | INFO | grasp_system | EE_STATE stage=after_descend | ee_pos=[0.7864, 0.0814, 0.0445] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0136, -0.0186, 0.0195] | target=[0.7834, 0.0811, 0.0449] | ee_to_target=[0.0031, 0.0003, -0.0004]
+2026-03-23 15:31:03,202 | INFO | grasp_system | GRIP_CONTACT stage=before_close_in_workflow contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:31:03,202 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 15:31:03,202 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=8.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 15:31:03,202 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:31:03,202 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=8.00
+2026-03-23 15:31:03,832 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=1 active_fingers=1 normal_force=4.6280 lateral_friction=5.7925 spinning_friction=0.0000 avg_mu=0.335 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:31:05,243 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=1 active_fingers=1 normal_force=0.5175 lateral_friction=0.6004 spinning_friction=0.0000 avg_mu=0.335 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:31:05,243 | WARNING | grasp_system | OBJECT_DYNAMICS unavailable: float() argument must be a string or a number, not 'tuple'
+2026-03-23 15:31:05,243 | INFO | grasp_system | EE_STATE stage=after_close | ee_pos=[0.7864, 0.0814, 0.0445] | api_true=[0.8035, 0.0988, 0.0253] | ee_to_object=[-0.0171, -0.0174, 0.0192] | target=[0.7834, 0.0811, 0.0449] | ee_to_target=[0.0031, 0.0003, -0.0003]
+2026-03-23 15:31:05,243 | INFO | grasp_system | GRIP_RESULT hold_force=8.00 final_pos=0.0220 final_contact_count=1
+2026-03-23 15:31:08,060 | INFO | grasp_system | Lift target [0.7834, 0.0811, 0.2949]
+2026-03-23 15:31:08,062 | INFO | grasp_system | move_lift target_pos=[0.7834, 0.0811, 0.2949] steps=240
+2026-03-23 15:31:11,827 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7767, 0.0804, 0.2931] | api_true=[0.8036, 0.0984, 0.025] | ee_to_object=[-0.0269, -0.018, 0.2682] | target=[0.7834, 0.0811, 0.2949] | ee_to_target=[-0.0067, -0.0007, -0.0017]
+2026-03-23 15:31:11,827 | INFO | grasp_system | Workflow finished
+2026-03-23 15:31:11,865 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:37:18,731 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:37:18,731 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:37:19,747 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.8137, 0.1135, 0.0499] corrected=[0.7987, 0.0985, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0137, 0.0135, 0.025] corrected_delta=[-0.0013, -0.0015, 0.0]
+2026-03-23 15:37:19,834 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.8137, 0.1155, 0.0499] corrected=[0.7987, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0137, 0.0155, 0.025] corrected_delta=[-0.0013, 0.0005, 0.0]
+2026-03-23 15:37:19,924 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:37:20,008 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:37:20,105 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0]
+2026-03-23 15:37:20,121 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8157, 0.1155, 0.0499] corrected=[0.8007, 0.1005, 0.0249] api_true=[0.8, 0.1, 0.0249] raw_delta=[0.0157, 0.0155, 0.025] corrected_delta=[0.0007, 0.0005, 0.0] raw_err=0.0334 corrected_err=0.0009 repeats=5
+2026-03-23 15:37:20,137 | INFO | grasp_system | grasp plan target_pos=[0.8007, 0.1005, 0.0449] yaw=0.785 pos_error=0.0097
+2026-03-23 15:37:20,137 | INFO | grasp_system | TARGET_COMPARE initial_plan vision=[0.8007, 0.1005, 0.0249] | api_true=[0.8, 0.1, 0.0249] | vision_delta=[0.0007, 0.0005, -0.0] | planned=[0.8007, 0.1005, 0.0449] | plan_delta=[0.0007, 0.0005, 0.02]
+2026-03-23 15:37:20,137 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:37:20,139 | INFO | grasp_system | move_pre_grasp target_pos=[0.8007, 0.1005, 0.2049] steps=240
+2026-03-23 15:37:23,896 | INFO | grasp_system | EE_STATE stage=after_pre_grasp | ee_pos=[0.6769, 0.085, 0.4218] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.1231, -0.015, 0.3969] | target=[0.8007, 0.1005, 0.2049] | ee_to_target=[-0.1238, -0.0155, 0.2169]
+2026-03-23 15:37:23,969 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7789, 0.0767, 0.0498] corrected=[0.7639, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.0211, -0.0233, 0.0248] corrected_delta=[-0.0361, -0.0383, -0.0002]
+2026-03-23 15:37:24,066 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:37:24,165 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7789, 0.0767, 0.048] corrected=[0.7639, 0.0617, 0.023] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.0211, -0.0233, 0.023] corrected_delta=[-0.0361, -0.0383, -0.002]
+2026-03-23 15:37:24,253 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:37:24,347 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002]
+2026-03-23 15:37:24,363 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.781, 0.0767, 0.0498] corrected=[0.766, 0.0617, 0.0248] api_true=[0.8, 0.1, 0.025] raw_delta=[-0.019, -0.0233, 0.0248] corrected_delta=[-0.034, -0.0383, -0.0002] raw_err=0.0390 corrected_err=0.0513 repeats=5
+2026-03-23 15:37:24,365 | WARNING | grasp_system | REFINE_REJECT delta=0.0521 accept_threshold=0.0080 previous=[0.8007, 0.1005, 0.0249] refined=[0.766, 0.0617, 0.0248]
+2026-03-23 15:37:24,381 | INFO | grasp_system | refined_grasp plan target_pos=[0.8007, 0.1005, 0.0449] yaw=0.785 pos_error=0.0068
+2026-03-23 15:37:24,381 | INFO | grasp_system | TARGET_COMPARE refined_plan vision=[0.8007, 0.1005, 0.0249] | api_true=[0.8, 0.1, 0.025] | vision_delta=[0.0007, 0.0005, -0.0001] | planned=[0.8007, 0.1005, 0.0449] | plan_delta=[0.0007, 0.0005, 0.0199]
+2026-03-23 15:37:24,381 | INFO | grasp_system | Descend to grasp pose [0.8007, 0.1005, 0.0449]
+2026-03-23 15:37:24,381 | INFO | grasp_system | move_grasp target_pos=[0.8007, 0.1005, 0.0449] steps=240
+2026-03-23 15:37:28,126 | INFO | grasp_system | TARGET_COMPARE after_descend vision=[0.8007, 0.1005, 0.0249] | api_true=[0.8017, 0.1017, 0.025] | vision_delta=[-0.001, -0.0012, -0.0001] | planned=[0.8007, 0.1005, 0.0449] | plan_delta=[-0.001, -0.0012, 0.0199]
+2026-03-23 15:37:28,126 | INFO | grasp_system | EE_STATE stage=after_descend | ee_pos=[0.7939, 0.0997, 0.0455] | api_true=[0.8017, 0.1017, 0.025] | ee_to_object=[-0.0078, -0.0021, 0.0206] | target=[0.8007, 0.1005, 0.0449] | ee_to_target=[-0.0068, -0.0009, 0.0006]
+2026-03-23 15:37:28,126 | INFO | grasp_system | GRIP_CONTACT stage=before_close_in_workflow contact_count=1 active_fingers=1 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:37:28,126 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 15:37:28,126 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0237 force=8.00 estimate_size=[0.0534, 0.0534, 0.05] finger_target=0.0237
+2026-03-23 15:37:28,126 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=1 active_fingers=1 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:37:28,126 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0237 force=8.00
+2026-03-23 15:37:28,752 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=4 active_fingers=2 normal_force=14.3735 lateral_friction=6.8041 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0237 grip_force=8.00
+2026-03-23 15:37:30,157 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=4 active_fingers=2 normal_force=14.3746 lateral_friction=6.8649 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0237 grip_force=8.00
+2026-03-23 15:37:30,157 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 15:37:30,157 | INFO | grasp_system | EE_STATE stage=after_close | ee_pos=[0.794, 0.0997, 0.0456] | api_true=[0.7989, 0.1047, 0.0252] | ee_to_object=[-0.005, -0.005, 0.0204] | target=[0.8007, 0.1005, 0.0449] | ee_to_target=[-0.0068, -0.0008, 0.0006]
+2026-03-23 15:37:30,157 | INFO | grasp_system | GRIP_RESULT hold_force=8.00 final_pos=0.0237 final_contact_count=4
+2026-03-23 15:37:32,970 | INFO | grasp_system | Lift target [0.8007, 0.1005, 0.2949]
+2026-03-23 15:37:32,971 | INFO | grasp_system | move_lift target_pos=[0.8007, 0.1005, 0.2949] steps=240
+2026-03-23 15:37:36,738 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7814, 0.0981, 0.2901] | api_true=[0.788, 0.1022, 0.2697] | ee_to_object=[-0.0066, -0.0041, 0.0204] | target=[0.8007, 0.1005, 0.2949] | ee_to_target=[-0.0193, -0.0024, -0.0048]
+2026-03-23 15:37:36,738 | INFO | grasp_system | Workflow finished
+2026-03-23 15:37:36,765 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:37:49,725 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:37:49,725 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:37:50,725 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:37:50,811 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.8137, 0.0153, 0.0499] corrected=[0.7987, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0137, 0.0153, 0.025] corrected_delta=[-0.0013, 0.0003, 0.0]
+2026-03-23 15:37:50,901 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:37:50,994 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:37:51,088 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0]
+2026-03-23 15:37:51,107 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8157, 0.0153, 0.0499] corrected=[0.8007, 0.0003, 0.0249] api_true=[0.8, -0.0, 0.0249] raw_delta=[0.0157, 0.0153, 0.025] corrected_delta=[0.0007, 0.0003, 0.0] raw_err=0.0333 corrected_err=0.0008 repeats=5
+2026-03-23 15:37:51,129 | INFO | grasp_system | grasp plan target_pos=[0.8007, 0.0003, 0.0449] yaw=0.785 pos_error=0.0064
+2026-03-23 15:37:51,129 | INFO | grasp_system | TARGET_COMPARE initial_plan vision=[0.8007, 0.0003, 0.0249] | api_true=[0.8, -0.0, 0.0249] | vision_delta=[0.0007, 0.0003, -0.0] | planned=[0.8007, 0.0003, 0.0449] | plan_delta=[0.0007, 0.0003, 0.02]
+2026-03-23 15:37:51,129 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:37:51,131 | INFO | grasp_system | move_pre_grasp target_pos=[0.8007, 0.0003, 0.2049] steps=240
+2026-03-23 15:37:54,872 | INFO | grasp_system | EE_STATE stage=after_pre_grasp | ee_pos=[0.6824, 0.0003, 0.4416] | api_true=[0.8, 0.0, 0.025] | ee_to_object=[-0.1176, 0.0003, 0.4166] | target=[0.8007, 0.0003, 0.2049] | ee_to_target=[-0.1183, -0.0001, 0.2366]
+2026-03-23 15:37:54,961 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:37:55,051 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:37:55,134 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:37:55,223 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:37:55,304 | WARNING | grasp_system | VISION_FRAME miss object_id=2
+2026-03-23 15:37:55,304 | WARNING | grasp_system | VISION_SUMMARY fallback_to_true api_true=[0.8, 0.0, 0.025]
+2026-03-23 15:37:55,310 | INFO | grasp_system | REFINE_KEEP delta=0.0008 previous=[0.8007, 0.0003, 0.0249] refined=[0.8, 0.0, 0.025]
+2026-03-23 15:37:55,324 | INFO | grasp_system | refined_grasp plan target_pos=[0.8, 0.0, 0.045] yaw=0.785 pos_error=0.0030
+2026-03-23 15:37:55,325 | INFO | grasp_system | TARGET_COMPARE refined_plan vision=[0.8, 0.0, 0.025] | api_true=[0.8, 0.0, 0.025] | vision_delta=[0.0, 0.0, 0.0] | planned=[0.8, 0.0, 0.045] | plan_delta=[0.0, 0.0, 0.02]
+2026-03-23 15:37:55,325 | INFO | grasp_system | Descend to grasp pose [0.8, 0.0, 0.045]
+2026-03-23 15:37:55,325 | INFO | grasp_system | move_grasp target_pos=[0.8, 0.0, 0.045] steps=240
+2026-03-23 15:37:59,072 | INFO | grasp_system | TARGET_COMPARE after_descend vision=[0.8, 0.0, 0.025] | api_true=[0.8028, 0.0038, 0.025] | vision_delta=[-0.0028, -0.0037, -0.0] | planned=[0.8, 0.0, 0.045] | plan_delta=[-0.0028, -0.0037, 0.02]
+2026-03-23 15:37:59,072 | INFO | grasp_system | EE_STATE stage=after_descend | ee_pos=[0.797, 0.0, 0.0452] | api_true=[0.8028, 0.0038, 0.025] | ee_to_object=[-0.0058, -0.0037, 0.0202] | target=[0.8, 0.0, 0.045] | ee_to_target=[-0.003, -0.0, 0.0002]
+2026-03-23 15:37:59,072 | INFO | grasp_system | GRIP_CONTACT stage=before_close_in_workflow contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:37:59,072 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 15:37:59,072 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0256 force=8.00 estimate_size=[0.0571, 0.0571, 0.05] finger_target=0.0256
+2026-03-23 15:37:59,072 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:37:59,072 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0256 force=8.00
+2026-03-23 15:37:59,692 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=14.0064 lateral_friction=10.3200 spinning_friction=0.0000 avg_mu=0.334 grip_target=0.0256 grip_force=8.00
+2026-03-23 15:38:01,097 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=14.0262 lateral_friction=11.7980 spinning_friction=0.0000 avg_mu=0.334 grip_target=0.0256 grip_force=8.00
+2026-03-23 15:38:01,097 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 15:38:01,097 | INFO | grasp_system | EE_STATE stage=after_close | ee_pos=[0.797, 0.0, 0.0452] | api_true=[0.8026, 0.0039, 0.025] | ee_to_object=[-0.0057, -0.0038, 0.0202] | target=[0.8, 0.0, 0.045] | ee_to_target=[-0.003, 0.0, 0.0002]
+2026-03-23 15:38:01,097 | INFO | grasp_system | GRIP_RESULT hold_force=8.00 final_pos=0.0256 final_contact_count=2
+2026-03-23 15:38:03,910 | INFO | grasp_system | Lift target [0.8, 0.0, 0.295]
+2026-03-23 15:38:03,911 | INFO | grasp_system | move_lift target_pos=[0.8, 0.0, 0.295] steps=240
+2026-03-23 15:38:07,670 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7859, -0.0, 0.2914] | api_true=[0.7922, 0.0035, 0.2712] | ee_to_object=[-0.0063, -0.0035, 0.0202] | target=[0.8, 0.0, 0.295] | ee_to_target=[-0.0141, -0.0, -0.0035]
+2026-03-23 15:38:07,670 | INFO | grasp_system | Workflow finished
+2026-03-23 15:38:07,698 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:38:12,386 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:38:12,386 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:38:13,401 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:38:13,493 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7135, 0.0153, 0.0499] corrected=[0.6985, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0135, 0.0153, 0.025] corrected_delta=[-0.0015, 0.0003, 0.0]
+2026-03-23 15:38:13,589 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:38:13,687 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:38:13,776 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:38:13,793 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0] raw_err=0.0332 corrected_err=0.0006 repeats=5
+2026-03-23 15:38:13,809 | INFO | grasp_system | grasp plan target_pos=[0.7005, 0.0003, 0.0449] yaw=-1.571 pos_error=0.0000
+2026-03-23 15:38:13,809 | INFO | grasp_system | TARGET_COMPARE initial_plan vision=[0.7005, 0.0003, 0.0249] | api_true=[0.7, -0.0, 0.0249] | vision_delta=[0.0005, 0.0003, -0.0] | planned=[0.7005, 0.0003, 0.0449] | plan_delta=[0.0005, 0.0003, 0.02]
+2026-03-23 15:38:13,809 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:38:13,810 | INFO | grasp_system | move_pre_grasp target_pos=[0.7005, 0.0003, 0.2049] steps=240
+2026-03-23 15:38:17,552 | INFO | grasp_system | EE_STATE stage=after_pre_grasp | ee_pos=[0.6698, 0.0976, 0.4998] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.0302, 0.0976, 0.4748] | target=[0.7005, 0.0003, 0.2049] | ee_to_target=[-0.0307, 0.0972, 0.2948]
+2026-03-23 15:38:17,646 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.693, 0.0174, 0.05] corrected=[0.678, 0.0024, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.007, 0.0174, 0.025] corrected_delta=[-0.022, 0.0024, 0.0]
+2026-03-23 15:38:17,745 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.6951, 0.0174, 0.05] corrected=[0.6801, 0.0024, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0049, 0.0174, 0.025] corrected_delta=[-0.0199, 0.0024, 0.0]
+2026-03-23 15:38:17,845 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.6951, 0.0174, 0.05] corrected=[0.6801, 0.0024, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0049, 0.0174, 0.025] corrected_delta=[-0.0199, 0.0024, 0.0]
+2026-03-23 15:38:17,952 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.6971, 0.0174, 0.05] corrected=[0.6821, 0.0024, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0029, 0.0174, 0.025] corrected_delta=[-0.0179, 0.0024, 0.0]
+2026-03-23 15:38:18,046 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.6992, 0.0174, 0.05] corrected=[0.6842, 0.0024, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0008, 0.0174, 0.025] corrected_delta=[-0.0158, 0.0024, 0.0]
+2026-03-23 15:38:18,052 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6951, 0.0174, 0.05] corrected=[0.6801, 0.0024, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[-0.0049, 0.0174, 0.025] corrected_delta=[-0.0199, 0.0024, 0.0] raw_err=0.0308 corrected_err=0.0201 repeats=5
+2026-03-23 15:38:18,054 | WARNING | grasp_system | REFINE_REJECT delta=0.0206 accept_threshold=0.0080 previous=[0.7005, 0.0003, 0.0249] refined=[0.6801, 0.0024, 0.025]
+2026-03-23 15:38:18,071 | INFO | grasp_system | refined_grasp plan target_pos=[0.7005, 0.0003, 0.0449] yaw=2.356 pos_error=0.0005
+2026-03-23 15:38:18,071 | INFO | grasp_system | TARGET_COMPARE refined_plan vision=[0.7005, 0.0003, 0.0249] | api_true=[0.7, 0.0, 0.025] | vision_delta=[0.0005, 0.0003, -0.0001] | planned=[0.7005, 0.0003, 0.0449] | plan_delta=[0.0005, 0.0003, 0.0199]
+2026-03-23 15:38:18,071 | INFO | grasp_system | Descend to grasp pose [0.7005, 0.0003, 0.0449]
+2026-03-23 15:38:18,071 | INFO | grasp_system | move_grasp target_pos=[0.7005, 0.0003, 0.0449] steps=240
+2026-03-23 15:38:21,811 | INFO | grasp_system | TARGET_COMPARE after_descend vision=[0.7005, 0.0003, 0.0249] | api_true=[0.7, 0.0, 0.025] | vision_delta=[0.0005, 0.0003, -0.0001] | planned=[0.7005, 0.0003, 0.0449] | plan_delta=[0.0005, 0.0003, 0.0199]
+2026-03-23 15:38:21,811 | INFO | grasp_system | EE_STATE stage=after_descend | ee_pos=[0.7083, 0.134, 0.0006] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[0.0083, 0.134, -0.0244] | target=[0.7005, 0.0003, 0.0449] | ee_to_target=[0.0078, 0.1337, -0.0444]
+2026-03-23 15:38:21,811 | INFO | grasp_system | GRIP_CONTACT stage=before_close_in_workflow contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:38:21,811 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 15:38:21,811 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=8.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 15:38:21,811 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:38:21,812 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=8.00
+2026-03-23 15:38:22,434 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:38:23,839 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:38:23,839 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 15:38:23,839 | INFO | grasp_system | EE_STATE stage=after_close | ee_pos=[0.7087, 0.1345, 0.0009] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[0.0087, 0.1345, -0.0241] | target=[0.7005, 0.0003, 0.0449] | ee_to_target=[0.0081, 0.1342, -0.044]
+2026-03-23 15:38:23,839 | INFO | grasp_system | GRIP_RESULT hold_force=8.00 final_pos=0.0220 final_contact_count=0
+2026-03-23 15:38:26,650 | INFO | grasp_system | Lift target [0.7005, 0.0003, 0.2949]
+2026-03-23 15:38:26,651 | INFO | grasp_system | move_lift target_pos=[0.7005, 0.0003, 0.2949] steps=240
+2026-03-23 15:38:30,404 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.6832, 0.0822, 0.1245] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.0168, 0.0822, 0.0995] | target=[0.7005, 0.0003, 0.2949] | ee_to_target=[-0.0173, 0.0819, -0.1705]
+2026-03-23 15:38:30,404 | INFO | grasp_system | Workflow finished
+2026-03-23 15:38:30,437 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:48:27,698 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:48:27,698 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:48:28,709 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:48:28,802 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7135, 0.0153, 0.0499] corrected=[0.6985, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0135, 0.0153, 0.025] corrected_delta=[-0.0015, 0.0003, 0.0]
+2026-03-23 15:48:28,898 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:48:28,991 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:48:29,084 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:48:29,103 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0] raw_err=0.0332 corrected_err=0.0006 repeats=5
+2026-03-23 15:48:29,179 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:48:29,279 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:48:29,364 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7135, 0.0133, 0.0499] corrected=[0.6985, -0.0017, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0135, 0.0133, 0.025] corrected_delta=[-0.0015, -0.0017, 0.0]
+2026-03-23 15:48:29,438 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7135, 0.0133, 0.05] corrected=[0.6985, -0.0017, 0.025] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0135, 0.0133, 0.025] corrected_delta=[-0.0015, -0.0017, 0.0]
+2026-03-23 15:48:29,518 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7155, 0.0153, 0.05] corrected=[0.7005, 0.0003, 0.025] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0]
+2026-03-23 15:48:29,524 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7155, 0.0153, 0.0499] corrected=[0.7005, 0.0003, 0.0249] api_true=[0.7, -0.0, 0.0249] raw_delta=[0.0155, 0.0153, 0.025] corrected_delta=[0.0005, 0.0003, 0.0] raw_err=0.0332 corrected_err=0.0006 repeats=5
+2026-03-23 15:48:29,526 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7005, 0.0003, 0.0249] refined=[0.7005, 0.0003, 0.0249]
+2026-03-23 15:48:29,538 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7005, 0.0003, 0.0249] | api_true=[0.7, -0.0, 0.025] | vision_delta=[0.0005, 0.0003, -0.0] | planned=[0.7005, 0.0003, 0.0449] | plan_delta=[0.0005, 0.0003, 0.02]
+2026-03-23 15:48:29,538 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=-1.571 score=22.6620 grasp_pos=[0.7005, 0.0003, 0.0449] pre_grasp=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:29,538 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:48:29,539 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7005, 0.0003, 0.2049] steps=240
+2026-03-23 15:48:33,282 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=False error=0.3119 current=[0.6698, 0.0976, 0.4998] target=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:33,282 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_1 | ee_pos=[0.6698, 0.0976, 0.4998] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.0302, 0.0976, 0.4748] | target=[0.7005, 0.0003, 0.2049] | ee_to_target=[-0.0307, 0.0972, 0.2948]
+2026-03-23 15:48:33,282 | WARNING | grasp_system | GRASP_ATTEMPT_PRE_FAIL index=1 yaw=-1.571
+2026-03-23 15:48:33,282 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_2 vision=[0.7005, 0.0003, 0.0249] | api_true=[0.7, 0.0, 0.025] | vision_delta=[0.0005, 0.0003, -0.0] | planned=[0.7005, 0.0003, 0.0449] | plan_delta=[0.0005, 0.0003, 0.02]
+2026-03-23 15:48:33,282 | INFO | grasp_system | GRASP_ATTEMPT index=2 yaw=3.142 score=22.6635 grasp_pos=[0.7005, 0.0003, 0.0449] pre_grasp=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:33,282 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:48:33,283 | INFO | grasp_system | move_pre_grasp_attempt_2 target_pos=[0.7005, 0.0003, 0.2049] steps=240
+2026-03-23 15:48:37,021 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_2 reached=False error=0.2274 current=[0.6588, 0.1158, 0.0136] target=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:37,021 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_2 | ee_pos=[0.6588, 0.1158, 0.0136] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.0412, 0.1158, -0.0114] | target=[0.7005, 0.0003, 0.2049] | ee_to_target=[-0.0418, 0.1155, -0.1914]
+2026-03-23 15:48:37,021 | WARNING | grasp_system | GRASP_ATTEMPT_PRE_FAIL index=2 yaw=3.142
+2026-03-23 15:48:37,021 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_3 vision=[0.7005, 0.0003, 0.0249] | api_true=[0.7, 0.0, 0.025] | vision_delta=[0.0005, 0.0003, -0.0] | planned=[0.7005, 0.0003, 0.0449] | plan_delta=[0.0005, 0.0003, 0.02]
+2026-03-23 15:48:37,021 | INFO | grasp_system | GRASP_ATTEMPT index=3 yaw=2.356 score=23.3167 grasp_pos=[0.7005, 0.0003, 0.0449] pre_grasp=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:37,021 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:48:37,022 | INFO | grasp_system | move_pre_grasp_attempt_3 target_pos=[0.7005, 0.0003, 0.2049] steps=240
+2026-03-23 15:48:40,764 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_3 reached=False error=0.2361 current=[0.6579, 0.1262, 0.0098] target=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:40,764 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_3 | ee_pos=[0.6579, 0.1262, 0.0098] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.0421, 0.1262, -0.0152] | target=[0.7005, 0.0003, 0.2049] | ee_to_target=[-0.0427, 0.1258, -0.1951]
+2026-03-23 15:48:40,764 | WARNING | grasp_system | GRASP_ATTEMPT_PRE_FAIL index=3 yaw=2.356
+2026-03-23 15:48:40,764 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_4 vision=[0.7005, 0.0003, 0.0249] | api_true=[0.7, 0.0, 0.025] | vision_delta=[0.0005, 0.0003, -0.0] | planned=[0.7005, 0.0003, 0.0449] | plan_delta=[0.0005, 0.0003, 0.02]
+2026-03-23 15:48:40,764 | INFO | grasp_system | GRASP_ATTEMPT index=4 yaw=-0.785 score=23.3167 grasp_pos=[0.7005, 0.0003, 0.0449] pre_grasp=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:40,764 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:48:40,764 | INFO | grasp_system | move_pre_grasp_attempt_4 target_pos=[0.7005, 0.0003, 0.2049] steps=240
+2026-03-23 15:48:44,506 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_4 reached=False error=0.2313 current=[0.66, 0.1191, 0.0107] target=[0.7005, 0.0003, 0.2049]
+2026-03-23 15:48:44,506 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_4 | ee_pos=[0.66, 0.1191, 0.0107] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.04, 0.1191, -0.0143] | target=[0.7005, 0.0003, 0.2049] | ee_to_target=[-0.0406, 0.1188, -0.1943]
+2026-03-23 15:48:44,506 | WARNING | grasp_system | GRASP_ATTEMPT_PRE_FAIL index=4 yaw=-0.785
+2026-03-23 15:48:44,506 | ERROR | grasp_system | GRASP_FAILED no candidate reached a stable two-finger contact
+2026-03-23 15:48:44,531 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:57:19,003 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:57:19,003 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:57:19,928 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 15:57:25,538 | INFO | grasp_system | EE_STATE stage=after_initial_home | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.493, -0.1, 0.4603]
+2026-03-23 15:57:25,616 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:25,704 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:25,796 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:25,872 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:25,953 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:25,972 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=5
+2026-03-23 15:57:26,048 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:26,140 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:26,232 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:26,315 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:26,408 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0]
+2026-03-23 15:57:26,426 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=5
+2026-03-23 15:57:26,427 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 15:57:26,438 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 15:57:26,438 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 15:57:26,438 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 15:57:32,058 | INFO | grasp_system | EE_STATE stage=after_home_attempt_1 | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.493, -0.1, 0.4603]
+2026-03-23 15:57:32,058 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3766 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 15:57:32,058 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:57:32,059 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=480
+2026-03-23 15:57:39,545 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 15:57:39,545 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_1 | ee_pos=[0.782, 0.1035, 0.204] | api_true=[0.8, 0.1001, 0.025] | ee_to_object=[-0.018, 0.0034, 0.179] | target=[0.7905, 0.1046, 0.205] | ee_to_target=[-0.0085, -0.0012, -0.001]
+2026-03-23 15:57:39,545 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=480
+2026-03-23 15:57:47,018 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0084 extra_steps=0 current=[0.7823, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 15:57:47,018 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7823, 0.1035, 0.0459] | api_true=[0.8, 0.1001, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0082, -0.0011, 0.0009]
+2026-03-23 15:57:47,018 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:57:47,018 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 15:57:47,018 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=8.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 15:57:47,018 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:57:47,018 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=8.00
+2026-03-23 15:57:47,645 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=15.9651 lateral_friction=5.8357 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:57:49,057 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=15.9590 lateral_friction=5.7070 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:57:49,057 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 15:57:49,057 | INFO | grasp_system | EE_STATE stage=after_close_attempt_1 | ee_pos=[0.7823, 0.1035, 0.0459] | api_true=[0.8005, 0.1022, 0.025] | ee_to_object=[-0.0182, 0.0013, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0082, -0.0011, 0.0009]
+2026-03-23 15:57:49,057 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=8.00 contact_count=2 active_fingers=2
+2026-03-23 15:57:49,057 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 15:57:51,860 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 15:57:51,861 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=480
+2026-03-23 15:57:59,339 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7777, 0.1029, 0.2918] | api_true=[0.9285, 0.1789, 0.025] | ee_to_object=[-0.1508, -0.0759, 0.2668] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0128, -0.0017, -0.0032]
+2026-03-23 15:57:59,339 | INFO | grasp_system | Workflow finished
+2026-03-23 15:57:59,375 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 15:58:07,311 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:58:07,311 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:58:08,240 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 15:58:13,854 | INFO | grasp_system | EE_STATE stage=after_initial_home | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.393, -0.0, 0.4603]
+2026-03-23 15:58:13,932 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,017 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,099 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,189 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,273 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,287 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0] raw_err=0.0323 corrected_err=0.0097 repeats=5
+2026-03-23 15:58:14,365 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,454 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,548 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,628 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,716 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0]
+2026-03-23 15:58:14,724 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7063, 0.0194, 0.05] corrected=[0.6913, 0.0044, 0.025] api_true=[0.7, 0.0, 0.025] raw_delta=[0.0063, 0.0194, 0.025] corrected_delta=[-0.0087, 0.0044, 0.0] raw_err=0.0323 corrected_err=0.0097 repeats=5
+2026-03-23 15:58:14,726 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.6913, 0.0044, 0.025] refined=[0.6913, 0.0044, 0.025]
+2026-03-23 15:58:14,744 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.6913, 0.0044, 0.025] | api_true=[0.7, 0.0, 0.025] | vision_delta=[-0.0087, 0.0044, 0.0] | planned=[0.6913, 0.0044, 0.045] | plan_delta=[-0.0087, 0.0044, 0.02]
+2026-03-23 15:58:14,745 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 15:58:14,746 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 15:58:20,335 | INFO | grasp_system | EE_STATE stage=after_home_attempt_1 | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.7, 0.0, 0.025] | ee_to_object=[-0.393, -0.0, 0.4603]
+2026-03-23 15:58:20,335 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.1003 grasp_pos=[0.6913, 0.0044, 0.045] pre_grasp=[0.6913, 0.0044, 0.205]
+2026-03-23 15:58:20,335 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:58:20,337 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.6913, 0.0044, 0.205] steps=480
+2026-03-23 15:58:27,795 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6913, 0.0044, 0.205] target=[0.6913, 0.0044, 0.205]
+2026-03-23 15:58:27,795 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_1 | ee_pos=[0.6913, 0.0044, 0.205] | api_true=[0.7, 0.0001, 0.025] | ee_to_object=[-0.0087, 0.0044, 0.18] | target=[0.6913, 0.0044, 0.205] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 15:58:27,795 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.6913, 0.0044, 0.045] steps=480
+2026-03-23 15:58:35,262 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6913, 0.0044, 0.045] target=[0.6913, 0.0044, 0.045]
+2026-03-23 15:58:35,262 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.6913, 0.0044, 0.045] | api_true=[0.7, 0.0001, 0.025] | ee_to_object=[-0.0087, 0.0044, 0.02] | target=[0.6913, 0.0044, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 15:58:35,262 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:58:35,262 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 15:58:35,262 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=8.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 15:58:35,262 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:58:35,262 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=8.00
+2026-03-23 15:58:35,883 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=15.9863 lateral_friction=4.7588 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:58:37,282 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=15.9849 lateral_friction=4.6782 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:58:37,282 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 15:58:37,282 | INFO | grasp_system | EE_STATE stage=after_close_attempt_1 | ee_pos=[0.6913, 0.0044, 0.045] | api_true=[0.6998, 0.0042, 0.025] | ee_to_object=[-0.0085, 0.0002, 0.02] | target=[0.6913, 0.0044, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 15:58:37,282 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=8.00 contact_count=3 active_fingers=2
+2026-03-23 15:58:37,282 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.6913, 0.0044, 0.045]
+2026-03-23 15:58:40,084 | INFO | grasp_system | Lift target [0.6913, 0.0044, 0.295]
+2026-03-23 15:58:40,085 | INFO | grasp_system | move_lift target_pos=[0.6913, 0.0044, 0.295] steps=480
+2026-03-23 15:58:54,263 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 15:58:54,263 | INFO | grasp_system | Start grasp workflow
+2026-03-23 15:58:55,186 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 15:59:00,774 | INFO | grasp_system | EE_STATE stage=after_initial_home | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.7, 0.1, 0.025] | ee_to_object=[-0.393, -0.1, 0.4603]
+2026-03-23 15:59:00,858 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:00,940 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,033 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,130 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,218 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,239 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0107 repeats=5
+2026-03-23 15:59:01,315 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,407 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,501 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,593 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,686 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0]
+2026-03-23 15:59:01,704 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0107 repeats=5
+2026-03-23 15:59:01,706 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.6903, 0.1046, 0.025] refined=[0.6903, 0.1046, 0.025]
+2026-03-23 15:59:01,718 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.6903, 0.1046, 0.025] | api_true=[0.7, 0.1, 0.025] | vision_delta=[-0.0097, 0.0046, 0.0] | planned=[0.6903, 0.1046, 0.045] | plan_delta=[-0.0097, 0.0046, 0.02]
+2026-03-23 15:59:01,718 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 15:59:01,718 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 15:59:07,312 | INFO | grasp_system | EE_STATE stage=after_home_attempt_1 | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.7, 0.1, 0.025] | ee_to_object=[-0.393, -0.1, 0.4603]
+2026-03-23 15:59:07,312 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.1033 grasp_pos=[0.6903, 0.1046, 0.045] pre_grasp=[0.6903, 0.1046, 0.205]
+2026-03-23 15:59:07,312 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 15:59:07,313 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.6903, 0.1046, 0.205] steps=480
+2026-03-23 15:59:14,787 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6903, 0.1046, 0.205] target=[0.6903, 0.1046, 0.205]
+2026-03-23 15:59:14,787 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_1 | ee_pos=[0.6903, 0.1046, 0.205] | api_true=[0.7, 0.1001, 0.025] | ee_to_object=[-0.0097, 0.0045, 0.18] | target=[0.6903, 0.1046, 0.205] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 15:59:14,787 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.6903, 0.1046, 0.045] steps=480
+2026-03-23 15:59:22,278 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6903, 0.1046, 0.045] target=[0.6903, 0.1046, 0.045]
+2026-03-23 15:59:22,278 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.6903, 0.1046, 0.045] | api_true=[0.7, 0.1001, 0.025] | ee_to_object=[-0.0097, 0.0045, 0.02] | target=[0.6903, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 15:59:22,278 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:59:22,278 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 15:59:22,278 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=8.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 15:59:22,278 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 15:59:22,278 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=8.00
+2026-03-23 15:59:22,907 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=15.9919 lateral_friction=4.7684 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:59:24,306 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=15.9906 lateral_friction=4.7649 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 15:59:24,306 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 15:59:24,306 | INFO | grasp_system | EE_STATE stage=after_close_attempt_1 | ee_pos=[0.6903, 0.1046, 0.045] | api_true=[0.6999, 0.1043, 0.025] | ee_to_object=[-0.0096, 0.0003, 0.02] | target=[0.6903, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 15:59:24,306 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=8.00 contact_count=3 active_fingers=2
+2026-03-23 15:59:24,306 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.6903, 0.1046, 0.045]
+2026-03-23 15:59:27,111 | INFO | grasp_system | Lift target [0.6903, 0.1046, 0.295]
+2026-03-23 15:59:27,112 | INFO | grasp_system | move_lift target_pos=[0.6903, 0.1046, 0.295] steps=480
+2026-03-23 15:59:34,585 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.6903, 0.1046, 0.295] | api_true=[0.8974, 0.1526, 0.025] | ee_to_object=[-0.2071, -0.048, 0.27] | target=[0.6903, 0.1046, 0.295] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 15:59:34,585 | INFO | grasp_system | Workflow finished
+2026-03-23 15:59:34,611 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 16:00:45,133 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 16:00:45,134 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:00:46,070 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 16:00:51,639 | INFO | grasp_system | EE_STATE stage=after_initial_home | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.6, 0.1, 0.025] | ee_to_object=[-0.293, -0.1, 0.4603]
+2026-03-23 16:00:51,713 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:51,805 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:51,892 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:51,976 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:52,063 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:52,071 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0109 repeats=5
+2026-03-23 16:00:52,143 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:52,221 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:52,300 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:52,382 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:52,467 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0]
+2026-03-23 16:00:52,478 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0109 repeats=5
+2026-03-23 16:00:52,480 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.5901, 0.1046, 0.025] refined=[0.5901, 0.1046, 0.025]
+2026-03-23 16:00:52,493 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.5901, 0.1046, 0.025] | api_true=[0.6, 0.1, 0.025] | vision_delta=[-0.0099, 0.0046, 0.0] | planned=[0.5901, 0.1046, 0.045] | plan_delta=[-0.0099, 0.0046, 0.02]
+2026-03-23 16:00:52,493 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:00:52,494 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 16:00:58,094 | INFO | grasp_system | EE_STATE stage=after_home_attempt_1 | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.6, 0.1, 0.025] | ee_to_object=[-0.293, -0.1, 0.4603]
+2026-03-23 16:00:58,094 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0908 grasp_pos=[0.5901, 0.1046, 0.045] pre_grasp=[0.5901, 0.1046, 0.205]
+2026-03-23 16:00:58,094 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:00:58,095 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.5901, 0.1046, 0.205] steps=480
+2026-03-23 16:01:05,572 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.205] target=[0.5901, 0.1046, 0.205]
+2026-03-23 16:01:05,572 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_1 | ee_pos=[0.5901, 0.1046, 0.205] | api_true=[0.6, 0.1001, 0.025] | ee_to_object=[-0.0099, 0.0045, 0.18] | target=[0.5901, 0.1046, 0.205] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:01:05,572 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.5901, 0.1046, 0.045] steps=480
+2026-03-23 16:01:13,034 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.045] target=[0.5901, 0.1046, 0.045]
+2026-03-23 16:01:13,034 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.5901, 0.1046, 0.045] | api_true=[0.6, 0.1001, 0.025] | ee_to_object=[-0.0099, 0.0045, 0.02] | target=[0.5901, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 16:01:13,034 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:01:13,034 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 16:01:13,034 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=8.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:01:13,034 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:01:13,034 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=8.00
+2026-03-23 16:01:13,652 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=15.9938 lateral_friction=3.3275 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 16:01:15,053 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=15.9927 lateral_friction=3.3490 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=8.00
+2026-03-23 16:01:15,053 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:01:15,053 | INFO | grasp_system | EE_STATE stage=after_close_attempt_1 | ee_pos=[0.5901, 0.1046, 0.045] | api_true=[0.5999, 0.1043, 0.025] | ee_to_object=[-0.0098, 0.0003, 0.02] | target=[0.5901, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 16:01:15,053 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=8.00 contact_count=3 active_fingers=2
+2026-03-23 16:01:15,053 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.5901, 0.1046, 0.045]
+2026-03-23 16:01:17,854 | INFO | grasp_system | Lift target [0.5901, 0.1046, 0.295]
+2026-03-23 16:01:17,855 | INFO | grasp_system | move_lift target_pos=[0.5901, 0.1046, 0.295] steps=480
+2026-03-23 16:01:25,321 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.5901, 0.1046, 0.295] | api_true=[0.6623, 0.1721, 0.025] | ee_to_object=[-0.0722, -0.0675, 0.27] | target=[0.5901, 0.1046, 0.295] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:01:25,321 | INFO | grasp_system | Workflow finished
+2026-03-23 16:01:25,335 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 16:01:36,042 | INFO | grasp_system | 仿真环境初始化完成，robot_id=1, object_id=2
+2026-03-23 16:01:36,042 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:01:36,968 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 16:01:42,572 | INFO | grasp_system | EE_STATE stage=after_initial_home | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.6, 0.2, 0.025] | ee_to_object=[-0.293, -0.2, 0.4603]
+2026-03-23 16:01:42,652 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:42,739 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:42,839 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:42,925 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:43,018 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:43,024 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0] raw_err=0.0323 corrected_err=0.0110 repeats=5
+2026-03-23 16:01:43,107 | INFO | grasp_system | VISION_FRAME frame=1 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:43,205 | INFO | grasp_system | VISION_FRAME frame=2 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:43,290 | INFO | grasp_system | VISION_FRAME frame=3 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:43,390 | INFO | grasp_system | VISION_FRAME frame=4 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:43,471 | INFO | grasp_system | VISION_FRAME frame=5 camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0]
+2026-03-23 16:01:43,477 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.2198, 0.05] corrected=[0.5901, 0.2048, 0.025] api_true=[0.6, 0.2, 0.025] raw_delta=[0.0051, 0.0198, 0.025] corrected_delta=[-0.0099, 0.0048, 0.0] raw_err=0.0323 corrected_err=0.0110 repeats=5
+2026-03-23 16:01:43,479 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.5901, 0.2048, 0.025] refined=[0.5901, 0.2048, 0.025]
+2026-03-23 16:01:43,486 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.5901, 0.2048, 0.025] | api_true=[0.6, 0.2, 0.025] | vision_delta=[-0.0099, 0.0048, 0.0] | planned=[0.5901, 0.2048, 0.045] | plan_delta=[-0.0099, 0.0048, 0.02]
+2026-03-23 16:01:43,487 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:01:43,487 | INFO | grasp_system | move_home joints=[0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785] steps=360
+2026-03-23 16:01:49,087 | INFO | grasp_system | EE_STATE stage=after_home_attempt_1 | ee_pos=[0.307, -0.0, 0.4853] | api_true=[0.6, 0.2, 0.025] | ee_to_object=[-0.293, -0.2, 0.4603]
+2026-03-23 16:01:49,087 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.785 score=0.0949 grasp_pos=[0.5901, 0.2048, 0.045] pre_grasp=[0.5901, 0.2048, 0.205]
+2026-03-23 16:01:49,087 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:01:49,088 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.5901, 0.2048, 0.205] steps=480
+2026-03-23 16:01:56,583 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.2048, 0.205] target=[0.5901, 0.2048, 0.205]
+2026-03-23 16:01:56,583 | INFO | grasp_system | EE_STATE stage=after_pre_grasp_attempt_1 | ee_pos=[0.5901, 0.2048, 0.205] | api_true=[0.6, 0.2001, 0.025] | ee_to_object=[-0.0099, 0.0047, 0.18] | target=[0.5901, 0.2048, 0.205] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:01:56,583 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.5901, 0.2048, 0.045] steps=480
+2026-03-23 16:02:04,044 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.2048, 0.045] target=[0.5901, 0.2048, 0.045]
+2026-03-23 16:02:04,044 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.5901, 0.2048, 0.045] | api_true=[0.5951, 0.2037, 0.0253] | ee_to_object=[-0.005, 0.0011, 0.0197] | target=[0.5901, 0.2048, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 16:02:04,044 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=1 active_fingers=1 normal_force=0.8665 lateral_friction=0.0878 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:02:04,044 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=8.000
+2026-03-23 16:02:04,044 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0244 force=8.00 estimate_size=[0.0554, 0.0548, 0.0507] finger_target=0.0244
+2026-03-23 16:02:04,044 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=1 active_fingers=1 normal_force=0.8665 lateral_friction=0.0878 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:02:04,044 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0244 force=8.00
+2026-03-23 16:02:04,666 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=15.9803 lateral_friction=0.6507 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0244 grip_force=8.00
+2026-03-23 16:02:06,065 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=15.9825 lateral_friction=0.6542 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0244 grip_force=8.00
+2026-03-23 16:02:06,065 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:02:06,065 | INFO | grasp_system | EE_STATE stage=after_close_attempt_1 | ee_pos=[0.5901, 0.2048, 0.045] | api_true=[0.5914, 0.2068, 0.0253] | ee_to_object=[-0.0013, -0.002, 0.0197] | target=[0.5901, 0.2048, 0.045] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:02:06,065 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=8.00 contact_count=2 active_fingers=2
+2026-03-23 16:02:06,065 | INFO | grasp_system | GRASP_SUCCESS yaw=0.785 target=[0.5901, 0.2048, 0.045]
+2026-03-23 16:02:08,867 | INFO | grasp_system | Lift target [0.5901, 0.2048, 0.295]
+2026-03-23 16:02:08,868 | INFO | grasp_system | move_lift target_pos=[0.5901, 0.2048, 0.295] steps=480
+2026-03-23 16:02:16,340 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.5901, 0.2048, 0.295] | api_true=[0.5907, 0.2052, 0.2725] | ee_to_object=[-0.0006, -0.0004, 0.0224] | target=[0.5901, 0.2048, 0.295] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:02:16,340 | INFO | grasp_system | Workflow finished
+2026-03-23 16:02:16,363 | INFO | grasp_system | 仿真连接已断开
+2026-03-23 16:16:38,841 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:16:38,841 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:16:38,843 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:39,093 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:16:39,334 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:16:39,337 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:16:39,347 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:16:39,347 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:16:39,347 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:39,360 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:16:39,360 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:16:39,361 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:16:39,381 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:16:39,381 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:16:39,410 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0083 extra_steps=0 current=[0.7824, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:16:39,410 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7824, 0.1035, 0.0459] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0081, -0.0011, 0.0009]
+2026-03-23 16:16:39,410 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:39,410 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:16:39,410 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:16:39,411 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:39,411 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:16:39,415 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=23.9341 lateral_friction=7.2652 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:39,424 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9322 lateral_friction=7.2961 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:39,425 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:16:39,426 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7905, 0.1046, 0.105] steps=360
+2026-03-23 16:16:39,461 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0015 extra_steps=0 current=[0.789, 0.1044, 0.1049] target=[0.7905, 0.1046, 0.105]
+2026-03-23 16:16:39,461 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0588 obj_xy_error=0.0184 ee_pos=[0.789, 0.1044, 0.1049] obj_pos=[0.8069, 0.0999, 0.0839] expected_ee=[0.7905, 0.1046, 0.105]
+2026-03-23 16:16:39,461 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.789, 0.1044, 0.1049] | api_true=[0.8069, 0.0999, 0.0839] | ee_to_object=[-0.0178, 0.0045, 0.0211] | target=[0.7905, 0.1046, 0.105] | ee_to_target=[-0.0015, -0.0002, -0.0001]
+2026-03-23 16:16:39,461 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-03-23 16:16:39,461 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:16:39,471 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 16:16:39,473 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=360
+2026-03-23 16:16:39,516 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0129 extra_steps=0 current=[0.7781, 0.103, 0.2919] target=[0.7905, 0.1046, 0.295]
+2026-03-23 16:16:39,516 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7781, 0.103, 0.2919] | api_true=[0.7959, 0.0983, 0.2707] | ee_to_object=[-0.0178, 0.0046, 0.0211] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0124, -0.0016, -0.0031]
+2026-03-23 16:16:39,516 | INFO | grasp_system | Workflow finished
+2026-03-23 16:16:39,548 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:16:42,611 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:16:42,611 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:16:42,614 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:42,870 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:16:43,116 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:16:43,118 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:16:43,129 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:16:43,129 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:16:43,130 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:43,141 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:16:43,141 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:16:43,143 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:16:43,164 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:16:43,164 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:16:43,194 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0083 extra_steps=0 current=[0.7824, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:16:43,194 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7824, 0.1035, 0.0459] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0081, -0.0011, 0.0009]
+2026-03-23 16:16:43,194 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:43,195 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:16:43,195 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:16:43,195 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:43,195 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:16:43,199 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=23.9341 lateral_friction=7.2652 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:43,209 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9322 lateral_friction=7.2961 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:43,209 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:16:43,211 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7905, 0.1046, 0.105] steps=360
+2026-03-23 16:16:43,241 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0015 extra_steps=0 current=[0.789, 0.1044, 0.1049] target=[0.7905, 0.1046, 0.105]
+2026-03-23 16:16:43,241 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0588 obj_xy_error=0.0184 ee_pos=[0.789, 0.1044, 0.1049] obj_pos=[0.8069, 0.0999, 0.0839] expected_ee=[0.7905, 0.1046, 0.105]
+2026-03-23 16:16:43,241 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.789, 0.1044, 0.1049] | api_true=[0.8069, 0.0999, 0.0839] | ee_to_object=[-0.0178, 0.0045, 0.0211] | target=[0.7905, 0.1046, 0.105] | ee_to_target=[-0.0015, -0.0002, -0.0001]
+2026-03-23 16:16:43,241 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-03-23 16:16:43,241 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:16:43,251 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 16:16:43,253 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=360
+2026-03-23 16:16:43,291 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0129 extra_steps=0 current=[0.7781, 0.103, 0.2919] target=[0.7905, 0.1046, 0.295]
+2026-03-23 16:16:43,292 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7781, 0.103, 0.2919] | api_true=[0.7959, 0.0983, 0.2707] | ee_to_object=[-0.0178, 0.0046, 0.0211] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0124, -0.0016, -0.0031]
+2026-03-23 16:16:43,292 | INFO | grasp_system | Workflow finished
+2026-03-23 16:16:43,323 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:16:49,461 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:16:49,461 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:16:49,463 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:49,746 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0107 repeats=3
+2026-03-23 16:16:49,987 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7053, 0.1196, 0.05] corrected=[0.6903, 0.1046, 0.025] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0053, 0.0196, 0.025] corrected_delta=[-0.0097, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0107 repeats=3
+2026-03-23 16:16:49,991 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.6903, 0.1046, 0.025] refined=[0.6903, 0.1046, 0.025]
+2026-03-23 16:16:50,003 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.6903, 0.1046, 0.025] | api_true=[0.7, 0.1, 0.025] | vision_delta=[-0.0097, 0.0046, 0.0] | planned=[0.6903, 0.1046, 0.045] | plan_delta=[-0.0097, 0.0046, 0.02]
+2026-03-23 16:16:50,003 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:16:50,003 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:50,013 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0980 grasp_pos=[0.6903, 0.1046, 0.045] pre_grasp=[0.6903, 0.1046, 0.205]
+2026-03-23 16:16:50,014 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:16:50,015 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.6903, 0.1046, 0.205] steps=360
+2026-03-23 16:16:50,036 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6903, 0.1046, 0.205] target=[0.6903, 0.1046, 0.205]
+2026-03-23 16:16:50,036 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.6903, 0.1046, 0.045] steps=360
+2026-03-23 16:16:50,063 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6903, 0.1046, 0.045] target=[0.6903, 0.1046, 0.045]
+2026-03-23 16:16:50,063 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.6903, 0.1046, 0.045] | api_true=[0.7, 0.1, 0.025] | ee_to_object=[-0.0097, 0.0046, 0.02] | target=[0.6903, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 16:16:50,064 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:50,064 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:16:50,064 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:16:50,064 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:50,064 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:16:50,070 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=23.9866 lateral_friction=5.1211 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:50,087 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=23.9848 lateral_friction=5.0953 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:50,087 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:16:50,089 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.6903, 0.1046, 0.105] steps=360
+2026-03-23 16:16:50,134 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6903, 0.1046, 0.105] target=[0.6903, 0.1046, 0.105]
+2026-03-23 16:16:50,135 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0096 ee_pos=[0.6903, 0.1046, 0.105] obj_pos=[0.6999, 0.1033, 0.085] expected_ee=[0.6903, 0.1046, 0.105]
+2026-03-23 16:16:50,135 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.6903, 0.1046, 0.105] | api_true=[0.6999, 0.1033, 0.085] | ee_to_object=[-0.0095, 0.0013, 0.02] | target=[0.6903, 0.1046, 0.105] | ee_to_target=[0.0, -0.0, -0.0]
+2026-03-23 16:16:50,135 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=3 active_fingers=2
+2026-03-23 16:16:50,135 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.6903, 0.1046, 0.045]
+2026-03-23 16:16:50,145 | INFO | grasp_system | Lift target [0.6903, 0.1046, 0.295]
+2026-03-23 16:16:50,146 | INFO | grasp_system | move_lift target_pos=[0.6903, 0.1046, 0.295] steps=360
+2026-03-23 16:16:50,197 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.6903, 0.1046, 0.295] target=[0.6903, 0.1046, 0.295]
+2026-03-23 16:16:50,197 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.6903, 0.1046, 0.295] | api_true=[0.6998, 0.1006, 0.2749] | ee_to_object=[-0.0095, 0.004, 0.0201] | target=[0.6903, 0.1046, 0.295] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:16:50,198 | INFO | grasp_system | Workflow finished
+2026-03-23 16:16:50,229 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:16:54,918 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:16:54,918 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:16:54,921 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:55,183 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0109 repeats=3
+2026-03-23 16:16:55,427 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0109 repeats=3
+2026-03-23 16:16:55,430 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.5901, 0.1046, 0.025] refined=[0.5901, 0.1046, 0.025]
+2026-03-23 16:16:55,443 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.5901, 0.1046, 0.025] | api_true=[0.6, 0.1, 0.025] | vision_delta=[-0.0099, 0.0046, 0.0] | planned=[0.5901, 0.1046, 0.045] | plan_delta=[-0.0099, 0.0046, 0.02]
+2026-03-23 16:16:55,443 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:16:55,443 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:16:55,454 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0892 grasp_pos=[0.5901, 0.1046, 0.045] pre_grasp=[0.5901, 0.1046, 0.205]
+2026-03-23 16:16:55,454 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:16:55,455 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.5901, 0.1046, 0.205] steps=360
+2026-03-23 16:16:55,475 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.205] target=[0.5901, 0.1046, 0.205]
+2026-03-23 16:16:55,475 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.5901, 0.1046, 0.045] steps=360
+2026-03-23 16:16:55,504 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.045] target=[0.5901, 0.1046, 0.045]
+2026-03-23 16:16:55,504 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.5901, 0.1046, 0.045] | api_true=[0.6, 0.1, 0.025] | ee_to_object=[-0.0099, 0.0046, 0.02] | target=[0.5901, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 16:16:55,505 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:55,505 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:16:55,505 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:16:55,505 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:16:55,505 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:16:55,510 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=23.9912 lateral_friction=3.3605 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:55,523 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=23.9894 lateral_friction=3.3632 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:16:55,523 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:16:55,523 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.5901, 0.1046, 0.105] steps=360
+2026-03-23 16:16:55,568 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.105] target=[0.5901, 0.1046, 0.105]
+2026-03-23 16:16:55,568 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0104 ee_pos=[0.5901, 0.1046, 0.105] obj_pos=[0.5999, 0.101, 0.085] expected_ee=[0.5901, 0.1046, 0.105]
+2026-03-23 16:16:55,568 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.5901, 0.1046, 0.105] | api_true=[0.5999, 0.101, 0.085] | ee_to_object=[-0.0097, 0.0037, 0.02] | target=[0.5901, 0.1046, 0.105] | ee_to_target=[0.0, 0.0, -0.0]
+2026-03-23 16:16:55,568 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=3 active_fingers=2
+2026-03-23 16:16:55,568 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.5901, 0.1046, 0.045]
+2026-03-23 16:16:55,579 | INFO | grasp_system | Lift target [0.5901, 0.1046, 0.295]
+2026-03-23 16:16:55,580 | INFO | grasp_system | move_lift target_pos=[0.5901, 0.1046, 0.295] steps=360
+2026-03-23 16:16:55,631 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.295] target=[0.5901, 0.1046, 0.295]
+2026-03-23 16:16:55,632 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.5901, 0.1046, 0.295] | api_true=[0.5998, 0.1006, 0.2749] | ee_to_object=[-0.0097, 0.004, 0.0201] | target=[0.5901, 0.1046, 0.295] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:16:55,632 | INFO | grasp_system | Workflow finished
+2026-03-23 16:16:55,663 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:17:45,116 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:17:45,116 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:17:45,120 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:17:45,362 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:17:45,607 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:17:45,610 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:17:45,627 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:17:45,627 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:17:45,627 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:17:45,640 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:17:45,640 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:17:45,641 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:17:45,663 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:17:45,664 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:17:45,691 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0083 extra_steps=0 current=[0.7824, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:17:45,691 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7824, 0.1035, 0.0459] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0081, -0.0011, 0.0009]
+2026-03-23 16:17:45,691 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:17:45,691 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:17:45,691 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:17:45,691 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:17:45,691 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:17:45,695 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=23.9341 lateral_friction=7.2652 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:17:45,705 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9322 lateral_friction=7.2961 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:17:45,705 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:17:45,707 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7905, 0.1046, 0.105] steps=360
+2026-03-23 16:17:45,743 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0015 extra_steps=0 current=[0.789, 0.1044, 0.1049] target=[0.7905, 0.1046, 0.105]
+2026-03-23 16:17:45,743 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0588 obj_xy_error=0.0184 ee_pos=[0.789, 0.1044, 0.1049] obj_pos=[0.8069, 0.0999, 0.0839] expected_ee=[0.7905, 0.1046, 0.105]
+2026-03-23 16:17:45,743 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.789, 0.1044, 0.1049] | api_true=[0.8069, 0.0999, 0.0839] | ee_to_object=[-0.0178, 0.0045, 0.0211] | target=[0.7905, 0.1046, 0.105] | ee_to_target=[-0.0015, -0.0002, -0.0001]
+2026-03-23 16:17:45,743 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-03-23 16:17:45,744 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:17:45,753 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 16:17:45,755 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=360
+2026-03-23 16:17:45,795 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0129 extra_steps=0 current=[0.7781, 0.103, 0.2919] target=[0.7905, 0.1046, 0.295]
+2026-03-23 16:17:45,795 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7781, 0.103, 0.2919] | api_true=[0.7959, 0.0983, 0.2707] | ee_to_object=[-0.0178, 0.0046, 0.0211] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0124, -0.0016, -0.0031]
+2026-03-23 16:17:45,796 | INFO | grasp_system | Workflow finished
+2026-03-23 16:17:45,825 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:18:08,063 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:18:08,063 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:18:08,985 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:18:13,005 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:18:13,302 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:18:13,303 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:18:13,316 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:18:13,316 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:18:13,316 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:18:17,064 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:18:17,064 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:18:17,066 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:18:22,679 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:18:22,679 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:18:28,302 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0083 extra_steps=0 current=[0.7824, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:18:28,302 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7824, 0.1035, 0.0459] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0081, -0.0011, 0.0009]
+2026-03-23 16:18:28,302 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:18:28,302 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:18:28,302 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:18:28,302 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:18:28,302 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:18:28,928 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=23.9341 lateral_friction=7.2652 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:18:30,340 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9322 lateral_friction=7.2961 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:18:30,340 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:18:30,341 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7905, 0.1046, 0.105] steps=360
+2026-03-23 16:18:35,956 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0015 extra_steps=0 current=[0.789, 0.1044, 0.1049] target=[0.7905, 0.1046, 0.105]
+2026-03-23 16:18:35,956 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0588 obj_xy_error=0.0184 ee_pos=[0.789, 0.1044, 0.1049] obj_pos=[0.8069, 0.0999, 0.0839] expected_ee=[0.7905, 0.1046, 0.105]
+2026-03-23 16:18:35,956 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.789, 0.1044, 0.1049] | api_true=[0.8069, 0.0999, 0.0839] | ee_to_object=[-0.0178, 0.0045, 0.0211] | target=[0.7905, 0.1046, 0.105] | ee_to_target=[-0.0015, -0.0002, -0.0001]
+2026-03-23 16:18:35,956 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-03-23 16:18:35,956 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:18:37,347 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 16:18:37,349 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=360
+2026-03-23 16:18:42,943 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0129 extra_steps=0 current=[0.7781, 0.103, 0.2919] target=[0.7905, 0.1046, 0.295]
+2026-03-23 16:18:42,944 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7781, 0.103, 0.2919] | api_true=[0.7959, 0.0983, 0.2707] | ee_to_object=[-0.0178, 0.0046, 0.0211] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0124, -0.0016, -0.0031]
+2026-03-23 16:18:42,944 | INFO | grasp_system | Workflow finished
+2026-03-23 16:18:42,966 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:18:56,924 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:18:56,924 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:18:57,859 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:19:01,893 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:19:02,175 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:19:02,178 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:19:02,194 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:19:02,194 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:19:02,194 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:19:05,921 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:19:05,921 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:19:05,921 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:19:11,526 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:19:11,526 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:19:17,131 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0083 extra_steps=0 current=[0.7824, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:19:17,131 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7824, 0.1035, 0.0459] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0081, -0.0011, 0.0009]
+2026-03-23 16:19:17,131 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:19:17,131 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:19:17,131 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:19:17,131 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:19:17,131 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:19:17,755 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=23.9341 lateral_friction=7.2652 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:19:19,157 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9322 lateral_friction=7.2961 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:19:19,157 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:19:19,158 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7905, 0.1046, 0.105] steps=360
+2026-03-23 16:19:24,746 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0015 extra_steps=0 current=[0.789, 0.1044, 0.1049] target=[0.7905, 0.1046, 0.105]
+2026-03-23 16:19:24,746 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0588 obj_xy_error=0.0184 ee_pos=[0.789, 0.1044, 0.1049] obj_pos=[0.8069, 0.0999, 0.0839] expected_ee=[0.7905, 0.1046, 0.105]
+2026-03-23 16:19:24,746 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.789, 0.1044, 0.1049] | api_true=[0.8069, 0.0999, 0.0839] | ee_to_object=[-0.0178, 0.0045, 0.0211] | target=[0.7905, 0.1046, 0.105] | ee_to_target=[-0.0015, -0.0002, -0.0001]
+2026-03-23 16:19:24,746 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-03-23 16:19:24,746 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:19:26,146 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 16:19:26,147 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=360
+2026-03-23 16:19:31,739 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0129 extra_steps=0 current=[0.7781, 0.103, 0.2919] target=[0.7905, 0.1046, 0.295]
+2026-03-23 16:19:31,739 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7781, 0.103, 0.2919] | api_true=[0.7959, 0.0983, 0.2707] | ee_to_object=[-0.0178, 0.0046, 0.0211] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0124, -0.0016, -0.0031]
+2026-03-23 16:19:31,739 | INFO | grasp_system | Workflow finished
+2026-03-23 16:19:31,760 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:23:46,426 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:23:46,426 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:23:47,361 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:23:51,358 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:23:51,623 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:23:51,626 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:23:51,637 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:23:51,637 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:23:51,637 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:23:55,376 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:23:55,376 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:23:55,377 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:24:00,988 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:24:00,988 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:24:06,584 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0083 extra_steps=0 current=[0.7824, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:24:06,584 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7824, 0.1035, 0.0459] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0081, -0.0011, 0.0009]
+2026-03-23 16:24:06,584 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:24:06,584 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:24:06,584 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:24:06,584 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:24:06,585 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:24:07,205 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=23.9341 lateral_friction=7.2652 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:24:07,829 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9363 lateral_friction=7.3915 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:24:07,829 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:24:07,831 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7905, 0.1046, 0.105] steps=360
+2026-03-23 16:24:13,427 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0015 extra_steps=0 current=[0.789, 0.1044, 0.1049] target=[0.7905, 0.1046, 0.105]
+2026-03-23 16:24:13,427 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0588 obj_xy_error=0.0184 ee_pos=[0.789, 0.1044, 0.1049] obj_pos=[0.8069, 0.0999, 0.0839] expected_ee=[0.7905, 0.1046, 0.105]
+2026-03-23 16:24:13,427 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.789, 0.1044, 0.1049] | api_true=[0.8069, 0.0999, 0.0839] | ee_to_object=[-0.0178, 0.0045, 0.0211] | target=[0.7905, 0.1046, 0.105] | ee_to_target=[-0.0015, -0.0002, -0.0001]
+2026-03-23 16:24:13,427 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-03-23 16:24:13,427 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:24:13,896 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 16:24:13,896 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=360
+2026-03-23 16:24:19,498 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0129 extra_steps=0 current=[0.7781, 0.103, 0.2919] target=[0.7905, 0.1046, 0.295]
+2026-03-23 16:24:19,498 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7781, 0.103, 0.2919] | api_true=[0.7959, 0.0984, 0.2708] | ee_to_object=[-0.0178, 0.0046, 0.0211] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0124, -0.0016, -0.0031]
+2026-03-23 16:24:19,498 | INFO | grasp_system | Workflow finished
+2026-03-23 16:24:19,531 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:24:29,018 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:24:29,018 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:24:29,940 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:24:33,918 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:24:34,170 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:24:34,173 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:24:34,188 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:24:34,188 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:24:34,188 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:24:37,916 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:24:37,916 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:24:37,917 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:24:43,515 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:24:43,515 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:24:50,279 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:24:50,279 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:24:51,221 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:24:55,244 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:24:55,510 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:24:55,512 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:24:55,528 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:24:55,528 | INFO | grasp_system | GRASP_ATTEMPT_RESET index=1
+2026-03-23 16:24:55,528 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:24:59,344 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:24:59,344 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:24:59,345 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:25:04,946 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0087 extra_steps=0 current=[0.782, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:25:04,946 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:37:28,358 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:37:28,358 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:37:29,289 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:37:33,303 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:37:33,564 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.8055, 0.1196, 0.05] corrected=[0.7905, 0.1046, 0.025] api_true=[0.8, 0.1, 0.025] raw_delta=[0.0055, 0.0196, 0.025] corrected_delta=[-0.0095, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0106 repeats=3
+2026-03-23 16:37:33,566 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.7905, 0.1046, 0.025] refined=[0.7905, 0.1046, 0.025]
+2026-03-23 16:37:33,580 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7905, 0.1046, 0.025] | api_true=[0.8, 0.1, 0.025] | vision_delta=[-0.0095, 0.0046, 0.0] | planned=[0.7905, 0.1046, 0.045] | plan_delta=[-0.0095, 0.0046, 0.02]
+2026-03-23 16:37:33,581 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=1.3559 grasp_pos=[0.7905, 0.1046, 0.045] pre_grasp=[0.7905, 0.1046, 0.205]
+2026-03-23 16:37:33,581 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:37:33,582 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.205] steps=360
+2026-03-23 16:37:39,189 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0086 extra_steps=0 current=[0.7821, 0.1035, 0.204] target=[0.7905, 0.1046, 0.205]
+2026-03-23 16:37:39,189 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7905, 0.1046, 0.045] steps=360
+2026-03-23 16:37:44,792 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0083 extra_steps=0 current=[0.7824, 0.1035, 0.0459] target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:37:44,792 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7824, 0.1035, 0.0459] | api_true=[0.8, 0.1, 0.025] | ee_to_object=[-0.0177, 0.0035, 0.0209] | target=[0.7905, 0.1046, 0.045] | ee_to_target=[-0.0081, -0.0011, 0.0009]
+2026-03-23 16:37:44,792 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:37:44,792 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:37:44,792 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:37:44,792 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:37:44,792 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:37:45,418 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=23.9561 lateral_friction=8.0576 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:37:46,039 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9526 lateral_friction=7.7097 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:37:46,039 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:37:46,040 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7905, 0.1046, 0.105] steps=360
+2026-03-23 16:37:51,653 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0015 extra_steps=0 current=[0.789, 0.1044, 0.1049] target=[0.7905, 0.1046, 0.105]
+2026-03-23 16:37:51,653 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0588 obj_xy_error=0.0184 ee_pos=[0.789, 0.1044, 0.1049] obj_pos=[0.8069, 0.1001, 0.0839] expected_ee=[0.7905, 0.1046, 0.105]
+2026-03-23 16:37:51,653 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.789, 0.1044, 0.1049] | api_true=[0.8069, 0.1001, 0.0839] | ee_to_object=[-0.0178, 0.0044, 0.0211] | target=[0.7905, 0.1046, 0.105] | ee_to_target=[-0.0015, -0.0002, -0.0001]
+2026-03-23 16:37:51,654 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-03-23 16:37:51,654 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7905, 0.1046, 0.045]
+2026-03-23 16:37:52,122 | INFO | grasp_system | Lift target [0.7905, 0.1046, 0.295]
+2026-03-23 16:37:52,123 | INFO | grasp_system | move_lift target_pos=[0.7905, 0.1046, 0.295] steps=360
+2026-03-23 16:37:57,737 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0129 extra_steps=0 current=[0.7781, 0.103, 0.2919] target=[0.7905, 0.1046, 0.295]
+2026-03-23 16:37:57,737 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7781, 0.103, 0.2919] | api_true=[0.7959, 0.0983, 0.2707] | ee_to_object=[-0.0178, 0.0046, 0.0212] | target=[0.7905, 0.1046, 0.295] | ee_to_target=[-0.0124, -0.0016, -0.0031]
+2026-03-23 16:37:57,737 | INFO | grasp_system | Workflow finished
+2026-03-23 16:37:57,764 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:38:48,612 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:38:48,612 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:38:49,543 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:38:53,533 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0109 repeats=3
+2026-03-23 16:38:53,798 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6051, 0.1196, 0.05] corrected=[0.5901, 0.1046, 0.025] api_true=[0.6, 0.1, 0.025] raw_delta=[0.0051, 0.0196, 0.025] corrected_delta=[-0.0099, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0109 repeats=3
+2026-03-23 16:38:53,800 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.5901, 0.1046, 0.025] refined=[0.5901, 0.1046, 0.025]
+2026-03-23 16:38:53,808 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.5901, 0.1046, 0.025] | api_true=[0.6, 0.1, 0.025] | vision_delta=[-0.0099, 0.0046, 0.0] | planned=[0.5901, 0.1046, 0.045] | plan_delta=[-0.0099, 0.0046, 0.02]
+2026-03-23 16:38:53,808 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0892 grasp_pos=[0.5901, 0.1046, 0.045] pre_grasp=[0.5901, 0.1046, 0.205]
+2026-03-23 16:38:53,808 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:38:53,809 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.5901, 0.1046, 0.205] steps=360
+2026-03-23 16:38:59,388 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.205] target=[0.5901, 0.1046, 0.205]
+2026-03-23 16:38:59,388 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.5901, 0.1046, 0.045] steps=360
+2026-03-23 16:39:04,993 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.045] target=[0.5901, 0.1046, 0.045]
+2026-03-23 16:39:04,993 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.5901, 0.1046, 0.045] | api_true=[0.6, 0.1, 0.025] | ee_to_object=[-0.0099, 0.0046, 0.02] | target=[0.5901, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 16:39:04,993 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:39:04,993 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:39:04,993 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:39:04,993 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:39:04,993 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:39:05,618 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=23.9909 lateral_friction=3.3213 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:39:06,241 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=23.9891 lateral_friction=3.3192 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:39:06,241 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:39:06,242 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.5901, 0.1046, 0.105] steps=360
+2026-03-23 16:39:11,849 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.105] target=[0.5901, 0.1046, 0.105]
+2026-03-23 16:39:11,849 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0104 ee_pos=[0.5901, 0.1046, 0.105] obj_pos=[0.5999, 0.101, 0.085] expected_ee=[0.5901, 0.1046, 0.105]
+2026-03-23 16:39:11,849 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.5901, 0.1046, 0.105] | api_true=[0.5999, 0.101, 0.085] | ee_to_object=[-0.0097, 0.0037, 0.02] | target=[0.5901, 0.1046, 0.105] | ee_to_target=[0.0, 0.0, -0.0]
+2026-03-23 16:39:11,849 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=3 active_fingers=2
+2026-03-23 16:39:11,849 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.5901, 0.1046, 0.045]
+2026-03-23 16:39:12,314 | INFO | grasp_system | Lift target [0.5901, 0.1046, 0.295]
+2026-03-23 16:39:12,315 | INFO | grasp_system | move_lift target_pos=[0.5901, 0.1046, 0.295] steps=360
+2026-03-23 16:39:17,913 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.5901, 0.1046, 0.295] target=[0.5901, 0.1046, 0.295]
+2026-03-23 16:39:17,913 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.5901, 0.1046, 0.295] | api_true=[0.5998, 0.1006, 0.2749] | ee_to_object=[-0.0097, 0.004, 0.0201] | target=[0.5901, 0.1046, 0.295] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-03-23 16:39:17,914 | INFO | grasp_system | Workflow finished
+2026-03-23 16:39:17,941 | INFO | grasp_system | simulation_disconnected
+2026-03-23 16:39:23,198 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-03-23 16:39:23,199 | INFO | grasp_system | Start grasp workflow
+2026-03-23 16:39:24,131 | INFO | grasp_system | move_home steps=240
+2026-03-23 16:39:28,128 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.5049, 0.1196, 0.05] corrected=[0.4899, 0.1046, 0.025] api_true=[0.5, 0.1, 0.025] raw_delta=[0.0049, 0.0196, 0.025] corrected_delta=[-0.0101, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0111 repeats=3
+2026-03-23 16:39:28,360 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.5049, 0.1196, 0.05] corrected=[0.4899, 0.1046, 0.025] api_true=[0.5, 0.1, 0.025] raw_delta=[0.0049, 0.0196, 0.025] corrected_delta=[-0.0101, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0111 repeats=3
+2026-03-23 16:39:28,362 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.4899, 0.1046, 0.025] refined=[0.4899, 0.1046, 0.025]
+2026-03-23 16:39:28,370 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.4899, 0.1046, 0.025] | api_true=[0.5, 0.1, 0.025] | vision_delta=[-0.0101, 0.0046, 0.0] | planned=[0.4899, 0.1046, 0.045] | plan_delta=[-0.0101, 0.0046, 0.02]
+2026-03-23 16:39:28,371 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0899 grasp_pos=[0.4899, 0.1046, 0.045] pre_grasp=[0.4899, 0.1046, 0.205]
+2026-03-23 16:39:28,371 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-03-23 16:39:28,371 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.4899, 0.1046, 0.205] steps=360
+2026-03-23 16:39:33,963 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.205] target=[0.4899, 0.1046, 0.205]
+2026-03-23 16:39:33,963 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.4899, 0.1046, 0.045] steps=360
+2026-03-23 16:39:39,572 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.045] target=[0.4899, 0.1046, 0.045]
+2026-03-23 16:39:39,572 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.4899, 0.1046, 0.045] | api_true=[0.5, 0.1, 0.025] | ee_to_object=[-0.0101, 0.0046, 0.02] | target=[0.4899, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-03-23 16:39:39,572 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:39:39,572 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-03-23 16:39:39,572 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-03-23 16:39:39,572 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-03-23 16:39:39,572 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-03-23 16:39:40,194 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=23.9940 lateral_friction=2.2791 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:39:40,818 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=23.9922 lateral_friction=2.2628 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-03-23 16:39:40,818 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-03-23 16:39:40,819 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.4899, 0.1046, 0.105] steps=360
+2026-03-23 16:39:46,427 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.105] target=[0.4899, 0.1046, 0.105]
+2026-03-23 16:39:46,427 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0106 ee_pos=[0.4899, 0.1046, 0.105] obj_pos=[0.4999, 0.101, 0.085] expected_ee=[0.4899, 0.1046, 0.105]
+2026-03-23 16:39:46,427 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.4899, 0.1046, 0.105] | api_true=[0.4999, 0.101, 0.085] | ee_to_object=[-0.01, 0.0037, 0.02] | target=[0.4899, 0.1046, 0.105] | ee_to_target=[0.0, 0.0, -0.0]
+2026-03-23 16:39:46,427 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=3 active_fingers=2
+2026-03-23 16:39:46,427 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.4899, 0.1046, 0.045]
+2026-03-23 16:39:46,895 | INFO | grasp_system | Lift target [0.4899, 0.1046, 0.295]
+2026-03-23 16:39:46,895 | INFO | grasp_system | move_lift target_pos=[0.4899, 0.1046, 0.295] steps=360
+2026-03-23 16:39:52,495 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1047, 0.295] target=[0.4899, 0.1046, 0.295]
+2026-03-23 16:39:52,495 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.4899, 0.1047, 0.295] | api_true=[0.4998, 0.1007, 0.2749] | ee_to_object=[-0.0099, 0.004, 0.0201] | target=[0.4899, 0.1046, 0.295] | ee_to_target=[-0.0, 0.0, -0.0]
+2026-03-23 16:39:52,495 | INFO | grasp_system | Workflow finished
+2026-03-23 16:39:52,524 | INFO | grasp_system | simulation_disconnected
