@@ -1375,3 +1375,456 @@
 2026-03-23 16:39:52,495 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.4899, 0.1047, 0.295] | api_true=[0.4998, 0.1007, 0.2749] | ee_to_object=[-0.0099, 0.004, 0.0201] | target=[0.4899, 0.1046, 0.295] | ee_to_target=[-0.0, 0.0, -0.0]
 2026-03-23 16:39:52,495 | INFO | grasp_system | Workflow finished
 2026-03-23 16:39:52,524 | INFO | grasp_system | simulation_disconnected
+2026-04-02 14:39:15,785 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 14:39:15,785 | INFO | grasp_system | Start grasp workflow
+2026-04-02 14:39:16,717 | INFO | grasp_system | move_home steps=240
+2026-04-02 14:39:20,477 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=2.1478 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:39:20,793 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.5049, 0.1196, 0.05] corrected=[0.4899, 0.1046, 0.025] api_true=[0.5, 0.1, 0.025] raw_delta=[0.0049, 0.0196, 0.025] corrected_delta=[-0.0101, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0111 repeats=3
+2026-04-02 14:39:21,075 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.5049, 0.1196, 0.05] corrected=[0.4899, 0.1046, 0.025] api_true=[0.5, 0.1, 0.025] raw_delta=[0.0049, 0.0196, 0.025] corrected_delta=[-0.0101, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0111 repeats=3
+2026-04-02 14:39:21,078 | INFO | grasp_system | REFINE_KEEP delta=0.0000 previous=[0.4899, 0.1046, 0.025] refined=[0.4899, 0.1046, 0.025]
+2026-04-02 14:39:21,079 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2750 | vision=[0.4899, 0.1046, 0.025] | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=1.9784 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:39:21,090 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.4899, 0.1046, 0.025] | api_true=[0.5, 0.1, 0.025] | vision_delta=[-0.0101, 0.0046, 0.0] | planned=[0.4899, 0.1046, 0.045] | plan_delta=[-0.0101, 0.0046, 0.02]
+2026-04-02 14:39:21,090 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0899 grasp_pos=[0.4899, 0.1046, 0.045] pre_grasp=[0.4899, 0.1046, 0.205]
+2026-04-02 14:39:21,090 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 14:39:21,091 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.4899, 0.1046, 0.205] steps=360
+2026-04-02 14:39:26,744 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.205] target=[0.4899, 0.1046, 0.205]
+2026-04-02 14:39:26,744 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.4899, 0.1046, 0.045] steps=360
+2026-04-02 14:39:32,368 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.045] target=[0.4899, 0.1046, 0.045]
+2026-04-02 14:39:32,368 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.4899, 0.1046, 0.045] | api_true=[0.5, 0.1, 0.025] | ee_to_object=[-0.0101, 0.0046, 0.02] | target=[0.4899, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 14:39:32,369 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2750 | planned=[0.4899, 0.1046, 0.045] | object=[0.5, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:39:32,369 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 14:39:32,369 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 14:39:32,369 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 14:39:32,369 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 14:39:32,369 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 14:39:32,991 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=23.9940 lateral_friction=2.2791 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 14:39:33,615 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=23.9922 lateral_friction=2.2628 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 14:39:33,615 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 14:39:33,616 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.6083 | planned=[0.4899, 0.1046, 0.045] | object=[0.4999, 0.1045, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0001 | pressure_normal=23.9922 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9997 | right_force=11.9925
+2026-04-02 14:39:33,617 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.4899, 0.1046, 0.105] steps=360
+2026-04-02 14:39:39,244 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.105] target=[0.4899, 0.1046, 0.105]
+2026-04-02 14:39:39,244 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0106 ee_pos=[0.4899, 0.1046, 0.105] obj_pos=[0.4999, 0.101, 0.085] expected_ee=[0.4899, 0.1046, 0.105]
+2026-04-02 14:39:39,245 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.4899, 0.1046, 0.105] | api_true=[0.4999, 0.101, 0.085] | ee_to_object=[-0.01, 0.0037, 0.02] | target=[0.4899, 0.1046, 0.105] | ee_to_target=[0.0, 0.0, -0.0]
+2026-04-02 14:39:39,246 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.1083 | planned=[0.4899, 0.1046, 0.105] | object=[0.4999, 0.101, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=23.9979 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9996 | right_force=11.9983
+2026-04-02 14:39:39,246 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=3 active_fingers=2
+2026-04-02 14:39:39,246 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.4899, 0.1046, 0.045]
+2026-04-02 14:39:39,713 | INFO | grasp_system | Lift target [0.4899, 0.1046, 0.295]
+2026-04-02 14:39:39,713 | INFO | grasp_system | move_lift target_pos=[0.4899, 0.1046, 0.295] steps=360
+2026-04-02 14:39:45,345 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1047, 0.295] target=[0.4899, 0.1046, 0.295]
+2026-04-02 14:39:45,345 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.4899, 0.1047, 0.295] | api_true=[0.4998, 0.1007, 0.2749] | ee_to_object=[-0.0099, 0.004, 0.0201] | target=[0.4899, 0.1046, 0.295] | ee_to_target=[-0.0, 0.0, -0.0]
+2026-04-02 14:39:45,346 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7333 | planned=[0.4899, 0.1046, 0.295] | object=[0.4998, 0.1007, 0.2749] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0001 | pressure_normal=24.0175 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9995 | right_force=12.0180
+2026-04-02 14:39:45,346 | INFO | grasp_system | Workflow finished
+2026-04-02 14:39:45,373 | INFO | grasp_system | simulation_disconnected
+2026-04-02 14:46:14,698 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 14:46:14,699 | INFO | grasp_system | Start grasp workflow
+2026-04-02 14:46:15,635 | INFO | grasp_system | move_home steps=240
+2026-04-02 14:46:19,378 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:46:19,661 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.5049, 0.1196, 0.05] corrected=[0.4899, 0.1046, 0.025] api_true=[0.5, 0.1, 0.025] raw_delta=[0.0049, 0.0196, 0.025] corrected_delta=[-0.0101, 0.0046, 0.0] raw_err=0.0322 corrected_err=0.0111 repeats=3
+2026-04-02 14:46:19,664 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.4899, 0.1046, 0.025]
+2026-04-02 14:46:19,664 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.4899, 0.1046, 0.025] | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:46:19,676 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.4899, 0.1046, 0.025] | api_true=[0.5, 0.1, 0.025] | vision_delta=[-0.0101, 0.0046, 0.0] | planned=[0.4899, 0.1046, 0.045] | plan_delta=[-0.0101, 0.0046, 0.02]
+2026-04-02 14:46:19,676 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0901 grasp_pos=[0.4899, 0.1046, 0.045] pre_grasp=[0.4899, 0.1046, 0.205]
+2026-04-02 14:46:19,676 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 14:46:19,676 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.4899, 0.1046, 0.205] steps=360
+2026-04-02 14:46:25,298 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.205] target=[0.4899, 0.1046, 0.205]
+2026-04-02 14:46:25,298 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.4899, 0.1046, 0.045] steps=360
+2026-04-02 14:46:30,914 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.045] target=[0.4899, 0.1046, 0.045]
+2026-04-02 14:46:30,914 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.4899, 0.1046, 0.045] | api_true=[0.5, 0.1, 0.025] | ee_to_object=[-0.0101, 0.0046, 0.02] | target=[0.4899, 0.1046, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 14:46:30,915 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.4899, 0.1046, 0.045] | object=[0.5, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:46:30,915 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 14:46:30,915 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 14:46:30,915 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 14:46:30,915 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 14:46:30,915 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 14:46:31,538 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=3 active_fingers=2 normal_force=23.9940 lateral_friction=2.2786 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 14:46:32,162 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=3 active_fingers=2 normal_force=23.9922 lateral_friction=2.2624 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 14:46:32,162 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 14:46:32,163 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.4899, 0.1046, 0.045] | object=[0.4999, 0.1045, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0314 | obj_speed=0.0000 | obj_peak_acc=11.2331 | pressure_normal=23.9922 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9997 | right_force=11.9925
+2026-04-02 14:46:32,164 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.4899, 0.1046, 0.105] steps=360
+2026-04-02 14:46:37,788 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1046, 0.105] target=[0.4899, 0.1046, 0.105]
+2026-04-02 14:46:37,788 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0106 ee_pos=[0.4899, 0.1046, 0.105] obj_pos=[0.4999, 0.101, 0.085] expected_ee=[0.4899, 0.1046, 0.105]
+2026-04-02 14:46:37,788 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.4899, 0.1046, 0.105] | api_true=[0.4999, 0.101, 0.085] | ee_to_object=[-0.01, 0.0037, 0.02] | target=[0.4899, 0.1046, 0.105] | ee_to_target=[0.0, 0.0, -0.0]
+2026-04-02 14:46:37,789 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.4899, 0.1046, 0.105] | object=[0.4999, 0.101, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=23.9979 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9996 | right_force=11.9983
+2026-04-02 14:46:37,789 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=3 active_fingers=2
+2026-04-02 14:46:37,789 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.4899, 0.1046, 0.045]
+2026-04-02 14:46:38,258 | INFO | grasp_system | Lift target [0.4899, 0.1046, 0.295]
+2026-04-02 14:46:38,258 | INFO | grasp_system | move_lift target_pos=[0.4899, 0.1046, 0.295] steps=360
+2026-04-02 14:46:43,868 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.4899, 0.1047, 0.295] target=[0.4899, 0.1046, 0.295]
+2026-04-02 14:46:43,868 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.4899, 0.1047, 0.295] | api_true=[0.4998, 0.1007, 0.2749] | ee_to_object=[-0.0099, 0.004, 0.0201] | target=[0.4899, 0.1046, 0.295] | ee_to_target=[-0.0, 0.0, -0.0]
+2026-04-02 14:46:43,869 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.4899, 0.1046, 0.295] | object=[0.4998, 0.1007, 0.2749] | ee_speed=0.0000 | ee_peak_acc=0.5905 | obj_speed=0.0000 | obj_peak_acc=0.6471 | pressure_normal=24.0175 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9995 | right_force=12.0180
+2026-04-02 14:46:43,869 | INFO | grasp_system | Workflow finished
+2026-04-02 14:46:43,905 | INFO | grasp_system | simulation_disconnected
+2026-04-02 14:54:52,019 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 14:54:52,019 | INFO | grasp_system | Start grasp workflow
+2026-04-02 14:54:52,952 | INFO | grasp_system | move_home steps=240
+2026-04-02 14:54:56,703 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:54:56,783 | INFO | grasp_system | VISION_BIAS_UPDATE previous=[-0.0052, -0.0196, -0.025] target=[-0.0049, -0.0196, -0.025] updated=[-0.0049, -0.0196, -0.025]
+2026-04-02 14:54:56,877 | INFO | grasp_system | VISION_BIAS_UPDATE previous=[-0.0049, -0.0196, -0.025] target=[-0.0049, -0.0196, -0.025] updated=[-0.0049, -0.0196, -0.025]
+2026-04-02 14:54:56,966 | INFO | grasp_system | VISION_BIAS_UPDATE previous=[-0.0049, -0.0196, -0.025] target=[-0.0049, -0.0196, -0.025] updated=[-0.0049, -0.0196, -0.025]
+2026-04-02 14:54:56,981 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.5049, 0.1196, 0.05] corrected=[0.5, 0.1, 0.025] api_true=[0.5, 0.1, 0.025] raw_delta=[0.0049, 0.0196, 0.025] corrected_delta=[0.0, 0.0, 0.0] raw_err=0.0322 corrected_err=0.0000 repeats=3
+2026-04-02 14:54:56,984 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.5, 0.1, 0.025]
+2026-04-02 14:54:56,985 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.5, 0.1, 0.025] | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:54:56,993 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.5, 0.1, 0.025] | api_true=[0.5, 0.1, 0.025] | vision_delta=[-0.0, -0.0, -0.0] | planned=[0.5, 0.1, 0.045] | plan_delta=[-0.0, -0.0, 0.02]
+2026-04-02 14:54:56,994 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0896 grasp_pos=[0.5, 0.1, 0.045] pre_grasp=[0.5, 0.1, 0.205]
+2026-04-02 14:54:56,994 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 14:54:56,994 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.5, 0.1, 0.205] steps=360
+2026-04-02 14:55:02,614 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5, 0.1, 0.205] target=[0.5, 0.1, 0.205]
+2026-04-02 14:55:02,614 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.5, 0.1, 0.045] steps=360
+2026-04-02 14:55:08,231 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5, 0.1, 0.045] target=[0.5, 0.1, 0.045]
+2026-04-02 14:55:08,231 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.5, 0.1, 0.045] | api_true=[0.5, 0.1, 0.025] | ee_to_object=[-0.0, -0.0, 0.02] | target=[0.5, 0.1, 0.045] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 14:55:08,232 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.5, 0.1, 0.045] | object=[0.5, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 14:55:08,232 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 14:55:08,232 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 14:55:08,232 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 14:55:08,232 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 14:55:08,232 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 14:55:08,857 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=24.0020 lateral_friction=9.9214 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 14:55:09,478 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9989 lateral_friction=9.9297 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 14:55:09,478 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 14:55:09,479 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.5, 0.1, 0.045] | object=[0.5, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0127 | obj_speed=0.0000 | obj_peak_acc=0.0098 | pressure_normal=23.9989 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9994 | right_force=11.9995
+2026-04-02 14:55:09,480 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.5, 0.1, 0.105] steps=360
+2026-04-02 14:55:15,115 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.5, 0.1, 0.105] target=[0.5, 0.1, 0.105]
+2026-04-02 14:55:15,115 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0037 ee_pos=[0.5, 0.1, 0.105] obj_pos=[0.5, 0.0963, 0.085] expected_ee=[0.5, 0.1, 0.105]
+2026-04-02 14:55:15,116 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.5, 0.1, 0.105] | api_true=[0.5, 0.0963, 0.085] | ee_to_object=[-0.0, 0.0037, 0.02] | target=[0.5, 0.1, 0.105] | ee_to_target=[0.0, 0.0, -0.0]
+2026-04-02 14:55:15,117 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.5, 0.1, 0.105] | object=[0.5, 0.0963, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=23.9984 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9992 | right_force=11.9992
+2026-04-02 14:55:15,117 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-04-02 14:55:15,117 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.5, 0.1, 0.045]
+2026-04-02 14:55:15,583 | INFO | grasp_system | Lift target [0.5, 0.1, 0.295]
+2026-04-02 14:55:15,583 | INFO | grasp_system | move_lift target_pos=[0.5, 0.1, 0.295] steps=360
+2026-04-02 14:55:21,189 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.5, 0.1001, 0.295] target=[0.5, 0.1, 0.295]
+2026-04-02 14:55:21,189 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.5, 0.1001, 0.295] | api_true=[0.5, 0.096, 0.2749] | ee_to_object=[0.0, 0.004, 0.02] | target=[0.5, 0.1, 0.295] | ee_to_target=[-0.0, 0.0, -0.0]
+2026-04-02 14:55:21,190 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.5, 0.1, 0.295] | object=[0.5, 0.096, 0.2749] | ee_speed=0.0000 | ee_peak_acc=0.3872 | obj_speed=0.0000 | obj_peak_acc=0.4184 | pressure_normal=23.9932 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9998 | right_force=11.9934
+2026-04-02 14:55:21,191 | INFO | grasp_system | Workflow finished
+2026-04-02 14:55:21,211 | INFO | grasp_system | simulation_disconnected
+2026-04-02 15:00:27,453 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 15:00:27,454 | INFO | grasp_system | Start grasp workflow
+2026-04-02 15:00:28,403 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:00:32,172 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:00:32,436 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.4998, 0.1002, 0.0358] corrected=[0.4998, 0.1002, 0.0358] api_true=[0.5, 0.1, 0.025] raw_delta=[-0.0002, 0.0002, 0.0108] corrected_delta=[-0.0002, 0.0002, 0.0108] raw_err=0.0108 corrected_err=0.0108 repeats=3
+2026-04-02 15:00:32,438 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.4998, 0.1002, 0.0358]
+2026-04-02 15:00:32,439 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.4998, 0.1002, 0.0358] | object=[0.5, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:00:32,449 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.4998, 0.1002, 0.0358] | api_true=[0.5, 0.1, 0.025] | vision_delta=[-0.0002, 0.0002, 0.0108] | planned=[0.4998, 0.1002, 0.0558] | plan_delta=[-0.0002, 0.0002, 0.0308]
+2026-04-02 15:00:32,449 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0879 grasp_pos=[0.4998, 0.1002, 0.0558] pre_grasp=[0.4998, 0.1002, 0.2158]
+2026-04-02 15:00:32,449 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:00:32,450 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.4998, 0.1002, 0.2158] steps=360
+2026-04-02 15:00:38,065 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4998, 0.1002, 0.2158] target=[0.4998, 0.1002, 0.2158]
+2026-04-02 15:00:38,065 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.4998, 0.1002, 0.0558] steps=360
+2026-04-02 15:00:43,693 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4998, 0.1002, 0.0558] target=[0.4998, 0.1002, 0.0558]
+2026-04-02 15:00:43,693 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.4998, 0.1002, 0.0558] | api_true=[0.5, 0.1, 0.025] | ee_to_object=[-0.0002, 0.0002, 0.0308] | target=[0.4998, 0.1002, 0.0558] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 15:00:43,694 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.4998, 0.1002, 0.0558] | object=[0.5, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:00:43,694 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:00:43,694 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 15:00:43,694 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 15:00:43,694 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:00:43,694 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 15:00:44,320 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=24.0097 lateral_friction=-3.3708 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:00:44,942 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=24.0089 lateral_friction=-3.0923 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:00:44,942 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 15:00:44,943 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.4998, 0.1002, 0.0558] | object=[0.5, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0380 | obj_speed=0.0000 | obj_peak_acc=0.0927 | pressure_normal=24.0088 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0067 | right_force=12.0022
+2026-04-02 15:00:44,943 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.4998, 0.1002, 0.1158] steps=360
+2026-04-02 15:00:50,559 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.4998, 0.1002, 0.1158] target=[0.4998, 0.1002, 0.1158]
+2026-04-02 15:00:50,559 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0037 ee_pos=[0.4998, 0.1002, 0.1158] obj_pos=[0.5, 0.0965, 0.085] expected_ee=[0.4998, 0.1002, 0.1158]
+2026-04-02 15:00:50,559 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.4998, 0.1002, 0.1158] | api_true=[0.5, 0.0965, 0.085] | ee_to_object=[-0.0002, 0.0037, 0.0308] | target=[0.4998, 0.1002, 0.1158] | ee_to_target=[0.0, 0.0, -0.0]
+2026-04-02 15:00:50,560 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.4998, 0.1002, 0.1158] | object=[0.5, 0.0965, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=23.9868 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9934 | right_force=11.9934
+2026-04-02 15:00:50,560 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-04-02 15:00:50,560 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.4998, 0.1002, 0.0558]
+2026-04-02 15:00:51,025 | INFO | grasp_system | Lift target [0.4998, 0.1002, 0.3058]
+2026-04-02 15:00:51,025 | INFO | grasp_system | move_lift target_pos=[0.4998, 0.1002, 0.3058] steps=360
+2026-04-02 15:00:56,633 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0000 extra_steps=0 current=[0.4998, 0.1002, 0.3058] target=[0.4998, 0.1002, 0.3058]
+2026-04-02 15:00:56,633 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.4998, 0.1002, 0.3058] | api_true=[0.5, 0.0966, 0.275] | ee_to_object=[-0.0002, 0.0037, 0.0308] | target=[0.4998, 0.1002, 0.3058] | ee_to_target=[-0.0, 0.0, -0.0]
+2026-04-02 15:00:56,634 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.4998, 0.1002, 0.3058] | object=[0.5, 0.0966, 0.275] | ee_speed=0.0000 | ee_peak_acc=0.4449 | obj_speed=0.0000 | obj_peak_acc=0.5003 | pressure_normal=23.9871 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9936 | right_force=11.9935
+2026-04-02 15:00:56,641 | INFO | grasp_system | POSE_PLAN label=place yaw=-0.785 score=0.0445 target_pos=[0.55, -0.2, 0.08] achieved_pos=[0.55, -0.2, 0.08]
+2026-04-02 15:00:56,641 | INFO | grasp_system | PLACE_START release=[0.55, -0.2, 0.08]
+2026-04-02 15:00:56,642 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=360
+2026-04-02 15:01:02,262 | INFO | grasp_system | MOVE_VERIFY label=move_pre_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.22] target=[0.55, -0.2, 0.22]
+2026-04-02 15:01:02,262 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=360
+2026-04-02 15:01:07,893 | INFO | grasp_system | MOVE_VERIFY label=move_release reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.08] target=[0.55, -0.2, 0.08]
+2026-04-02 15:01:07,894 | INFO | grasp_system | MULTIMODAL stage=before_release | sim_time=10.7208 | planned=[0.55, -0.2, 0.08] | object=[0.7436, -0.2515, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:01:07,894 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:01:09,295 | INFO | grasp_system | MULTIMODAL stage=after_release | sim_time=11.0958 | planned=[0.55, -0.2, 0.08] | object=[0.7436, -0.2515, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0001 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:01:09,296 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=360
+2026-04-02 15:01:14,910 | INFO | grasp_system | MOVE_VERIFY label=move_post_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.28] target=[0.55, -0.2, 0.28]
+2026-04-02 15:01:14,910 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:01:18,662 | INFO | grasp_system | PLACE_FINISH retreat=[0.55, -0.2, 0.28]
+2026-04-02 15:01:18,662 | INFO | grasp_system | Workflow finished
+2026-04-02 15:01:18,692 | INFO | grasp_system | simulation_disconnected
+2026-04-02 15:01:41,247 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 15:01:41,247 | INFO | grasp_system | Start grasp workflow
+2026-04-02 15:01:42,175 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:01:45,920 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.7, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:01:46,187 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7002, 0.1002, 0.0358] corrected=[0.7002, 0.1002, 0.0358] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0002, 0.0002, 0.0108] corrected_delta=[0.0002, 0.0002, 0.0108] raw_err=0.0108 corrected_err=0.0108 repeats=3
+2026-04-02 15:01:46,189 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.7002, 0.1002, 0.0358]
+2026-04-02 15:01:46,190 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.7002, 0.1002, 0.0358] | object=[0.7, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:01:46,205 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7002, 0.1002, 0.0358] | api_true=[0.7, 0.1, 0.025] | vision_delta=[0.0002, 0.0002, 0.0108] | planned=[0.7002, 0.1002, 0.0558] | plan_delta=[0.0002, 0.0002, 0.0308]
+2026-04-02 15:01:46,205 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.0995 grasp_pos=[0.7002, 0.1002, 0.0558] pre_grasp=[0.7002, 0.1002, 0.2158]
+2026-04-02 15:01:46,205 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:01:46,206 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7002, 0.1002, 0.2158] steps=360
+2026-04-02 15:01:51,834 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.7002, 0.1002, 0.2158] target=[0.7002, 0.1002, 0.2158]
+2026-04-02 15:01:51,834 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7002, 0.1002, 0.0558] steps=360
+2026-04-02 15:01:57,456 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.7002, 0.1002, 0.0558] target=[0.7002, 0.1002, 0.0558]
+2026-04-02 15:01:57,456 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7002, 0.1002, 0.0558] | api_true=[0.7, 0.1, 0.025] | ee_to_object=[0.0002, 0.0001, 0.0308] | target=[0.7002, 0.1002, 0.0558] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 15:01:57,457 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.7002, 0.1002, 0.0558] | object=[0.7, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:01:57,457 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:01:57,457 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 15:01:57,457 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 15:01:57,457 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:01:57,457 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 15:01:58,082 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=24.0455 lateral_friction=0.5263 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:01:58,708 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=24.0418 lateral_friction=0.3932 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:01:58,708 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 15:01:58,710 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.7002, 0.1002, 0.0558] | object=[0.7, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0354 | obj_speed=0.0000 | obj_peak_acc=0.0390 | pressure_normal=24.0418 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0260 | right_force=12.0158
+2026-04-02 15:01:58,710 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7002, 0.1002, 0.1158] steps=360
+2026-04-02 15:02:04,329 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.7002, 0.1002, 0.1158] target=[0.7002, 0.1002, 0.1158]
+2026-04-02 15:02:04,329 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0022 ee_pos=[0.7002, 0.1002, 0.1158] obj_pos=[0.7, 0.0979, 0.085] expected_ee=[0.7002, 0.1002, 0.1158]
+2026-04-02 15:02:04,329 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.7002, 0.1002, 0.1158] | api_true=[0.7, 0.0979, 0.085] | ee_to_object=[0.0002, 0.0022, 0.0308] | target=[0.7002, 0.1002, 0.1158] | ee_to_target=[0.0, -0.0, -0.0]
+2026-04-02 15:02:04,330 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.7002, 0.1002, 0.1158] | object=[0.7, 0.0979, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0013 | obj_peak_acc=0.0002 | pressure_normal=23.9867 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9934 | right_force=11.9933
+2026-04-02 15:02:04,330 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-04-02 15:02:04,330 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7002, 0.1002, 0.0558]
+2026-04-02 15:02:04,793 | INFO | grasp_system | Lift target [0.7002, 0.1002, 0.3058]
+2026-04-02 15:02:04,794 | INFO | grasp_system | move_lift target_pos=[0.7002, 0.1002, 0.3058] steps=360
+2026-04-02 15:02:10,415 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0001 extra_steps=0 current=[0.7001, 0.1002, 0.3058] target=[0.7002, 0.1002, 0.3058]
+2026-04-02 15:02:10,415 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7001, 0.1002, 0.3058] | api_true=[0.6999, 0.0962, 0.2749] | ee_to_object=[0.0003, 0.004, 0.0309] | target=[0.7002, 0.1002, 0.3058] | ee_to_target=[-0.0001, -0.0, -0.0]
+2026-04-02 15:02:10,416 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.7002, 0.1002, 0.3058] | object=[0.6999, 0.0962, 0.2749] | ee_speed=0.0000 | ee_peak_acc=0.0017 | obj_speed=0.0001 | obj_peak_acc=0.0024 | pressure_normal=24.0542 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9936 | right_force=12.0606
+2026-04-02 15:02:10,424 | INFO | grasp_system | POSE_PLAN label=place yaw=-0.785 score=0.0547 target_pos=[0.55, -0.2, 0.08] achieved_pos=[0.55, -0.2, 0.08]
+2026-04-02 15:02:10,424 | INFO | grasp_system | PLACE_START release=[0.55, -0.2, 0.08]
+2026-04-02 15:02:10,425 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=360
+2026-04-02 15:02:16,042 | INFO | grasp_system | MOVE_VERIFY label=move_pre_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.22] target=[0.55, -0.2, 0.22]
+2026-04-02 15:02:16,042 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=360
+2026-04-02 15:02:21,663 | INFO | grasp_system | MOVE_VERIFY label=move_release reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.08] target=[0.55, -0.2, 0.08]
+2026-04-02 15:02:21,663 | INFO | grasp_system | MULTIMODAL stage=before_release | sim_time=10.7208 | planned=[0.55, -0.2, 0.08] | object=[0.6684, -0.3908, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:02:21,663 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:02:23,070 | INFO | grasp_system | MULTIMODAL stage=after_release | sim_time=11.0958 | planned=[0.55, -0.2, 0.08] | object=[0.6684, -0.3908, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0001 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:02:23,071 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=360
+2026-04-02 15:02:28,692 | INFO | grasp_system | MOVE_VERIFY label=move_post_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.28] target=[0.55, -0.2, 0.28]
+2026-04-02 15:02:28,692 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:02:32,428 | INFO | grasp_system | PLACE_FINISH retreat=[0.55, -0.2, 0.28]
+2026-04-02 15:02:32,428 | INFO | grasp_system | Workflow finished
+2026-04-02 15:02:32,447 | INFO | grasp_system | simulation_disconnected
+2026-04-02 15:10:19,745 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 15:10:19,746 | INFO | grasp_system | Start grasp workflow
+2026-04-02 15:10:20,674 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:10:24,407 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.7, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:10:24,654 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.7002, 0.1002, 0.0285] corrected=[0.7002, 0.1002, 0.0285] api_true=[0.7, 0.1, 0.025] raw_delta=[0.0002, 0.0002, 0.0035] corrected_delta=[0.0002, 0.0002, 0.0035] raw_err=0.0035 corrected_err=0.0035 repeats=3
+2026-04-02 15:10:24,656 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.7002, 0.1002, 0.0285]
+2026-04-02 15:10:24,657 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.7002, 0.1002, 0.0285] | object=[0.7, 0.1, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:10:24,673 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.7002, 0.1002, 0.0285] | api_true=[0.7, 0.1, 0.025] | vision_delta=[0.0002, 0.0002, 0.0035] | planned=[0.7002, 0.1002, 0.0485] | plan_delta=[0.0002, 0.0002, 0.0235]
+2026-04-02 15:10:24,673 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.000 score=0.1007 grasp_pos=[0.7002, 0.1002, 0.0485] pre_grasp=[0.7002, 0.1002, 0.2085]
+2026-04-02 15:10:24,673 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:10:24,674 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.7002, 0.1002, 0.2085] steps=360
+2026-04-02 15:10:30,299 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.7002, 0.1002, 0.2085] target=[0.7002, 0.1002, 0.2085]
+2026-04-02 15:10:30,299 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.7002, 0.1002, 0.0485] steps=360
+2026-04-02 15:10:35,930 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.7002, 0.1002, 0.0485] target=[0.7002, 0.1002, 0.0485]
+2026-04-02 15:10:35,930 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.7002, 0.1002, 0.0485] | api_true=[0.7, 0.1, 0.025] | ee_to_object=[0.0002, 0.0001, 0.0235] | target=[0.7002, 0.1002, 0.0485] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 15:10:35,931 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.7002, 0.1002, 0.0485] | object=[0.7, 0.1, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:10:35,931 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:10:35,931 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 15:10:35,931 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 15:10:35,931 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:10:35,931 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 15:10:36,557 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=24.0019 lateral_friction=12.9200 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:10:37,180 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=23.9986 lateral_friction=12.9986 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:10:37,180 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 15:10:37,180 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.7002, 0.1002, 0.0485] | object=[0.7, 0.1002, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0171 | obj_speed=0.0000 | obj_peak_acc=0.0109 | pressure_normal=23.9987 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9990 | right_force=11.9997
+2026-04-02 15:10:37,182 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.7002, 0.1002, 0.1085] steps=360
+2026-04-02 15:10:42,801 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.7002, 0.1002, 0.1085] target=[0.7002, 0.1002, 0.1085]
+2026-04-02 15:10:42,801 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0011 ee_pos=[0.7002, 0.1002, 0.1085] obj_pos=[0.7, 0.0991, 0.085] expected_ee=[0.7002, 0.1002, 0.1085]
+2026-04-02 15:10:42,801 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.7002, 0.1002, 0.1085] | api_true=[0.7, 0.0991, 0.085] | ee_to_object=[0.0002, 0.0011, 0.0235] | target=[0.7002, 0.1002, 0.1085] | ee_to_target=[0.0, -0.0, -0.0]
+2026-04-02 15:10:42,802 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.7002, 0.1002, 0.1085] | object=[0.7, 0.0991, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0005 | obj_peak_acc=0.0002 | pressure_normal=23.9987 | pressure_active_fingers=2 | pressure_stable=True | left_force=11.9994 | right_force=11.9994
+2026-04-02 15:10:42,802 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-04-02 15:10:42,802 | INFO | grasp_system | GRASP_SUCCESS yaw=0.000 target=[0.7002, 0.1002, 0.0485]
+2026-04-02 15:10:43,273 | INFO | grasp_system | GRIP_TRANSPORT reinforce target_pos=0.0220 previous_force=12.00 boosted_force=18.00
+2026-04-02 15:10:43,273 | INFO | grasp_system | Lift target [0.7002, 0.1002, 0.2985]
+2026-04-02 15:10:43,274 | INFO | grasp_system | move_lift target_pos=[0.7002, 0.1002, 0.2985] steps=360
+2026-04-02 15:10:48,913 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0001 extra_steps=0 current=[0.7002, 0.1002, 0.2985] target=[0.7002, 0.1002, 0.2985]
+2026-04-02 15:10:48,913 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.7002, 0.1002, 0.2985] | api_true=[0.6999, 0.0966, 0.275] | ee_to_object=[0.0002, 0.0036, 0.0235] | target=[0.7002, 0.1002, 0.2985] | ee_to_target=[-0.0, -0.0, -0.0]
+2026-04-02 15:10:48,914 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.7002, 0.1002, 0.2985] | object=[0.6999, 0.0966, 0.275] | ee_speed=0.0000 | ee_peak_acc=0.0013 | obj_speed=0.0000 | obj_peak_acc=0.0017 | pressure_normal=35.9979 | pressure_active_fingers=2 | pressure_stable=True | left_force=17.9989 | right_force=17.9989
+2026-04-02 15:10:48,922 | INFO | grasp_system | POSE_PLAN label=place yaw=-0.785 score=0.0537 target_pos=[0.55, -0.2, 0.08] achieved_pos=[0.55, -0.2, 0.08]
+2026-04-02 15:10:48,922 | INFO | grasp_system | PLACE_START release=[0.55, -0.2, 0.08]
+2026-04-02 15:10:48,923 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=360
+2026-04-02 15:10:54,547 | INFO | grasp_system | MOVE_VERIFY label=move_pre_place reached=True error=0.0001 extra_steps=0 current=[0.55, -0.1999, 0.22] target=[0.55, -0.2, 0.22]
+2026-04-02 15:10:54,547 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=360
+2026-04-02 15:11:00,178 | INFO | grasp_system | MOVE_VERIFY label=move_release reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.08] target=[0.55, -0.2, 0.08]
+2026-04-02 15:11:00,179 | INFO | grasp_system | MULTIMODAL stage=before_release | sim_time=10.7208 | planned=[0.55, -0.2, 0.08] | object=[0.547, -0.2027, 0.0565] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0025 | pressure_normal=31.0780 | pressure_active_fingers=2 | pressure_stable=True | left_force=15.5920 | right_force=15.4860
+2026-04-02 15:11:00,179 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:11:01,584 | INFO | grasp_system | MULTIMODAL stage=after_release | sim_time=11.0958 | planned=[0.55, -0.2, 0.08] | object=[0.5469, -0.2027, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0276 | obj_speed=0.0001 | obj_peak_acc=47.1822 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:11:01,585 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=360
+2026-04-02 15:11:07,209 | INFO | grasp_system | MOVE_VERIFY label=move_post_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.28] target=[0.55, -0.2, 0.28]
+2026-04-02 15:11:07,209 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:11:10,967 | INFO | grasp_system | PLACE_FINISH retreat=[0.55, -0.2, 0.28]
+2026-04-02 15:11:10,967 | INFO | grasp_system | Workflow finished
+2026-04-02 15:11:10,990 | INFO | grasp_system | simulation_disconnected
+2026-04-02 15:11:38,114 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 15:11:38,115 | INFO | grasp_system | Start grasp workflow
+2026-04-02 15:11:39,048 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:11:42,822 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.6, 0.2, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:11:43,073 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6, 0.1994, 0.0285] corrected=[0.6, 0.1994, 0.0285] api_true=[0.6, 0.2, 0.025] raw_delta=[-0.0, -0.0006, 0.0035] corrected_delta=[-0.0, -0.0006, 0.0035] raw_err=0.0036 corrected_err=0.0036 repeats=3
+2026-04-02 15:11:43,075 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.6, 0.1994, 0.0285]
+2026-04-02 15:11:43,076 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.6, 0.1994, 0.0285] | object=[0.6, 0.2, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:11:43,088 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.6, 0.1994, 0.0285] | api_true=[0.6, 0.2, 0.025] | vision_delta=[-0.0, -0.0006, 0.0035] | planned=[0.6, 0.1994, 0.0485] | plan_delta=[-0.0, -0.0006, 0.0235]
+2026-04-02 15:11:43,088 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.785 score=0.0922 grasp_pos=[0.6, 0.1994, 0.0485] pre_grasp=[0.6, 0.1994, 0.2085]
+2026-04-02 15:11:43,088 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:11:43,089 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.6, 0.1994, 0.2085] steps=360
+2026-04-02 15:11:48,714 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1994, 0.2085] target=[0.6, 0.1994, 0.2085]
+2026-04-02 15:11:48,714 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.6, 0.1994, 0.0485] steps=360
+2026-04-02 15:11:54,342 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1994, 0.0485] target=[0.6, 0.1994, 0.0485]
+2026-04-02 15:11:54,342 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.6, 0.1994, 0.0485] | api_true=[0.6, 0.2, 0.025] | ee_to_object=[-0.0, -0.0007, 0.0235] | target=[0.6, 0.1994, 0.0485] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 15:11:54,343 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.6, 0.1994, 0.0485] | object=[0.6, 0.2, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:11:54,343 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:11:54,343 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 15:11:54,343 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 15:11:54,344 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:11:54,344 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 15:11:54,970 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=24.0036 lateral_friction=5.8691 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:11:55,593 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=24.0069 lateral_friction=6.7820 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:11:55,593 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 15:11:55,594 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.6, 0.1994, 0.0485] | object=[0.6008, 0.1993, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0099 | obj_speed=0.0001 | obj_peak_acc=0.0158 | pressure_normal=24.0066 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0073 | right_force=11.9992
+2026-04-02 15:11:55,595 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.6, 0.1994, 0.1085] steps=360
+2026-04-02 15:12:01,230 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1993, 0.1085] target=[0.6, 0.1994, 0.1085]
+2026-04-02 15:12:01,230 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0015 ee_pos=[0.6, 0.1993, 0.1085] obj_pos=[0.5994, 0.2007, 0.085] expected_ee=[0.6, 0.1994, 0.1085]
+2026-04-02 15:12:01,230 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.6, 0.1993, 0.1085] | api_true=[0.5994, 0.2007, 0.085] | ee_to_object=[0.0006, -0.0013, 0.0235] | target=[0.6, 0.1994, 0.1085] | ee_to_target=[0.0, -0.0, -0.0]
+2026-04-02 15:12:01,231 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.6, 0.1994, 0.1085] | object=[0.5994, 0.2007, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0024 | obj_peak_acc=0.0002 | pressure_normal=24.0000 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0000 | right_force=12.0000
+2026-04-02 15:12:01,231 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-04-02 15:12:01,231 | INFO | grasp_system | GRASP_SUCCESS yaw=0.785 target=[0.6, 0.1994, 0.0485]
+2026-04-02 15:12:01,696 | INFO | grasp_system | GRIP_TRANSPORT reinforce target_pos=0.0220 previous_force=12.00 boosted_force=18.00
+2026-04-02 15:12:01,696 | INFO | grasp_system | Lift target [0.6, 0.1994, 0.2985]
+2026-04-02 15:12:01,697 | INFO | grasp_system | move_lift target_pos=[0.6, 0.1994, 0.2985] steps=360
+2026-04-02 15:12:07,317 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0001 extra_steps=0 current=[0.6, 0.1993, 0.2985] target=[0.6, 0.1994, 0.2985]
+2026-04-02 15:12:07,317 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.6, 0.1993, 0.2985] | api_true=[0.5972, 0.2029, 0.275] | ee_to_object=[0.0029, -0.0036, 0.0235] | target=[0.6, 0.1994, 0.2985] | ee_to_target=[0.0, -0.0001, -0.0]
+2026-04-02 15:12:07,318 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.6, 0.1994, 0.2985] | object=[0.5972, 0.2029, 0.275] | ee_speed=0.0000 | ee_peak_acc=0.0053 | obj_speed=0.0000 | obj_peak_acc=0.0085 | pressure_normal=35.9999 | pressure_active_fingers=2 | pressure_stable=True | left_force=18.0000 | right_force=18.0000
+2026-04-02 15:12:07,326 | INFO | grasp_system | POSE_PLAN label=place yaw=0.000 score=0.0428 target_pos=[0.55, -0.2, 0.08] achieved_pos=[0.55, -0.2, 0.08]
+2026-04-02 15:12:07,327 | INFO | grasp_system | PLACE_START release=[0.55, -0.2, 0.08]
+2026-04-02 15:12:07,327 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=360
+2026-04-02 15:12:12,925 | INFO | grasp_system | MOVE_VERIFY label=move_pre_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.22] target=[0.55, -0.2, 0.22]
+2026-04-02 15:12:12,925 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=360
+2026-04-02 15:12:18,545 | INFO | grasp_system | MOVE_VERIFY label=move_release reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.08] target=[0.55, -0.2, 0.08]
+2026-04-02 15:12:18,546 | INFO | grasp_system | MULTIMODAL stage=before_release | sim_time=10.7208 | planned=[0.55, -0.2, 0.08] | object=[0.5506, -0.2041, 0.0566] | ee_speed=0.0000 | ee_peak_acc=0.0005 | obj_speed=0.0002 | obj_peak_acc=0.0124 | pressure_normal=32.6990 | pressure_active_fingers=2 | pressure_stable=True | left_force=14.7110 | right_force=17.9880
+2026-04-02 15:12:18,546 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:12:19,954 | INFO | grasp_system | MULTIMODAL stage=after_release | sim_time=11.0958 | planned=[0.55, -0.2, 0.08] | object=[0.55, -0.2038, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0085 | obj_speed=0.0000 | obj_peak_acc=46.4394 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:12:19,955 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=360
+2026-04-02 15:12:25,567 | INFO | grasp_system | MOVE_VERIFY label=move_post_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.28] target=[0.55, -0.2, 0.28]
+2026-04-02 15:12:25,567 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:12:29,332 | INFO | grasp_system | PLACE_FINISH retreat=[0.55, -0.2, 0.28]
+2026-04-02 15:12:29,332 | INFO | grasp_system | Workflow finished
+2026-04-02 15:12:29,366 | INFO | grasp_system | simulation_disconnected
+2026-04-02 15:28:16,450 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 15:28:16,451 | INFO | grasp_system | Start grasp workflow
+2026-04-02 15:28:17,390 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:28:21,148 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.6, 0.2, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:28:21,148 | INFO | grasp_system | FUSION_STATE stage=after_home | state=HOMED | grasp_confidence=0.525 | slip_risk=0.245 | vision_confidence=0.500 | pressure_confidence=0.300 | imu_stability=0.850 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0000
+2026-04-02 15:28:21,431 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6, 0.1994, 0.0285] corrected=[0.6, 0.1994, 0.0285] api_true=[0.6, 0.2, 0.025] raw_delta=[-0.0, -0.0006, 0.0035] corrected_delta=[-0.0, -0.0006, 0.0035] raw_err=0.0036 corrected_err=0.0036 repeats=3
+2026-04-02 15:28:21,433 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.6, 0.1994, 0.0285]
+2026-04-02 15:28:21,434 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.6, 0.1994, 0.0285] | object=[0.6, 0.2, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:28:21,434 | INFO | grasp_system | FUSION_STATE stage=after_vision_lock | state=VISION_LOCKED | grasp_confidence=0.977 | slip_risk=0.245 | vision_confidence=1.000 | pressure_confidence=0.300 | imu_stability=0.850 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0000 | vision_error=0.0036
+2026-04-02 15:28:21,447 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.6, 0.1994, 0.0285] | api_true=[0.6, 0.2, 0.025] | vision_delta=[-0.0, -0.0006, 0.0035] | planned=[0.6, 0.1994, 0.0485] | plan_delta=[-0.0, -0.0006, 0.0235]
+2026-04-02 15:28:21,447 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.785 score=0.0922 grasp_pos=[0.6, 0.1994, 0.0485] pre_grasp=[0.6, 0.1994, 0.2085]
+2026-04-02 15:28:21,447 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:28:21,448 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.6, 0.1994, 0.2085] steps=360
+2026-04-02 15:28:27,090 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1994, 0.2085] target=[0.6, 0.1994, 0.2085]
+2026-04-02 15:28:27,090 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.6, 0.1994, 0.0485] steps=360
+2026-04-02 15:28:32,719 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1994, 0.0485] target=[0.6, 0.1994, 0.0485]
+2026-04-02 15:28:32,719 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.6, 0.1994, 0.0485] | api_true=[0.6, 0.2, 0.025] | ee_to_object=[-0.0, -0.0007, 0.0235] | target=[0.6, 0.1994, 0.0485] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 15:28:32,720 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.6, 0.1994, 0.0485] | object=[0.6, 0.2, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:28:32,720 | INFO | grasp_system | FUSION_STATE stage=after_descend_attempt_1 | state=ALIGNING_FOR_GRASP | grasp_confidence=0.860 | slip_risk=0.245 | vision_confidence=1.000 | pressure_confidence=0.300 | imu_stability=1.000 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0000
+2026-04-02 15:28:32,720 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:28:32,720 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 15:28:32,720 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 15:28:32,720 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 15:28:32,721 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 15:28:33,349 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=24.0036 lateral_friction=5.8691 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:28:33,976 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=24.0069 lateral_friction=6.7820 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 15:28:33,976 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 15:28:33,977 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.6, 0.1994, 0.0485] | object=[0.6008, 0.1993, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0099 | obj_speed=0.0001 | obj_peak_acc=0.0158 | pressure_normal=24.0066 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0073 | right_force=11.9992
+2026-04-02 15:28:33,977 | INFO | grasp_system | FUSION_STATE stage=after_close_attempt_1 | state=CONTACT_ESTABLISHED | grasp_confidence=0.914 | slip_risk=0.148 | vision_confidence=1.000 | pressure_confidence=0.847 | imu_stability=0.994 | pressure_balance=0.000 | pressure_lateral_ratio=0.294 | pressure_drop_ratio=0.000 | object_speed=0.0001 | object_peak_acc=0.0158
+2026-04-02 15:28:33,978 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.6, 0.1994, 0.1085] steps=360
+2026-04-02 15:28:39,614 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1993, 0.1085] target=[0.6, 0.1994, 0.1085]
+2026-04-02 15:28:39,614 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0015 ee_pos=[0.6, 0.1993, 0.1085] obj_pos=[0.5994, 0.2007, 0.085] expected_ee=[0.6, 0.1994, 0.1085]
+2026-04-02 15:28:39,614 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.6, 0.1993, 0.1085] | api_true=[0.5994, 0.2007, 0.085] | ee_to_object=[0.0006, -0.0013, 0.0235] | target=[0.6, 0.1994, 0.1085] | ee_to_target=[0.0, -0.0, -0.0]
+2026-04-02 15:28:39,615 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.6, 0.1994, 0.1085] | object=[0.5994, 0.2007, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0024 | obj_peak_acc=0.0002 | pressure_normal=24.0000 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0000 | right_force=12.0000
+2026-04-02 15:28:39,615 | INFO | grasp_system | FUSION_STATE stage=after_validation_lift_attempt_1 | state=GRASP_STABLE | grasp_confidence=0.979 | slip_risk=0.031 | vision_confidence=1.000 | pressure_confidence=1.000 | imu_stability=0.940 | pressure_balance=0.000 | pressure_lateral_ratio=0.043 | pressure_drop_ratio=0.000 | object_speed=0.0024 | object_peak_acc=0.0002
+2026-04-02 15:28:39,615 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-04-02 15:28:39,615 | INFO | grasp_system | GRASP_SUCCESS yaw=0.785 target=[0.6, 0.1994, 0.0485]
+2026-04-02 15:28:40,083 | INFO | grasp_system | GRIP_TRANSPORT reinforce target_pos=0.0220 previous_force=12.00 boosted_force=18.00
+2026-04-02 15:28:40,083 | INFO | grasp_system | Lift target [0.6, 0.1994, 0.2985]
+2026-04-02 15:28:40,084 | INFO | grasp_system | move_lift target_pos=[0.6, 0.1994, 0.2985] steps=360
+2026-04-02 15:28:45,707 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0001 extra_steps=0 current=[0.6, 0.1993, 0.2985] target=[0.6, 0.1994, 0.2985]
+2026-04-02 15:28:45,707 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.6, 0.1993, 0.2985] | api_true=[0.5972, 0.2029, 0.275] | ee_to_object=[0.0029, -0.0036, 0.0235] | target=[0.6, 0.1994, 0.2985] | ee_to_target=[0.0, -0.0001, -0.0]
+2026-04-02 15:28:45,708 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.6, 0.1994, 0.2985] | object=[0.5972, 0.2029, 0.275] | ee_speed=0.0000 | ee_peak_acc=0.0053 | obj_speed=0.0000 | obj_peak_acc=0.0085 | pressure_normal=35.9999 | pressure_active_fingers=2 | pressure_stable=True | left_force=18.0000 | right_force=18.0000
+2026-04-02 15:28:45,708 | INFO | grasp_system | FUSION_STATE stage=after_lift | state=GRASP_STABLE | grasp_confidence=0.999 | slip_risk=0.013 | vision_confidence=1.000 | pressure_confidence=1.000 | imu_stability=0.997 | pressure_balance=0.000 | pressure_lateral_ratio=0.029 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0085
+2026-04-02 15:28:45,717 | INFO | grasp_system | POSE_PLAN label=place yaw=0.000 score=0.0428 target_pos=[0.55, -0.2, 0.08] achieved_pos=[0.55, -0.2, 0.08]
+2026-04-02 15:28:45,717 | INFO | grasp_system | PLACE_START release=[0.55, -0.2, 0.08]
+2026-04-02 15:28:45,718 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=360
+2026-04-02 15:28:51,335 | INFO | grasp_system | MOVE_VERIFY label=move_pre_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.22] target=[0.55, -0.2, 0.22]
+2026-04-02 15:28:51,335 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=360
+2026-04-02 15:28:56,955 | INFO | grasp_system | MOVE_VERIFY label=move_release reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.08] target=[0.55, -0.2, 0.08]
+2026-04-02 15:28:56,956 | INFO | grasp_system | MULTIMODAL stage=before_release | sim_time=10.7208 | planned=[0.55, -0.2, 0.08] | object=[0.5506, -0.2041, 0.0566] | ee_speed=0.0000 | ee_peak_acc=0.0005 | obj_speed=0.0002 | obj_peak_acc=0.0124 | pressure_normal=32.6990 | pressure_active_fingers=2 | pressure_stable=True | left_force=14.7110 | right_force=17.9880
+2026-04-02 15:28:56,967 | INFO | grasp_system | FUSION_STATE stage=before_release | state=TRANSPORT_STABLE | grasp_confidence=0.936 | slip_risk=0.312 | vision_confidence=1.000 | pressure_confidence=0.877 | imu_stability=0.993 | pressure_balance=0.100 | pressure_lateral_ratio=0.391 | pressure_drop_ratio=0.092 | object_speed=0.0002 | object_peak_acc=0.0124
+2026-04-02 15:28:56,967 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 15:28:58,366 | INFO | grasp_system | MULTIMODAL stage=after_release | sim_time=11.0958 | planned=[0.55, -0.2, 0.08] | object=[0.55, -0.2038, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0085 | obj_speed=0.0000 | obj_peak_acc=46.4394 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 15:28:58,366 | INFO | grasp_system | FUSION_STATE stage=after_release | state=RELEASED | grasp_confidence=0.719 | slip_risk=0.000 | vision_confidence=1.000 | pressure_confidence=0.345 | imu_stability=0.649 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=1.000 | object_speed=0.0000 | object_peak_acc=46.4394
+2026-04-02 15:28:58,367 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=360
+2026-04-02 15:29:03,975 | INFO | grasp_system | MOVE_VERIFY label=move_post_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.28] target=[0.55, -0.2, 0.28]
+2026-04-02 15:29:03,975 | INFO | grasp_system | move_home steps=240
+2026-04-02 15:29:07,734 | INFO | grasp_system | PLACE_FINISH retreat=[0.55, -0.2, 0.28]
+2026-04-02 15:29:07,734 | INFO | grasp_system | Workflow finished
+2026-04-02 15:29:07,750 | INFO | grasp_system | simulation_disconnected
+2026-04-02 16:14:30,662 | INFO | grasp_system | simulation_ready robot_id=1 object_id=2
+2026-04-02 16:14:30,663 | INFO | grasp_system | Start grasp workflow
+2026-04-02 16:14:31,598 | INFO | grasp_system | move_home steps=240
+2026-04-02 16:14:35,335 | INFO | grasp_system | MULTIMODAL stage=after_home | sim_time=1.2500 | object=[0.6, 0.2, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 16:14:35,335 | INFO | grasp_system | FUSION_STATE stage=after_home | state=HOMED | grasp_confidence=0.525 | slip_risk=0.245 | vision_confidence=0.500 | pressure_confidence=0.300 | imu_stability=0.850 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0000
+2026-04-02 16:14:35,582 | INFO | grasp_system | VISION_SUMMARY camera_raw=[0.6, 0.1994, 0.0285] corrected=[0.6, 0.1994, 0.0285] api_true=[0.6, 0.2, 0.025] raw_delta=[-0.0, -0.0006, 0.0035] corrected_delta=[-0.0, -0.0006, 0.0035] raw_err=0.0036 corrected_err=0.0036 repeats=3
+2026-04-02 16:14:35,584 | INFO | grasp_system | REFINE_SKIP enable_refine_pass=False position=[0.6, 0.1994, 0.0285]
+2026-04-02 16:14:35,585 | INFO | grasp_system | MULTIMODAL stage=after_vision_lock | sim_time=1.2625 | vision=[0.6, 0.1994, 0.0285] | object=[0.6, 0.2, 0.025] | ee_speed=0.9790 | ee_peak_acc=52.5961 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 16:14:35,585 | INFO | grasp_system | FUSION_STATE stage=after_vision_lock | state=VISION_LOCKED | grasp_confidence=0.977 | slip_risk=0.245 | vision_confidence=1.000 | pressure_confidence=0.300 | imu_stability=0.850 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0000 | vision_error=0.0036
+2026-04-02 16:14:35,597 | INFO | grasp_system | TARGET_COMPARE grasp_attempt_1 vision=[0.6, 0.1994, 0.0285] | api_true=[0.6, 0.2, 0.025] | vision_delta=[-0.0, -0.0006, 0.0035] | planned=[0.6, 0.1994, 0.0485] | plan_delta=[-0.0, -0.0006, 0.0235]
+2026-04-02 16:14:35,597 | INFO | grasp_system | GRASP_ATTEMPT index=1 yaw=0.785 score=0.0922 grasp_pos=[0.6, 0.1994, 0.0485] pre_grasp=[0.6, 0.1994, 0.2085]
+2026-04-02 16:14:35,597 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 16:14:35,598 | INFO | grasp_system | move_pre_grasp_attempt_1 target_pos=[0.6, 0.1994, 0.2085] steps=360
+2026-04-02 16:14:41,225 | INFO | grasp_system | MOVE_VERIFY label=move_pre_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1994, 0.2085] target=[0.6, 0.1994, 0.2085]
+2026-04-02 16:14:41,225 | INFO | grasp_system | move_grasp_attempt_1 target_pos=[0.6, 0.1994, 0.0485] steps=360
+2026-04-02 16:14:46,829 | INFO | grasp_system | MOVE_VERIFY label=move_grasp_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1994, 0.0485] target=[0.6, 0.1994, 0.0485]
+2026-04-02 16:14:46,829 | INFO | grasp_system | EE_STATE stage=after_descend_attempt_1 | ee_pos=[0.6, 0.1994, 0.0485] | api_true=[0.6, 0.2, 0.025] | ee_to_object=[-0.0, -0.0007, 0.0235] | target=[0.6, 0.1994, 0.0485] | ee_to_target=[-0.0, -0.0, 0.0]
+2026-04-02 16:14:46,830 | INFO | grasp_system | MULTIMODAL stage=after_descend_attempt_1 | sim_time=4.2625 | planned=[0.6, 0.1994, 0.0485] | object=[0.6, 0.2, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0000 | obj_peak_acc=0.0000 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 16:14:46,830 | INFO | grasp_system | FUSION_STATE stage=after_descend_attempt_1 | state=ALIGNING_FOR_GRASP | grasp_confidence=0.860 | slip_risk=0.245 | vision_confidence=1.000 | pressure_confidence=0.300 | imu_stability=1.000 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0000
+2026-04-02 16:14:46,830 | INFO | grasp_system | GRIP_CONTACT stage=before_close_attempt_1 contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 16:14:46,830 | INFO | grasp_system | GRIP_FORCE mass=0.100 mu=1.000 computed_force=1.176 applied_floor=12.000
+2026-04-02 16:14:46,830 | INFO | grasp_system | GRIP_EXECUTE close_position=0.0220 force=12.00 estimate_size=[0.05, 0.05, 0.05] finger_target=0.0220
+2026-04-02 16:14:46,830 | INFO | grasp_system | GRIP_CONTACT stage=before_close_command contact_count=0 active_fingers=0 normal_force=0.0000 lateral_friction=0.0000 spinning_friction=0.0000 avg_mu=0.000 grip_target=0.0400 grip_force=80.00
+2026-04-02 16:14:46,830 | INFO | grasp_system | GRIP_CLOSE_COMMAND target_pos=0.0220 force=12.00
+2026-04-02 16:14:47,450 | INFO | grasp_system | GRIP_CONTACT stage=after_initial_close contact_count=2 active_fingers=2 normal_force=24.0036 lateral_friction=5.8691 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 16:14:48,071 | INFO | grasp_system | GRIP_CONTACT stage=after_stabilize contact_count=2 active_fingers=2 normal_force=24.0069 lateral_friction=6.7820 spinning_friction=0.0000 avg_mu=0.333 grip_target=0.0220 grip_force=12.00
+2026-04-02 16:14:48,071 | INFO | grasp_system | OBJECT_DYNAMICS mass=0.100 lateral_mu=1.000 spinning=0.0000 rolling=0.0000
+2026-04-02 16:14:48,072 | INFO | grasp_system | MULTIMODAL stage=after_close_attempt_1 | sim_time=4.5958 | planned=[0.6, 0.1994, 0.0485] | object=[0.6008, 0.1993, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0099 | obj_speed=0.0001 | obj_peak_acc=0.0158 | pressure_normal=24.0066 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0073 | right_force=11.9992
+2026-04-02 16:14:48,072 | INFO | grasp_system | FUSION_STATE stage=after_close_attempt_1 | state=CONTACT_ESTABLISHED | grasp_confidence=0.914 | slip_risk=0.148 | vision_confidence=1.000 | pressure_confidence=0.847 | imu_stability=0.994 | pressure_balance=0.000 | pressure_lateral_ratio=0.294 | pressure_drop_ratio=0.000 | object_speed=0.0001 | object_peak_acc=0.0158
+2026-04-02 16:14:48,072 | INFO | grasp_system | move_validation_lift_attempt_1 target_pos=[0.6, 0.1994, 0.1085] steps=360
+2026-04-02 16:14:53,683 | INFO | grasp_system | MOVE_VERIFY label=move_validation_lift_attempt_1 reached=True error=0.0000 extra_steps=0 current=[0.6, 0.1993, 0.1085] target=[0.6, 0.1994, 0.1085]
+2026-04-02 16:14:53,683 | INFO | grasp_system | LIFT_CHECK success=True obj_height_gain=0.0600 obj_xy_error=0.0015 ee_pos=[0.6, 0.1993, 0.1085] obj_pos=[0.5994, 0.2007, 0.085] expected_ee=[0.6, 0.1994, 0.1085]
+2026-04-02 16:14:53,683 | INFO | grasp_system | EE_STATE stage=after_validation_lift_attempt_1 | ee_pos=[0.6, 0.1993, 0.1085] | api_true=[0.5994, 0.2007, 0.085] | ee_to_object=[0.0006, -0.0013, 0.0235] | target=[0.6, 0.1994, 0.1085] | ee_to_target=[0.0, -0.0, -0.0]
+2026-04-02 16:14:53,684 | INFO | grasp_system | MULTIMODAL stage=after_validation_lift_attempt_1 | sim_time=6.0958 | planned=[0.6, 0.1994, 0.1085] | object=[0.5994, 0.2007, 0.085] | ee_speed=0.0000 | ee_peak_acc=0.0000 | obj_speed=0.0024 | obj_peak_acc=0.0002 | pressure_normal=24.0000 | pressure_active_fingers=2 | pressure_stable=True | left_force=12.0000 | right_force=12.0000
+2026-04-02 16:14:53,684 | INFO | grasp_system | FUSION_STATE stage=after_validation_lift_attempt_1 | state=GRASP_STABLE | grasp_confidence=0.979 | slip_risk=0.031 | vision_confidence=1.000 | pressure_confidence=1.000 | imu_stability=0.940 | pressure_balance=0.000 | pressure_lateral_ratio=0.043 | pressure_drop_ratio=0.000 | object_speed=0.0024 | object_peak_acc=0.0002
+2026-04-02 16:14:53,684 | INFO | grasp_system | GRASP_ATTEMPT_RESULT index=1 success=True hold_force=12.00 contact_count=2 active_fingers=2
+2026-04-02 16:14:53,684 | INFO | grasp_system | GRASP_SUCCESS yaw=0.785 target=[0.6, 0.1994, 0.0485]
+2026-04-02 16:14:54,153 | INFO | grasp_system | GRIP_TRANSPORT reinforce target_pos=0.0220 previous_force=12.00 boosted_force=18.00
+2026-04-02 16:14:54,153 | INFO | grasp_system | Lift target [0.6, 0.1994, 0.2985]
+2026-04-02 16:14:54,154 | INFO | grasp_system | move_lift target_pos=[0.6, 0.1994, 0.2985] steps=360
+2026-04-02 16:14:59,779 | INFO | grasp_system | MOVE_VERIFY label=move_lift reached=True error=0.0001 extra_steps=0 current=[0.6, 0.1993, 0.2985] target=[0.6, 0.1994, 0.2985]
+2026-04-02 16:14:59,779 | INFO | grasp_system | EE_STATE stage=after_lift | ee_pos=[0.6, 0.1993, 0.2985] | api_true=[0.5972, 0.2029, 0.275] | ee_to_object=[0.0029, -0.0036, 0.0235] | target=[0.6, 0.1994, 0.2985] | ee_to_target=[0.0, -0.0001, -0.0]
+2026-04-02 16:14:59,780 | INFO | grasp_system | MULTIMODAL stage=after_lift | sim_time=7.7208 | planned=[0.6, 0.1994, 0.2985] | object=[0.5972, 0.2029, 0.275] | ee_speed=0.0000 | ee_peak_acc=0.0053 | obj_speed=0.0000 | obj_peak_acc=0.0085 | pressure_normal=35.9999 | pressure_active_fingers=2 | pressure_stable=True | left_force=18.0000 | right_force=18.0000
+2026-04-02 16:14:59,780 | INFO | grasp_system | FUSION_STATE stage=after_lift | state=GRASP_STABLE | grasp_confidence=0.999 | slip_risk=0.013 | vision_confidence=1.000 | pressure_confidence=1.000 | imu_stability=0.997 | pressure_balance=0.000 | pressure_lateral_ratio=0.029 | pressure_drop_ratio=0.000 | object_speed=0.0000 | object_peak_acc=0.0085
+2026-04-02 16:14:59,788 | INFO | grasp_system | POSE_PLAN label=place yaw=0.000 score=0.0428 target_pos=[0.55, -0.2, 0.08] achieved_pos=[0.55, -0.2, 0.08]
+2026-04-02 16:14:59,788 | INFO | grasp_system | PLACE_START release=[0.55, -0.2, 0.08]
+2026-04-02 16:14:59,788 | INFO | grasp_system | move_pre_place target_pos=[0.55, -0.2, 0.22] steps=360
+2026-04-02 16:15:05,397 | INFO | grasp_system | MOVE_VERIFY label=move_pre_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.22] target=[0.55, -0.2, 0.22]
+2026-04-02 16:15:05,397 | INFO | grasp_system | move_release target_pos=[0.55, -0.2, 0.08] steps=360
+2026-04-02 16:15:11,012 | INFO | grasp_system | MOVE_VERIFY label=move_release reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.08] target=[0.55, -0.2, 0.08]
+2026-04-02 16:15:11,013 | INFO | grasp_system | MULTIMODAL stage=before_release | sim_time=10.7208 | planned=[0.55, -0.2, 0.08] | object=[0.5506, -0.2041, 0.0566] | ee_speed=0.0000 | ee_peak_acc=0.0005 | obj_speed=0.0002 | obj_peak_acc=0.0124 | pressure_normal=32.6990 | pressure_active_fingers=2 | pressure_stable=True | left_force=14.7110 | right_force=17.9880
+2026-04-02 16:15:11,013 | INFO | grasp_system | FUSION_STATE stage=before_release | state=TRANSPORT_STABLE | grasp_confidence=0.936 | slip_risk=0.312 | vision_confidence=1.000 | pressure_confidence=0.877 | imu_stability=0.993 | pressure_balance=0.100 | pressure_lateral_ratio=0.391 | pressure_drop_ratio=0.092 | object_speed=0.0002 | object_peak_acc=0.0124
+2026-04-02 16:15:11,013 | INFO | grasp_system | gripper_open target_pos=0.0400 force=80.00
+2026-04-02 16:15:12,423 | INFO | grasp_system | MULTIMODAL stage=after_release | sim_time=11.0958 | planned=[0.55, -0.2, 0.08] | object=[0.55, -0.2038, 0.025] | ee_speed=0.0000 | ee_peak_acc=0.0085 | obj_speed=0.0000 | obj_peak_acc=46.4394 | pressure_normal=0.0000 | pressure_active_fingers=0 | pressure_stable=False | left_force=0.0000 | right_force=0.0000
+2026-04-02 16:15:12,424 | INFO | grasp_system | FUSION_STATE stage=after_release | state=RELEASED | grasp_confidence=0.719 | slip_risk=0.000 | vision_confidence=1.000 | pressure_confidence=0.345 | imu_stability=0.649 | pressure_balance=0.000 | pressure_lateral_ratio=0.000 | pressure_drop_ratio=1.000 | object_speed=0.0000 | object_peak_acc=46.4394
+2026-04-02 16:15:12,424 | INFO | grasp_system | move_post_place target_pos=[0.55, -0.2, 0.28] steps=360
+2026-04-02 16:15:18,051 | INFO | grasp_system | MOVE_VERIFY label=move_post_place reached=True error=0.0000 extra_steps=0 current=[0.55, -0.2, 0.28] target=[0.55, -0.2, 0.28]
+2026-04-02 16:15:18,051 | INFO | grasp_system | move_home steps=240
+2026-04-02 16:15:21,804 | INFO | grasp_system | PLACE_FINISH retreat=[0.55, -0.2, 0.28]
+2026-04-02 16:15:21,804 | INFO | grasp_system | Workflow finished
+2026-04-02 16:15:21,825 | INFO | grasp_system | simulation_disconnected

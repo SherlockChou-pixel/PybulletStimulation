@@ -7,6 +7,7 @@ class VisionSystem:
         self.runtime = runtime
         self.config = config
         self.logger = logger
+        self.cam_to_world_bias = np.array(self.config.scene.cam_to_world_bias, dtype=float)
 
     @staticmethod
     def _fmt_vec(vec):
@@ -67,15 +68,32 @@ class VisionSystem:
         if len(points) == 0:
             return None
 
-        top_percentile = self.config.vision.top_percentile
-        z_threshold = np.percentile(points[:, 2], top_percentile)
-        top_points = points[points[:, 2] >= z_threshold]
+        top_percentile = float(self.config.vision.top_percentile)
+        low_percentile = float(self.config.vision.center_low_percentile)
+        high_percentile = float(self.config.vision.center_high_percentile)
+        top_band = float(max(0.0, self.config.vision.top_surface_band))
+
+        z_top = float(np.percentile(points[:, 2], top_percentile))
+        z_bottom = float(np.percentile(points[:, 2], 100.0 - top_percentile))
+        top_points = points[points[:, 2] >= z_top - top_band]
+        if len(top_points) == 0:
+            top_points = points[points[:, 2] >= np.percentile(points[:, 2], 95.0)]
         if len(top_points) == 0:
             top_points = points
 
-        xy = np.median(top_points[:, :2], axis=0)
-        z = np.percentile(points[:, 2], top_percentile)
-        return np.array([xy[0], xy[1], z], dtype=float)
+        x_low, x_high = np.percentile(top_points[:, 0], [low_percentile, high_percentile])
+        y_low, y_high = np.percentile(top_points[:, 1], [low_percentile, high_percentile])
+        x_center = 0.5 * (x_low + x_high)
+        y_center = 0.5 * (y_low + y_high)
+        span_x = float(max(0.0, x_high - x_low))
+        span_y = float(max(0.0, y_high - y_low))
+        inferred_height = max(0.0, min(span_x, span_y))
+        if inferred_height > 1e-4:
+            z_center = z_top - 0.5 * inferred_height
+        else:
+            z_center = 0.5 * (z_top + z_bottom)
+
+        return np.array([x_center, y_center, z_center], dtype=float)
 
     def locate_object(self, object_id):
         true_pos, _ = p.getBasePositionAndOrientation(object_id)
@@ -90,7 +108,21 @@ class VisionSystem:
                 continue
 
             raw_pos = np.array(calc_pos, dtype=float)
-            corrected_pos = raw_pos + self.config.scene.cam_to_world_bias
+            corrected_pos = raw_pos + self.cam_to_world_bias
+
+            if self.config.vision.auto_bias_calibration_in_sim:
+                target_bias = true_pos - raw_pos
+                alpha = float(np.clip(self.config.vision.bias_update_alpha, 0.0, 1.0))
+                updated_bias = (1.0 - alpha) * self.cam_to_world_bias + alpha * target_bias
+                self.logger.info(
+                    'VISION_BIAS_UPDATE previous=%s target=%s updated=%s',
+                    self._fmt_vec(self.cam_to_world_bias),
+                    self._fmt_vec(target_bias),
+                    self._fmt_vec(updated_bias),
+                )
+                self.cam_to_world_bias = updated_bias
+                corrected_pos = raw_pos + self.cam_to_world_bias
+
             raw_positions.append(raw_pos)
             corrected_positions.append(corrected_pos)
 

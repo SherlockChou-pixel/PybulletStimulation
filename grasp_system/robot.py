@@ -163,6 +163,27 @@ class ArmController:
         candidates.sort(key=lambda item: item['score'])
         return candidates
 
+    def plan_top_down_pose(self, target_pos, z_offset=0.0, xy_offsets=None, yaw_candidates=None, label='grasp'):
+        candidates = self.iter_top_down_pose_candidates(
+            target_pos,
+            z_offset=z_offset,
+            xy_offsets=xy_offsets,
+            yaw_candidates=yaw_candidates,
+        )
+        if not candidates:
+            raise RuntimeError(f'No {label} pose candidates available')
+
+        best = candidates[0]
+        self.logger.info(
+            'POSE_PLAN label=%s yaw=%.3f score=%.4f target_pos=%s achieved_pos=%s',
+            label,
+            best['yaw'],
+            best['score'],
+            np.round(np.array(best['target_pos'], dtype=float), 4).tolist(),
+            np.round(np.array(best['achieved_pos'], dtype=float), 4).tolist(),
+        )
+        return best
+
     def move_to_position(self, target_pos, target_orn=None, steps=None, grip_adjust=None, joint_poses=None, label='arm_move', max_velocity=None, position_gain=None):
         if target_orn is None:
             target_orn = p.getQuaternionFromEuler(self.config.motion.default_orientation_euler)

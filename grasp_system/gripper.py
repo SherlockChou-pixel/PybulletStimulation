@@ -62,6 +62,26 @@ class GripperController:
         self.set_gripper(target_pos, force)
         self.logger.info('gripper_close target_pos=%.4f force=%.2f', target_pos, force)
 
+    def maintain_grip(self):
+        self.set_gripper(self.current_grip_target, self.current_grip_force)
+
+    def reinforce_grip_for_transport(self, multiplier=None, force_cap=None):
+        if multiplier is None:
+            multiplier = self.config.gripper.carry_force_multiplier
+        if force_cap is None:
+            force_cap = self.config.gripper.carry_force_cap
+        previous_force = float(self.current_grip_force)
+        boosted_force = min(previous_force * float(multiplier), float(force_cap))
+        boosted_force = max(boosted_force, previous_force)
+        self.set_gripper(self.current_grip_target, boosted_force)
+        self.logger.info(
+            'GRIP_TRANSPORT reinforce target_pos=%.4f previous_force=%.2f boosted_force=%.2f',
+            self.current_grip_target,
+            previous_force,
+            boosted_force,
+        )
+        return boosted_force
+
     def estimate_gripper_force(self, object_id=None):
         if object_id is None:
             object_id = self.object_id

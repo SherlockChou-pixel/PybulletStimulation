@@ -26,7 +26,13 @@ class CameraConfig:
 @dataclass(frozen=True)
 class VisionConfig:
     capture_repeats: int = 3
-    top_percentile: float = 85.0
+    top_percentile: float = 98.0
+    center_low_percentile: float = 5.0
+    center_high_percentile: float = 95.0
+    top_surface_band: float = 0.003
+    enable_refine_pass: bool = False
+    auto_bias_calibration_in_sim: bool = False
+    bias_update_alpha: float = 0.5
     replan_position_threshold: float = 0.01
     refine_accept_max_shift: float = 0.008
 
@@ -37,13 +43,14 @@ class SceneConfig:
     robot_urdf: str = "franka_panda/panda.urdf"
     object_urdf: str = "cube_small.urdf"
     robot_base_position: tuple[float, float, float] = (0.0, 0.0, 0.0)
-    object_position: tuple[float, float, float] = (0.5, 0.1, 0.2)
+    object_position: tuple[float, float, float] = (0.6, 0.2, 0.2)
     use_fixed_base: bool = True
-    cam_to_world_bias: np.ndarray = field(default_factory=lambda: np.array([-0.015, -0.015, -0.025]))
+    cam_to_world_bias: np.ndarray = field(default_factory=lambda: np.zeros(3, dtype=float))
 
 
 @dataclass(frozen=True)
 class RuntimeConfig:
+    sim_dt: float = 1 / 240.0
     realtime_sleep: bool = True
     sleep_dt: float = 1 /480.0
 
@@ -63,6 +70,47 @@ class GripperConfig:
     release_contact_force: float = 8.0
     boost_step: float = 2.0
     relax_step: float = 1.0
+    carry_force_multiplier: float = 1.5
+    carry_force_cap: float = 30.0
+
+
+@dataclass(frozen=True)
+class IMUConfig:
+    enabled: bool = True
+    history_length: int = 240
+    summary_window: int = 40
+    sample_every_steps: int = 4
+    track_end_effector: bool = True
+    track_object: bool = True
+    log_samples: bool = False
+
+
+@dataclass(frozen=True)
+class PressureConfig:
+    enabled: bool = True
+    history_length: int = 240
+    summary_window: int = 40
+    sample_every_steps: int = 4
+    min_active_fingers: int = 2
+    min_total_normal_force: float = 5.0
+    log_samples: bool = False
+
+
+@dataclass(frozen=True)
+class FusionConfig:
+    enabled: bool = True
+    vision_good_error: float = 0.005
+    vision_max_error: float = 0.03
+    desired_total_normal_force: float = 24.0
+    force_balance_tolerance: float = 0.35
+    lateral_ratio_warn: float = 0.45
+    object_speed_stable: float = 0.02
+    object_peak_acc_stable: float = 1.5
+    end_effector_peak_acc_smooth: float = 8.0
+    slip_object_speed_warn: float = 0.03
+    pressure_drop_warn_ratio: float = 0.25
+    stable_grasp_confidence: float = 0.65
+    high_slip_risk: float = 0.55
 
 
 @dataclass(frozen=True)
@@ -107,7 +155,7 @@ class MotionConfig:
 
 @dataclass(frozen=True)
 class PlaceConfig:
-    enabled: bool = False
+    enabled: bool = True
     release_position: tuple[float, float, float] = (0.55, -0.20, 0.08)
     pre_place_offset: float = 0.14
     retreat_offset: float = 0.20
@@ -130,6 +178,9 @@ class AppConfig:
     scene: SceneConfig = field(default_factory=SceneConfig)
     runtime: RuntimeConfig = field(default_factory=RuntimeConfig)
     gripper: GripperConfig = field(default_factory=GripperConfig)
+    imu: IMUConfig = field(default_factory=IMUConfig)
+    pressure: PressureConfig = field(default_factory=PressureConfig)
+    fusion: FusionConfig = field(default_factory=FusionConfig)
     motion: MotionConfig = field(default_factory=MotionConfig)
     place: PlaceConfig = field(default_factory=PlaceConfig)
     logging: LoggingConfig = field(default_factory=LoggingConfig)
