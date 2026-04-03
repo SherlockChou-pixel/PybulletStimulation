@@ -127,12 +127,20 @@ class ArmController:
                 offsets.append((dx, dy))
         return offsets
 
-    def iter_top_down_pose_candidates(self, target_pos, z_offset=0.0, xy_offsets=None, yaw_candidates=None):
+    @staticmethod
+    def _build_target_orientation(yaw, roll_deg=0.0, pitch_deg=0.0):
+        roll = np.pi + np.deg2rad(float(roll_deg))
+        pitch = np.deg2rad(float(pitch_deg))
+        return p.getQuaternionFromEuler((roll, pitch, float(yaw)))
+
+    def _iter_pose_candidates(self, target_pos, z_offset=0.0, xy_offsets=None, yaw_candidates=None, tilt_candidates_deg=None):
         base_pos = np.array(target_pos, dtype=float)
         if xy_offsets is None:
             xy_offsets = self.generate_xy_offsets()
         if yaw_candidates is None:
             yaw_candidates = self.config.motion.candidate_yaws
+        if tilt_candidates_deg is None:
+            tilt_candidates_deg = ((0.0, 0.0),)
 
         candidates = []
         self._set_rendering(False)
@@ -142,26 +150,49 @@ class ArmController:
                 offset_penalty = float(np.hypot(dx, dy) * 10.0)
 
                 for yaw in yaw_candidates:
-                    target_orn = p.getQuaternionFromEuler((np.pi, 0.0, float(yaw)))
-                    metrics = self.evaluate_pose(candidate_pos, target_orn)
-                    score = (
-                        metrics['pos_error'] * 150.0
-                        + metrics['limit_penalty'] * 2.0
-                        + metrics['motion_penalty'] * 0.05
-                        + offset_penalty
-                    )
-                    candidates.append({
-                        'target_pos': candidate_pos,
-                        'target_orn': target_orn,
-                        'yaw': float(yaw),
-                        'score': float(score),
-                        **metrics,
-                    })
+                    for roll_deg, pitch_deg in tilt_candidates_deg:
+                        target_orn = self._build_target_orientation(yaw, roll_deg=roll_deg, pitch_deg=pitch_deg)
+                        metrics = self.evaluate_pose(candidate_pos, target_orn)
+                        tilt_penalty = (abs(float(roll_deg)) + abs(float(pitch_deg))) / 180.0
+                        score = (
+                            metrics['pos_error'] * 150.0
+                            + metrics['limit_penalty'] * 2.0
+                            + metrics['motion_penalty'] * 0.05
+                            + offset_penalty
+                            + tilt_penalty
+                        )
+                        candidates.append({
+                            'target_pos': candidate_pos,
+                            'target_orn': target_orn,
+                            'yaw': float(yaw),
+                            'roll_deg': float(roll_deg),
+                            'pitch_deg': float(pitch_deg),
+                            'score': float(score),
+                            **metrics,
+                        })
         finally:
             self._set_rendering(True)
 
         candidates.sort(key=lambda item: item['score'])
         return candidates
+
+    def iter_top_down_pose_candidates(self, target_pos, z_offset=0.0, xy_offsets=None, yaw_candidates=None):
+        return self._iter_pose_candidates(
+            target_pos,
+            z_offset=z_offset,
+            xy_offsets=xy_offsets,
+            yaw_candidates=yaw_candidates,
+            tilt_candidates_deg=((0.0, 0.0),),
+        )
+
+    def iter_grasp_pose_candidates(self, target_pos, z_offset=0.0, xy_offsets=None, yaw_candidates=None):
+        return self._iter_pose_candidates(
+            target_pos,
+            z_offset=z_offset,
+            xy_offsets=xy_offsets,
+            yaw_candidates=yaw_candidates,
+            tilt_candidates_deg=self.config.motion.grasp_tilt_candidates_deg,
+        )
 
     def plan_top_down_pose(self, target_pos, z_offset=0.0, xy_offsets=None, yaw_candidates=None, label='grasp'):
         candidates = self.iter_top_down_pose_candidates(
@@ -175,9 +206,11 @@ class ArmController:
 
         best = candidates[0]
         self.logger.info(
-            'POSE_PLAN label=%s yaw=%.3f score=%.4f target_pos=%s achieved_pos=%s',
+            'POSE_PLAN label=%s yaw=%.3f roll_deg=%.1f pitch_deg=%.1f score=%.4f target_pos=%s achieved_pos=%s',
             label,
             best['yaw'],
+            best.get('roll_deg', 0.0),
+            best.get('pitch_deg', 0.0),
             best['score'],
             np.round(np.array(best['target_pos'], dtype=float), 4).tolist(),
             np.round(np.array(best['achieved_pos'], dtype=float), 4).tolist(),

@@ -82,6 +82,42 @@ class GripperController:
         )
         return boosted_force
 
+    def adaptive_tighten(self, reason='fusion_feedback', force_step=None, target_step=None, force_cap=None, target_floor=None):
+        if force_step is None:
+            force_step = self.config.fusion.control_force_step
+        if target_step is None:
+            target_step = self.config.fusion.control_target_step
+        if force_cap is None:
+            force_cap = min(self.config.fusion.control_force_cap, self.config.gripper.carry_force_cap)
+        if target_floor is None:
+            target_floor = self.config.gripper.default_close_position
+
+        previous_force = float(self.current_grip_force)
+        previous_target = float(self.current_grip_target)
+        new_force = min(previous_force + float(force_step), float(force_cap))
+        new_target = max(previous_target - float(target_step), float(target_floor))
+        changed = (new_force > previous_force + 1e-6) or (new_target < previous_target - 1e-6)
+        if not changed:
+            return {
+                'target_pos': previous_target,
+                'force': previous_force,
+                'changed': False,
+            }
+        self.set_gripper(new_target, new_force)
+        self.logger.warning(
+            'GRIP_ADAPTIVE reason=%s previous_target=%.4f new_target=%.4f previous_force=%.2f new_force=%.2f',
+            reason,
+            previous_target,
+            new_target,
+            previous_force,
+            new_force,
+        )
+        return {
+            'target_pos': new_target,
+            'force': new_force,
+            'changed': True,
+        }
+
     def estimate_gripper_force(self, object_id=None):
         if object_id is None:
             object_id = self.object_id

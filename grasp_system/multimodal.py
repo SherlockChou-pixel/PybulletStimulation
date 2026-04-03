@@ -27,7 +27,22 @@ class MultiModalObserver:
         span = max(max_error - good_error, 1e-6)
         return self._clamp01(1.0 - (error_value - good_error) / span)
 
-    def _compute_vision_metrics(self, vision_position=None, object_position=None):
+    @staticmethod
+    def _is_transport_stage(stage):
+        return (
+            'transport_monitor' in stage
+            or 'after_validation_lift' in stage
+            or stage in ('after_lift', 'before_release')
+        )
+
+    def _compute_vision_metrics(self, stage, vision_position=None, object_position=None):
+        transport_stage = self._is_transport_stage(stage) or stage == 'after_release'
+        if transport_stage:
+            return {
+                'confidence': float(self._last_vision_confidence),
+                'error': None,
+                'source': 'frozen_for_transport',
+            }
         if vision_position is None:
             return {
                 'confidence': float(self._last_vision_confidence),
@@ -78,6 +93,18 @@ class MultiModalObserver:
         active_fingers = int(pressure.get('active_fingers', 0))
         stable_ratio = float(pressure.get('stable_ratio', 0.0))
         stable_contact = bool(pressure.get('stable_contact', False))
+
+        if active_fingers == 0 or total_normal_force <= 1e-6:
+            return {
+                'confidence': 0.0,
+                'normal_force': total_normal_force,
+                'lateral_force': total_lateral_force,
+                'force_balance': 0.0,
+                'lateral_ratio': 0.0,
+                'active_fingers': active_fingers,
+                'stable_contact': False,
+                'stable_ratio': stable_ratio,
+            }
 
         force_score = self._clamp01(total_normal_force / max(self.config.fusion.desired_total_normal_force, 1e-6))
         contact_score = self._clamp01(active_fingers / max(self.config.pressure.min_active_fingers, 1))
@@ -131,6 +158,21 @@ class MultiModalObserver:
     def _compute_slip_risk(self, stage, pressure_metrics, imu_metrics):
         prev_snapshot = self._last_fusion_snapshot or {}
         prev_normal_force = float(prev_snapshot.get('pressure_normal', pressure_metrics['normal_force']))
+        contact_expected = any(
+            key in stage
+            for key in (
+                'after_close',
+                'after_validation_lift',
+                'after_lift',
+                'before_release',
+                'transport_monitor',
+            )
+        )
+        if not contact_expected and pressure_metrics['active_fingers'] == 0:
+            return {
+                'score': 0.0,
+                'pressure_drop_ratio': 0.0,
+            }
         if prev_normal_force <= 1e-6:
             pressure_drop_ratio = 0.0
         else:
@@ -146,6 +188,14 @@ class MultiModalObserver:
         motion_penalty = self._clamp01(
             imu_metrics['object_speed'] / max(self.config.fusion.slip_object_speed_warn, 1e-6)
         )
+        if self._is_transport_stage(stage) and pressure_metrics['stable_contact']:
+            motion_penalty *= self.config.fusion.transport_motion_penalty_scale
+            if (
+                pressure_metrics['normal_force'] >= 0.9 * self.config.fusion.desired_total_normal_force
+                and pressure_metrics['lateral_ratio'] <= self.config.fusion.control_transport_lateral_ratio
+                and pressure_metrics['force_balance'] <= self.config.fusion.force_balance_tolerance
+            ):
+                motion_penalty *= 0.6
         pressure_drop_penalty = self._clamp01(
             pressure_drop_ratio / max(self.config.fusion.pressure_drop_warn_ratio, 1e-6)
         )
@@ -173,16 +223,40 @@ class MultiModalObserver:
         pressure_confidence = pressure_metrics['confidence']
         imu_confidence = imu_metrics['confidence']
 
+        if stage == 'after_home':
+            return 0.0
         if 'after_vision_lock' in stage:
-            return self._clamp01(0.85 * vision_confidence + 0.15 * imu_confidence)
+            return min(0.75, self._clamp01(0.65 * vision_confidence + 0.10 * imu_confidence))
         if 'after_descend' in stage:
-            return self._clamp01(0.50 * vision_confidence + 0.20 * pressure_confidence + 0.30 * imu_confidence)
+            return min(0.82, self._clamp01(0.45 * vision_confidence + 0.15 * pressure_confidence + 0.20 * imu_confidence))
         if 'after_close' in stage:
             return self._clamp01(0.20 * vision_confidence + 0.55 * pressure_confidence + 0.25 * imu_confidence)
         if 'after_validation_lift' in stage or 'after_lift' in stage or 'before_release' in stage:
-            return self._clamp01(0.15 * vision_confidence + 0.50 * pressure_confidence + 0.35 * imu_confidence)
+            confidence = self._clamp01(0.72 * pressure_confidence + 0.28 * imu_confidence)
+            if (
+                pressure_metrics['stable_contact']
+                and pressure_metrics['lateral_ratio'] <= self.config.fusion.control_transport_lateral_ratio
+                and pressure_metrics['force_balance'] <= self.config.fusion.force_balance_tolerance
+            ):
+                confidence = max(
+                    confidence,
+                    self._clamp01(0.66 + 0.18 * pressure_confidence + self.config.fusion.transport_stable_grasp_boost),
+                )
+            return confidence
         if 'after_release' in stage:
-            return self._clamp01(0.20 * vision_confidence + 0.80 * imu_confidence)
+            return 0.0
+        if 'transport_monitor' in stage:
+            confidence = self._clamp01(0.74 * pressure_confidence + 0.26 * imu_confidence)
+            if (
+                pressure_metrics['stable_contact']
+                and pressure_metrics['normal_force'] >= 0.9 * self.config.fusion.desired_total_normal_force
+                and pressure_metrics['lateral_ratio'] <= self.config.fusion.control_transport_lateral_ratio
+            ):
+                confidence = max(
+                    confidence,
+                    self._clamp01(0.64 + 0.20 * pressure_confidence + self.config.fusion.transport_stable_grasp_boost),
+                )
+            return confidence
         return self._clamp01(0.30 * vision_confidence + 0.40 * pressure_confidence + 0.30 * imu_confidence)
 
     def _infer_fusion_state(self, stage, vision_metrics, pressure_metrics, imu_metrics, slip_metrics, grasp_confidence):
@@ -205,6 +279,14 @@ class MultiModalObserver:
             if pressure_stable and grasp_confidence >= self.config.fusion.stable_grasp_confidence:
                 return 'GRASP_STABLE'
             return 'GRASP_UNCERTAIN'
+        if 'transport_monitor' in stage:
+            if pressure_metrics['active_fingers'] == 0:
+                return 'GRASP_LOST'
+            if slip_risk >= self.config.fusion.high_slip_risk:
+                return 'SLIP_RISK'
+            if pressure_stable and grasp_confidence >= self.config.fusion.stable_grasp_confidence:
+                return 'TRANSPORT_STABLE'
+            return 'TRANSPORT_UNCERTAIN'
         if stage == 'before_release':
             if pressure_stable and grasp_confidence >= self.config.fusion.stable_grasp_confidence:
                 return 'TRANSPORT_STABLE'
@@ -224,9 +306,11 @@ class MultiModalObserver:
                 'after_validation_lift',
                 'after_lift',
                 'before_release',
+                'transport_monitor',
             )
         )
-        if vision_metrics['error'] is not None and vision_metrics['confidence'] < 0.7:
+        vision_relevant = any(key in stage for key in ('after_vision_lock', 'after_descend', 'after_close'))
+        if vision_relevant and vision_metrics['error'] is not None and vision_metrics['confidence'] < 0.7:
             alerts.append(f'vision_error={vision_metrics["error"]:.4f}')
         if contact_expected and pressure_metrics['active_fingers'] < self.config.pressure.min_active_fingers:
             alerts.append('insufficient_finger_contact')
@@ -254,6 +338,7 @@ class MultiModalObserver:
 
     def _compute_fusion(self, stage, observation):
         vision_metrics = self._compute_vision_metrics(
+            stage,
             observation.get('vision_position'),
             observation.get('object_position'),
         )

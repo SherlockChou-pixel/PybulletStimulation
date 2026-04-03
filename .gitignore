@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / local tooling
+.vscode/
+.idea/
+.codex-test/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and generated experiment outputs
+logs/
+
+# Keep a placeholder if you later need the directory
+!logs/.gitkeep
+
+# Notebook / temp
+*.tmp
+*.temp
